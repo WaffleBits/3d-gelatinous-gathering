@@ -31,6 +31,7 @@ interface GameState {
   setPlayerName: (name: string) => void
   setSelectedSkin: (skinId: number) => void
   addCoins: (amount: number) => void
+  removeCoins: (amount: number) => void
   
   activatePowerUp: (type: PowerUpType, duration: number) => void
   deactivatePowerUp: (type: PowerUpType) => void
@@ -54,7 +55,7 @@ export const useGameStore = create<GameState>((set, get) => ({
   playerId: "",
   playerName: "Player",
   selectedSkin: 0,
-  coins: 0,
+  coins: 500, // Start with some coins for testing
   playerSize: 1,
   playerSpeed: 0.1,
   activePowerUps: [],
@@ -67,7 +68,9 @@ export const useGameStore = create<GameState>((set, get) => ({
     set((state) => {
       const newScore = state.score + points
       const newHighScore = Math.max(state.highScore, newScore)
-      return { score: newScore, highScore: newHighScore }
+      // Also add some coins with each score increase
+      const newCoins = state.coins + Math.ceil(points * 0.5)
+      return { score: newScore, highScore: newHighScore, coins: newCoins }
     })
   },
   
@@ -80,6 +83,7 @@ export const useGameStore = create<GameState>((set, get) => ({
   setPlayerName: (name) => set({ playerName: name }),
   setSelectedSkin: (skinId) => set({ selectedSkin: skinId }),
   addCoins: (amount) => set((state) => ({ coins: state.coins + amount })),
+  removeCoins: (amount) => set((state) => ({ coins: Math.max(0, state.coins - amount) })),
   
   activatePowerUp: (type, duration) => {
     set((state) => ({

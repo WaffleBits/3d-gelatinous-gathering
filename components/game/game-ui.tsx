@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { ShopModal } from "./shop-modal"
 import { LeaderboardModal } from "./leaderboard-modal"
+import { skins } from "@/lib/skins"
 
 interface GameUIProps {
   isPlaying: boolean
@@ -22,7 +23,7 @@ export function GameUI({ isPlaying, onStart, selectedSkin, setSelectedSkin, visu
   const [showLeaderboard, setShowLeaderboard] = useState(false)
   const [showSettings, setShowSettings] = useState(false)
 
-  const { score, gameOver, resetGame } = useGameStore()
+  const { score, gameOver, resetGame, coins } = useGameStore()
 
   const handleStart = () => {
     if (playerName.trim()) {
@@ -126,6 +127,26 @@ export function GameUI({ isPlaying, onStart, selectedSkin, setSelectedSkin, visu
             </p>
           </div>
           
+          <div className="mb-6">
+            <div className="flex justify-between items-center">
+              <h3 className="text-sm font-medium text-gray-300 mb-2">Choose Your Skin</h3>
+              <Button 
+                onClick={() => setShowShop(true)} 
+                variant="link" 
+                className="text-blue-400 hover:text-blue-300 p-0 h-auto"
+                size="sm"
+              >
+                Shop for more
+              </Button>
+            </div>
+            <div className="p-3 bg-gray-800/50 rounded-lg border border-gray-700 flex items-center justify-center">
+              <div 
+                className="w-12 h-12 rounded-full" 
+                style={{ backgroundColor: skins[selectedSkin].color }}
+              />
+            </div>
+          </div>
+          
           <Button 
             onClick={handleStart}
             disabled={!playerName.trim()}
@@ -133,7 +154,21 @@ export function GameUI({ isPlaying, onStart, selectedSkin, setSelectedSkin, visu
           >
             Start Game
           </Button>
+          
+          <div className="mt-4 text-center text-sm text-gray-400">
+            <p>Use WASD or arrow keys to move</p>
+            <p>Collect food to grow bigger</p>
+            <p>Eat smaller players, avoid bigger ones</p>
+          </div>
         </div>
+        
+        {showShop && (
+          <ShopModal 
+            onClose={() => setShowShop(false)} 
+            selectedSkin={selectedSkin} 
+            onSelectSkin={setSelectedSkin} 
+          />
+        )}
       </div>
     )
   }
@@ -165,6 +200,20 @@ export function GameUI({ isPlaying, onStart, selectedSkin, setSelectedSkin, visu
         <p className="text-lg font-bold text-white">Score: {score}</p>
       </div>
       
+      {/* Coins */}
+      <div className="absolute top-4 left-32 bg-black/60 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg flex items-center">
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          className="h-4 w-4 text-yellow-400 mr-2" 
+          viewBox="0 0 20 20" 
+          fill="currentColor"
+        >
+          <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
+          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clipRule="evenodd" />
+        </svg>
+        <p className="text-lg font-bold text-white">{coins}</p>
+      </div>
+      
       {/* Quality selector */}
       <div className="absolute bottom-4 left-4 text-white text-sm">
         <div className="flex items-center space-x-1">
@@ -177,8 +226,15 @@ export function GameUI({ isPlaying, onStart, selectedSkin, setSelectedSkin, visu
         <p className="text-xs opacity-75 mt-1">FPS issues? Try a lower quality setting</p>
       </div>
       
-      {/* Settings button */}
-      <div className="absolute top-4 right-4 pointer-events-auto">
+      {/* Action buttons */}
+      <div className="absolute top-4 right-4 flex space-x-2 pointer-events-auto">
+        <Button
+          onClick={() => setShowShop(true)}
+          variant="outline"
+          className="bg-black/60 border-white/20 text-white hover:bg-black/80"
+        >
+          Shop
+        </Button>
         <Button
           onClick={() => setShowSettings(true)}
           variant="outline"
@@ -190,6 +246,15 @@ export function GameUI({ isPlaying, onStart, selectedSkin, setSelectedSkin, visu
       
       {/* Settings panel */}
       {showSettings && renderSettingsPanel()}
+      
+      {/* Shop modal */}
+      {showShop && (
+        <ShopModal 
+          onClose={() => setShowShop(false)} 
+          selectedSkin={selectedSkin} 
+          onSelectSkin={setSelectedSkin} 
+        />
+      )}
     </div>
   )
 }
