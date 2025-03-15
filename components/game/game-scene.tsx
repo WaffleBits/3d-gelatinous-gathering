@@ -96,7 +96,13 @@ export function GameScene({ playerName, selectedSkin, visualQuality = "medium" }
 
   // Only update player size based on score, NOT on every render
   useEffect(() => {
+    // Only update size when score actually changes
     playerSize.current = 1 + score * 0.1
+    
+    // Log size change for debugging
+    if (score > 0) {
+      console.log(`Player size updated: ${playerSize.current.toFixed(2)} (score: ${score})`)
+    }
   }, [score])
 
   // Join the multiplayer game when the component mounts
@@ -255,6 +261,14 @@ export function GameScene({ playerName, selectedSkin, visualQuality = "medium" }
   // Handle food collection
   const collectFood = (foodId: number) => {
     console.log("Food collected:", foodId)
+    
+    // Make sure size only increases when food is actually collected
+    // by adding score only for valid food items
+    const foodExists = foodsRef.current.some(food => food.id === foodId)
+    if (!foodExists) {
+      console.log("Food already collected or invalid:", foodId)
+      return
+    }
 
     // Update the server if connected
     if (isConnected && socket) {
@@ -266,7 +280,7 @@ export function GameScene({ playerName, selectedSkin, visualQuality = "medium" }
           const filtered = prev.filter((food) => food.id !== foodId)
           
           // Get current player position for safe spawning
-          const playerPosition = playerRef.current?.position;
+          const playerPosition = playerRef.current?.position
           
           const newFood = {
             id: Date.now(),
@@ -439,33 +453,26 @@ export function GameScene({ playerName, selectedSkin, visualQuality = "medium" }
     
     if (!playerRef.current || !controlsRef.current) return
     
-    // Throttled camera updates - only update every 50ms
-    throttle(() => {
-      const playerPosition = playerRef.current.position
-      
-      // Calculate zoom based on player size
-      const zoomFactor = 15 + playerSize.current * 1.5 
-      const distance = 10 + playerSize.current * 0.8
-      
-      // Set camera target directly for static feel
-      controlsRef.current.target.set(
-        playerPosition.x, 
-        0, 
-        playerPosition.z
-      )
-      
-      // Very minimal smoothing for zoom only
-      const currentHeight = camera.position.y
-      const targetHeight = zoomFactor
-      const smoothedHeight = currentHeight + (targetHeight - currentHeight) * 0.3
-      
-      // Set camera position directly for static feel
-      camera.position.set(
-        playerPosition.x,
-        smoothedHeight, 
-        playerPosition.z + distance
-      )
-    }, 50, lastCameraUpdate)
+    // Direct camera positioning with no smoothing - completely static follow
+    const playerPosition = playerRef.current.position
+    
+    // Calculate zoom based on player size
+    const zoomFactor = 15 + playerSize.current * 1.5 
+    const distance = 10 + playerSize.current * 0.8
+    
+    // Set camera position directly over player with no smoothing or delay
+    camera.position.set(
+      playerPosition.x,
+      zoomFactor, 
+      playerPosition.z + distance
+    )
+    
+    // Set camera target directly to player position
+    controlsRef.current.target.set(
+      playerPosition.x, 
+      0, 
+      playerPosition.z
+    )
     
     // Only run AI updates every 80ms
     throttle(() => {

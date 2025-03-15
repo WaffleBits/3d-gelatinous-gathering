@@ -1,5 +1,5 @@
-import { useRef, useMemo } from "react"
-import { useFrame } from "@react-three/fiber"
+import { useRef, useMemo, useEffect } from "react"
+import { useFrame, useThree } from "@react-three/fiber"
 import { 
   EffectComposer, 
   Bloom, 
@@ -8,6 +8,7 @@ import {
 } from "@react-three/postprocessing"
 import { BlendFunction } from "postprocessing"
 import * as THREE from "three"
+import { useGameStore } from "@/lib/game-store"
 
 // Optimized particle system for ambient floating particles
 function ParticleSystem({ particleCount = 100 }) {
@@ -116,6 +117,10 @@ function ParticleSystem({ particleCount = 100 }) {
 
 // Main visual effects component - optimized quality settings
 export function VisualEffects({ quality = "medium" }: { quality?: "low" | "medium" | "high" }) {
+  const { scene } = useThree()
+  const { score } = useGameStore()
+  const currentFogRef = useRef<THREE.Fog | null>(null)
+  
   // Configure effect intensity based on quality settings
   const effectsConfig = useMemo(() => {
     switch (quality) {
@@ -128,7 +133,7 @@ export function VisualEffects({ quality = "medium" }: { quality?: "low" | "mediu
           chromaticAberration: false,
           chromaticAberrationOffset: 0,
           vignette: false,
-          fog: { enabled: false },
+          fog: { enabled: false, density: 0, near: 0, far: 0 },
           particles: false,
           particleCount: 0
         }
@@ -156,7 +161,7 @@ export function VisualEffects({ quality = "medium" }: { quality?: "low" | "mediu
           chromaticAberration: true,
           chromaticAberrationOffset: 0.0002,
           vignette: true,
-          fog: { enabled: true, density: 0.003, near: 20, far: 100 },
+          fog: { enabled: true, density: 0.002, near: 20, far: 100 },
           particles: true,
           particleCount: 150
         }
@@ -176,6 +181,28 @@ export function VisualEffects({ quality = "medium" }: { quality?: "low" | "mediu
         }
     }
   }, [quality])
+
+  // Adjust fog based on player size/score to prevent visibility issues
+  useEffect(() => {
+    if (!effectsConfig.fog.enabled || !currentFogRef.current) return
+    
+    // Calculate player size from score (same formula as in game-scene.tsx)
+    const playerSize = 1 + score * 0.1
+    
+    // Increase fog distance as player grows to maintain visibility
+    const baseFar = effectsConfig.fog.far || 100
+    const baseNear = effectsConfig.fog.near || 30
+    
+    // Scale fog with player size - larger players see further
+    const farDistance = baseFar + playerSize * 20
+    const nearDistance = baseNear + playerSize * 5
+    
+    // Update fog settings dynamically
+    currentFogRef.current.near = nearDistance
+    currentFogRef.current.far = farDistance
+    
+    console.log(`Fog adjusted for player size ${playerSize.toFixed(1)}: near=${nearDistance.toFixed(1)}, far=${farDistance.toFixed(1)}`)
+  }, [score, effectsConfig.fog.enabled, effectsConfig.fog.near, effectsConfig.fog.far])
   
   // Skip rendering everything if low quality
   if (quality === "low") {
@@ -185,25 +212,26 @@ export function VisualEffects({ quality = "medium" }: { quality?: "low" | "mediu
   return (
     <>
       {/* Fog */}
-      {effectsConfig.fog.enabled && (
+      {effectsConfig.fog.enabled ? (
         <fog 
+          ref={currentFogRef}
           attach="fog" 
           color="#0a4d8c" 
           near={effectsConfig.fog.near} 
           far={effectsConfig.fog.far} 
           args={["#0a4d8c", effectsConfig.fog.near, effectsConfig.fog.far]} 
         />
-      )}
+      ) : null}
       
       {/* Ambient particles */}
-      {effectsConfig.particles && (
+      {effectsConfig.particles ? (
         <ParticleSystem particleCount={effectsConfig.particleCount} />
-      )}
+      ) : null}
       
       {/* Post-processing effects */}
       {effectsConfig.enabled && (
         <EffectComposer enabled={effectsConfig.enabled}>
-          {effectsConfig.bloomEnabled && (
+          {effectsConfig.bloomEnabled ? (
             <Bloom
               intensity={effectsConfig.bloomIntensity}
               luminanceThreshold={0.2}
@@ -211,20 +239,20 @@ export function VisualEffects({ quality = "medium" }: { quality?: "low" | "mediu
               height={effectsConfig.bloomHeight}
               blendFunction={BlendFunction.SCREEN}
             />
-          )}
-          {effectsConfig.chromaticAberration && (
+          ) : null}
+          {effectsConfig.chromaticAberration ? (
             <ChromaticAberration
               offset={new THREE.Vector2(effectsConfig.chromaticAberrationOffset, effectsConfig.chromaticAberrationOffset)}
               blendFunction={BlendFunction.NORMAL}
             />
-          )}
-          {effectsConfig.vignette && (
+          ) : null}
+          {effectsConfig.vignette ? (
             <Vignette
               offset={0.3}
               darkness={0.7}
               blendFunction={BlendFunction.NORMAL}
             />
-          )}
+          ) : null}
         </EffectComposer>
       )}
     </>
