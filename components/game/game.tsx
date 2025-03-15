@@ -6,6 +6,8 @@ import { GameScene } from "./game-scene"
 import { GameUI } from "./game-ui"
 import { GameProvider } from "@/lib/game-context"
 import { Loader } from "@/components/ui/loader"
+import { DebugOverlay } from "@/components/debug-overlay"
+import GameDebugger from "@/lib/debug"
 
 // Simple FPS counter component
 function FpsCounter() {
@@ -24,6 +26,8 @@ function FpsCounter() {
 
       if (delta >= 1000) {
         setFps(Math.round((frames.current * 1000) / delta));
+        // Also update the debugger
+        GameDebugger.updateFPS(Math.round((frames.current * 1000) / delta));
         frames.current = 0;
         lastUpdate.current = now;
       }
@@ -57,15 +61,31 @@ export default function Game() {
   const [selectedSkin, setSelectedSkin] = useState(0)
   const [visualQuality, setVisualQuality] = useState<"low" | "medium" | "high">("medium")
   const [isMounted, setIsMounted] = useState(false)
+  const [showDebugOverlay, setShowDebugOverlay] = useState(false)
 
   // Handle mounting to prevent hydration issues
   useEffect(() => {
     setIsMounted(true)
+    
+    // Add keyboard shortcut for debug overlay
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Ctrl+Shift+D to toggle debug overlay
+      if (e.ctrlKey && e.shiftKey && e.key === 'D') {
+        setShowDebugOverlay(prev => !prev);
+        e.preventDefault();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
   }, [])
 
   const startGame = (name: string) => {
     setPlayerName(name)
     setIsPlaying(true)
+    
+    // Log game start to debugger
+    GameDebugger.trackStateChange('Game', 'gameState', 'menu', 'playing');
   }
 
   // Prevent hydration issues by not rendering until client-side
@@ -83,6 +103,9 @@ export default function Game() {
           </div>
         )}
         
+        {/* Debug overlay (toggle with Ctrl+Shift+D) */}
+        {showDebugOverlay && <DebugOverlay position="bottom-right" initialExpanded={true} />}
+        
         <Canvas 
           shadows 
           dpr={[1, visualQuality === "low" ? 1 : visualQuality === "medium" ? 1.5 : 2]} 
@@ -98,6 +121,10 @@ export default function Game() {
             fov: 60, 
             near: 0.1, 
             far: 1000 
+          }}
+          onCreated={() => {
+            // Log game canvas creation to debugger
+            GameDebugger.trackStateChange('Game', 'Canvas', 'initializing', 'ready');
           }}
         >
           <Suspense fallback={null}>
@@ -119,6 +146,11 @@ export default function Game() {
           visualQuality={visualQuality}
           setVisualQuality={setVisualQuality}
         />
+        
+        {/* Controls help */}
+        <div className="absolute bottom-4 right-4 text-xs text-white/70">
+          Press <kbd className="px-1 py-0.5 bg-gray-800 rounded border border-gray-700">Ctrl+Shift+D</kbd> to toggle debug overlay
+        </div>
       </div>
     </GameProvider>
   )
