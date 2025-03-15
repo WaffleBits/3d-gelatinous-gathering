@@ -12,6 +12,7 @@ import { useSocketConnection, joinGame, updatePlayerPosition, playerDied, Player
 import { VisualEffects } from "./visual-effects"
 import { PowerUp } from "./power-up"
 import { PowerUpType, PowerUpDefinition, getRandomPowerUp, generatePowerUpPosition, powerUps } from "@/lib/power-ups"
+import { GameDebugger } from "@/lib/game-debugger"
 
 interface GameSceneProps {
   playerName: string
@@ -60,6 +61,7 @@ export function GameScene({ playerName, selectedSkin, visualQuality = "medium" }
   const lastCollisionCheck = useRef(0)
   const lastAIUpdate = useRef(0)
   const lastServerUpdate = useRef(0)
+  const lastMetricsUpdate = useRef(0)
   
   // Use requestAnimationFrame for timing
   const clock = useRef({
@@ -502,6 +504,25 @@ export function GameScene({ playerName, selectedSkin, visualQuality = "medium" }
       }
     }, 100, lastServerUpdate)
     
+    // Log metrics periodically (every ~10 seconds)
+    throttle(() => {
+      // Update debug counts
+      GameDebugger.updateCounts(
+        onlinePlayers.length + enemies.length + 1, // +1 for player
+        foods.length
+      );
+      
+      // Log a metrics snapshot
+      GameDebugger.logMetricsSnapshot();
+      
+      // Log player position for debugging purposes
+      GameDebugger.logEvent(
+        'Player', 
+        'Position update', 
+        `Position: (${playerPosition.x.toFixed(1)}, ${playerPosition.y.toFixed(1)}, ${playerPosition.z.toFixed(1)}), Size: ${playerSize.current.toFixed(2)}`
+      );
+    }, 10000, lastMetricsUpdate);
+    
     // Frame counter for debugging
     frameCount.current++
     if (frameCount.current % 100 === 0) {
@@ -516,6 +537,15 @@ export function GameScene({ playerName, selectedSkin, visualQuality = "medium" }
     const playerPos = playerRef.current.position.clone()
     const collisionRadius = playerSize.current * 0.5 + 0.2
     const checkRadius = collisionRadius * 3
+    
+    // Log collision check for debugging
+    if (Math.random() < 0.01) { // Only log occasionally to avoid spam
+      GameDebugger.logEvent(
+        'Collision', 
+        'Checking collisions', 
+        `Player at (${playerPos.x.toFixed(1)}, ${playerPos.z.toFixed(1)}) with radius ${collisionRadius.toFixed(2)}`
+      );
+    }
     
     // Optimize food collision checks with spatial partitioning
     for (let i = 0; i < foodsRef.current.length; i++) {

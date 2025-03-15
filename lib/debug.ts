@@ -11,6 +11,7 @@ export interface DebugConfig {
   trackPerformance: boolean;
   verboseErrors: boolean;
   captureStateChanges: boolean;
+  fileLogging: boolean;
 }
 
 // Game metrics interface
@@ -44,6 +45,14 @@ export interface StateChange {
   timestamp: number;
 }
 
+// Log entry interface
+interface LogEntry {
+  timestamp: string;
+  category: string;
+  message: string;
+  details?: string;
+}
+
 // Event subscriber type
 type Subscriber<T> = (data: T) => void;
 
@@ -55,7 +64,8 @@ class GameDebugger {
     logToConsole: true,
     trackPerformance: true,
     verboseErrors: true,
-    captureStateChanges: true
+    captureStateChanges: true,
+    fileLogging: true
   };
 
   private metrics: GameMetrics = {
@@ -76,6 +86,90 @@ class GameDebugger {
   private frameTimeHistory: number[] = [];
   private errorSubscribers: Subscriber<DebugError[]>[] = [];
   private stateSubscribers: Subscriber<StateChange[]>[] = [];
+  private sessionId: string;
+  private pendingLogs: LogEntry[] = [];
+  private lastLogSend: number = 0;
+  private logSendThrottle: number = 5000; // 5 seconds between log sends
+  private maxPendingLogs: number = 50; // Maximum number of pending logs before forcing a send
+  
+  constructor() {
+    // Generate a unique session ID
+    this.sessionId = `session-${new Date().toISOString().replace(/[:.]/g, '-')}`;
+    
+    // Initialize session
+    this.initSession();
+    
+    // Set up periodic flushing of logs
+    if (typeof window !== 'undefined') {
+      // Only set interval in browser environment
+      setInterval(() => this.flushLogs(), 10000); // Flush logs every 10 seconds
+      
+      // Also flush logs when page is about to unload
+      window.addEventListener('beforeunload', () => {
+        this.flushLogs();
+      });
+    }
+  }
+
+  private initSession() {
+    this.addLogEntry('System', 'Session started', `SessionID: ${this.sessionId}`);
+    
+    // Log browser info if available
+    if (typeof navigator !== 'undefined') {
+      const browserInfo = this.getBrowserInfo();
+      this.addLogEntry('System', 'Browser info', JSON.stringify(browserInfo));
+    }
+  }
+
+  private addLogEntry(category: string, message: string, details?: string) {
+    if (!this.config.enabled || !this.config.fileLogging) return;
+    
+    const logEntry: LogEntry = {
+      timestamp: new Date().toISOString(),
+      category,
+      message,
+      details
+    };
+    
+    // Add to pending logs
+    this.pendingLogs.push(logEntry);
+    
+    // Check if we should send logs now based on quantity or time
+    const now = Date.now();
+    if (this.pendingLogs.length >= this.maxPendingLogs || now - this.lastLogSend > this.logSendThrottle) {
+      this.flushLogs();
+    }
+  }
+
+  // Send logs to the server API
+  public flushLogs(): void {
+    if (!this.config.fileLogging || this.pendingLogs.length === 0) return;
+    
+    try {
+      // Clone and clear pending logs before sending
+      const logsToSend = [...this.pendingLogs];
+      this.pendingLogs = [];
+      this.lastLogSend = Date.now();
+      
+      // Don't use await here to make call non-blocking
+      fetch('/api/debug', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          sessionId: this.sessionId,
+          entries: logsToSend
+        }),
+      }).catch(error => {
+        console.error('Failed to send logs to server:', error);
+        // Put logs back in queue if send failed
+        this.pendingLogs.unshift(...logsToSend);
+      });
+    } catch (error) {
+      console.error('Error preparing logs for sending:', error);
+    }
+  }
 
   // Config management
   public getConfig(): DebugConfig {
@@ -84,6 +178,10 @@ class GameDebugger {
 
   public setConfig(newConfig: Partial<DebugConfig>): DebugConfig {
     this.config = { ...this.config, ...newConfig };
+    
+    // Log config changes
+    this.logEvent('Config', 'Configuration changed', JSON.stringify(this.config));
+    
     return this.config;
   }
 
@@ -106,6 +204,11 @@ class GameDebugger {
     if (!this.config.enabled || !this.config.trackPerformance) return;
     
     this.metrics.fps = fps;
+    
+    // Log significant FPS changes (avoid spamming the log)
+    if (fps < 30 && fps % 5 === 0) {
+      this.logEvent('Performance', 'Low FPS detected', `${fps} FPS`);
+    }
   }
 
   // Frame time tracking
@@ -161,6 +264,9 @@ class GameDebugger {
     if (this.config.logToConsole) {
       console.error(`[GameDebugger] Error in ${componentName}:`, error);
     }
+    
+    // Write to log file
+    this.logEvent('Error', `Error in ${componentName}`, error.message, error.stack);
   }
 
   // State change tracking
@@ -188,6 +294,23 @@ class GameDebugger {
     // Log to console if enabled
     if (this.config.logToConsole) {
       console.log(`[GameDebugger] State change in ${component}.${property}:`, oldValue, '->', newValue);
+    }
+    
+    // Log significant state changes
+    this.logEvent('StateChange', `${component}.${property} changed`, 
+                  `${JSON.stringify(oldValue)} -> ${JSON.stringify(newValue)}`);
+  }
+
+  // General event logging
+  public logEvent(category: string, title: string, details?: string, extraData?: any): void {
+    if (!this.config.enabled) return;
+    
+    // Add to log entries
+    this.addLogEntry(category, title, details);
+    
+    // Also log to console if enabled
+    if (this.config.logToConsole) {
+      console.log(`[GameDebugger] ${category}: ${title}${details ? ` - ${details}` : ''}`);
     }
   }
 
@@ -217,8 +340,9 @@ class GameDebugger {
 
   // Generate a complete debug report
   public generateDebugReport(): any {
-    return {
+    const report = {
       timestamp: new Date().toISOString(),
+      sessionId: this.sessionId,
       config: this.getConfig(),
       metrics: this.getMetrics(),
       errors: [...this.errors],
@@ -226,6 +350,29 @@ class GameDebugger {
       frameTimeAnalysis: this.analyzeFrameTimes(),
       browserInfo: this.getBrowserInfo()
     };
+    
+    // Log report generation
+    this.logEvent('System', 'Debug report generated', 
+                  `Generated at ${new Date().toLocaleString()} with ${this.errors.length} errors recorded`);
+    
+    return report;
+  }
+
+  // Save metrics snapshot to log file
+  public logMetricsSnapshot(): void {
+    if (!this.config.enabled) return;
+    
+    const metrics = this.getMetrics();
+    
+    let metricsDetails = `FPS: ${metrics.fps}, `;
+    metricsDetails += `Frame Time: ${metrics.frameTime.toFixed(2)}ms (min: ${metrics.minFrameTime.toFixed(2)}ms, max: ${metrics.maxFrameTime.toFixed(2)}ms), `;
+    metricsDetails += `Memory: ${Math.round(metrics.memoryUsage)}MB, `;
+    metricsDetails += `Objects: ${metrics.playerCount} players, ${metrics.foodCount} food items`;
+    if (metrics.ping) {
+      metricsDetails += `, Network: ${metrics.ping}ms ping, ${metrics.packetsReceived} packets received`;
+    }
+    
+    this.addLogEntry('Metrics', 'Performance Snapshot', metricsDetails);
   }
 
   // Analyze frame time performance
@@ -302,6 +449,21 @@ class GameDebugger {
     // Notify subscribers
     this.errorSubscribers.forEach(subscriber => subscriber([]));
     this.stateSubscribers.forEach(subscriber => subscriber([]));
+    
+    // Log data clear
+    this.logEvent('System', 'Debug data cleared', 'All collected metrics and errors have been reset');
+  }
+  
+  // Fetch the logs from the server
+  public async fetchLogs(): Promise<string> {
+    try {
+      const response = await fetch('/api/debug');
+      const data = await response.json();
+      return data.logs || 'No logs available';
+    } catch (error) {
+      console.error('Failed to fetch logs:', error);
+      return `Error fetching logs: ${(error as Error).message}`;
+    }
   }
 }
 
