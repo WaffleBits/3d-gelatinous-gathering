@@ -1,21 +1,6 @@
-import fs from 'fs';
-import path from 'path';
+"use client";
+
 import { format } from 'date-fns';
-
-// Define directory for logs
-const LOG_DIR = path.join(process.cwd(), 'debug-logs');
-const LOG_FILE = path.join(LOG_DIR, 'game-log.txt');
-
-// Ensure log directory exists
-try {
-  if (typeof window === 'undefined') { // Only run on server
-    if (!fs.existsSync(LOG_DIR)) {
-      fs.mkdirSync(LOG_DIR, { recursive: true });
-    }
-  }
-} catch (error) {
-  console.error('Failed to create log directory:', error);
-}
 
 // Game metrics interface
 interface GameMetrics {
@@ -179,32 +164,27 @@ class GameDebuggerClass {
     // Log to console
     console.log(logEntry);
     
-    // Store in browser logs if client-side
-    if (typeof window !== 'undefined') {
-      this.browserLogs.push(logEntry);
-      
-      // Trim logs if they get too large
-      if (this.browserLogs.length > this.maxBrowserLogs) {
-        this.browserLogs = this.browserLogs.slice(-this.maxBrowserLogs);
-      }
-      
-      // Save to localStorage for persistence
-      try {
-        localStorage.setItem('game-debug-logs', JSON.stringify(this.browserLogs.slice(-100)));
-      } catch (e) {
-        console.warn('Failed to save logs to localStorage:', e);
-      }
-      
-      // Send to server API if possible
-      this.sendLogToServer(category, action, details).catch(e => {
-        console.warn('Failed to send log to server:', e);
-      });
-      
-      return;
+    // Store in browser logs
+    this.browserLogs.push(logEntry);
+    
+    // Trim logs if they get too large
+    if (this.browserLogs.length > this.maxBrowserLogs) {
+      this.browserLogs = this.browserLogs.slice(-this.maxBrowserLogs);
     }
     
-    // Log to file if server-side
-    this.writeToLogFile(logEntry);
+    // Save to localStorage for persistence
+    try {
+      if (typeof localStorage !== 'undefined') {
+        localStorage.setItem('game-debug-logs', JSON.stringify(this.browserLogs.slice(-100)));
+      }
+    } catch (e) {
+      console.warn('Failed to save logs to localStorage:', e);
+    }
+    
+    // Send to server API if possible
+    this.sendLogToServer(category, action, details).catch(e => {
+      console.warn('Failed to send log to server:', e);
+    });
   }
   
   /**
@@ -279,19 +259,6 @@ class GameDebuggerClass {
     
     // Reset collision counter after logging
     this.collisionCount = 0;
-  }
-  
-  /**
-   * Write to log file (server-side only)
-   */
-  private writeToLogFile(logEntry: string): void {
-    if (typeof window !== 'undefined') return;
-    
-    try {
-      fs.appendFileSync(LOG_FILE, logEntry + '\n');
-    } catch (error) {
-      console.error('Failed to write to log file:', error);
-    }
   }
   
   /**

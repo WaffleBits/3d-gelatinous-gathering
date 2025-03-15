@@ -6,18 +6,36 @@ import { format } from 'date-fns';
 const LOG_DIR = path.join(process.cwd(), 'debug-logs');
 const LOG_FILE = path.join(LOG_DIR, 'game-log.txt');
 
-// Ensure log directory exists
-try {
-  if (!fs.existsSync(LOG_DIR)) {
-    fs.mkdirSync(LOG_DIR, { recursive: true });
+// Function to ensure log directory and file exist
+function ensureLogFileExists(): void {
+  try {
+    // Create directory if it doesn't exist
+    if (!fs.existsSync(LOG_DIR)) {
+      fs.mkdirSync(LOG_DIR, { recursive: true });
+      console.log(`Created log directory: ${LOG_DIR}`);
+    }
+    
+    // Create empty log file if it doesn't exist
+    if (!fs.existsSync(LOG_FILE)) {
+      const timestamp = format(new Date(), 'yyyy-MM-dd HH:mm:ss.SSS');
+      const initialEntry = `[${timestamp}] [System] Initialization: Log file created`;
+      fs.writeFileSync(LOG_FILE, initialEntry + '\n');
+      console.log(`Created log file: ${LOG_FILE}`);
+    }
+  } catch (error) {
+    console.error('Failed to create log directory or file:', error);
   }
-} catch (error) {
-  console.error('Failed to create log directory:', error);
 }
+
+// Ensure log infrastructure exists when the API route is loaded
+ensureLogFileExists();
 
 // Function to write log entry
 function writeLog(logEntry: string): void {
   try {
+    // Ensure log directory and file exist before writing
+    ensureLogFileExists();
+    
     fs.appendFileSync(LOG_FILE, logEntry + '\n');
   } catch (error) {
     console.error('Failed to write to log file:', error);
@@ -27,9 +45,8 @@ function writeLog(logEntry: string): void {
 // Function to read logs
 function readLogs(limit = 100, filter?: string): string[] {
   try {
-    if (!fs.existsSync(LOG_FILE)) {
-      return [];
-    }
+    // Ensure log file exists before reading
+    ensureLogFileExists();
     
     const content = fs.readFileSync(LOG_FILE, 'utf-8');
     const lines = content.split('\n').filter(line => line.trim().length > 0);
@@ -89,9 +106,12 @@ export async function GET(request: NextRequest) {
 // DELETE handler - clear logs
 export async function DELETE(request: NextRequest) {
   try {
-    if (fs.existsSync(LOG_FILE)) {
-      fs.writeFileSync(LOG_FILE, '');
-    }
+    ensureLogFileExists();
+    
+    // Clear log file by writing an empty file with initialization message
+    const timestamp = format(new Date(), 'yyyy-MM-dd HH:mm:ss.SSS');
+    const initialEntry = `[${timestamp}] [System] Clear: Log file cleared`;
+    fs.writeFileSync(LOG_FILE, initialEntry + '\n');
     
     return NextResponse.json({ success: true });
   } catch (error) {

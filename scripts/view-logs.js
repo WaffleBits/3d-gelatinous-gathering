@@ -99,15 +99,42 @@ Examples:
   process.exit(0);
 }
 
+// Function to ensure the log directory and file exist
+function ensureLogFileExists() {
+  try {
+    // Create the directory if it doesn't exist
+    if (!fs.existsSync(LOG_DIR)) {
+      fs.mkdirSync(LOG_DIR, { recursive: true });
+      console.log(`${colors.fg.green}Created log directory: ${LOG_DIR}${colors.reset}`);
+    }
+    
+    // Create an empty log file with timestamp if it doesn't exist
+    if (!fs.existsSync(LOG_FILE)) {
+      const timestamp = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
+      const initialEntry = `[${timestamp}] [System] Initialization: Log file created by view-logs.js`;
+      fs.writeFileSync(LOG_FILE, initialEntry + '\n');
+      console.log(`${colors.fg.green}Created new log file: ${LOG_FILE}${colors.reset}`);
+    }
+    
+    return true;
+  } catch (error) {
+    console.error(`${colors.fg.red}Error ensuring log file exists: ${error.message}${colors.reset}`);
+    return false;
+  }
+}
+
 // Clear logs
 if (options.clear) {
   try {
-    if (fs.existsSync(LOG_FILE)) {
-      fs.writeFileSync(LOG_FILE, '');
-      console.log(`${colors.fg.green}✓ Log file cleared${colors.reset}`);
-    } else {
-      console.log(`${colors.fg.yellow}! Log file doesn't exist${colors.reset}`);
-    }
+    // Ensure directory exists
+    ensureLogFileExists();
+    
+    // Clear the log file with an initialization message
+    const timestamp = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
+    const initialEntry = `[${timestamp}] [System] Clear: Log file cleared by view-logs.js`;
+    fs.writeFileSync(LOG_FILE, initialEntry + '\n');
+    
+    console.log(`${colors.fg.green}✓ Log file cleared${colors.reset}`);
   } catch (error) {
     console.error(`${colors.fg.red}Error clearing logs: ${error.message}${colors.reset}`);
   }
@@ -117,10 +144,9 @@ if (options.clear) {
   }
 }
 
-// Check if log file exists
-if (!fs.existsSync(LOG_FILE)) {
-  console.error(`${colors.fg.red}Error: Log file not found at ${LOG_FILE}${colors.reset}`);
-  console.log(`Run the game first to generate logs, or check the path configuration.`);
+// Ensure log file exists before trying to read it
+if (!ensureLogFileExists()) {
+  console.error(`${colors.fg.red}Unable to access or create the log file. Check permissions.${colors.reset}`);
   process.exit(1);
 }
 
@@ -172,6 +198,10 @@ function colorizeLog(log) {
 function displayLogs() {
   try {
     console.clear();
+    
+    // Make sure the log file exists
+    ensureLogFileExists();
+    
     let content = fs.readFileSync(LOG_FILE, 'utf-8');
     let lines = content.split('\n').filter(line => line.trim().length > 0);
     
@@ -221,6 +251,9 @@ if (options.watch) {
   // Set up interval to check for changes
   setInterval(() => {
     try {
+      // Make sure file exists
+      ensureLogFileExists();
+      
       const stats = fs.statSync(LOG_FILE);
       if (stats.size !== lastSize) {
         lastSize = stats.size;
