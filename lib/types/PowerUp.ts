@@ -5,5 +5,4 @@ export interface PowerUpItem {
   position: [number, number, number]
   type: PowerUpType
   duration?: number
-}
-
+} 

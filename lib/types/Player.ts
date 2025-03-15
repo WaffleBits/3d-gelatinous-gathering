@@ -7,5 +7,4 @@ export interface Player {
   score?: number
   skin?: number
   isBot?: boolean
-}
-
+} 

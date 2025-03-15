@@ -19,5 +19,4 @@ export function calculateSize(score: number): number {
 // Calculate speed based on size (larger = slower)
 export function calculateSpeed(size: number): number {
   return 0.1 / (1 + size * 0.05)
-}
-
+} 
