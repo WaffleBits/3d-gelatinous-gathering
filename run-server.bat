@@ -1,0 +1,3 @@
+@echo off
+echo Starting multiplayer server...
+node server.js 

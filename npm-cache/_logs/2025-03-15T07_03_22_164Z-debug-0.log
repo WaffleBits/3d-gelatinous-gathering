@@ -1,0 +1,240 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.2.4
+2 info using node@v20.11.1
+3 timing npm:load:whichnode Completed in 1ms
+4 timing config:load:defaults Completed in 3ms
+5 timing config:load:file:C:\Program Files\nodejs\node_modules\npm\npmrc Completed in 4ms
+6 timing config:load:builtin Completed in 6ms
+7 timing config:load:cli Completed in 3ms
+8 timing config:load:env Completed in 0ms
+9 timing config:load:file:C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\.npmrc Completed in 0ms
+10 timing config:load:project Completed in 3ms
+11 timing config:load:file:C:\Users\adnan\.npmrc Completed in 1ms
+12 timing config:load:user Completed in 1ms
+13 timing config:load:file:C:\Users\adnan\AppData\Roaming\npm\etc\npmrc Completed in 1ms
+14 timing config:load:global Completed in 1ms
+15 timing config:load:setEnvs Completed in 1ms
+16 timing config:load Completed in 19ms
+17 timing npm:load:configload Completed in 19ms
+18 timing config:load:flatten Completed in 3ms
+19 timing npm:load:mkdirpcache Completed in 0ms
+20 timing npm:load:mkdirplogs Completed in 1ms
+21 verbose title npm install uuid socket.io
+22 verbose argv "install" "uuid" "socket.io"
+23 timing npm:load:setTitle Completed in 1ms
+24 timing npm:load:display Completed in 1ms
+25 verbose logfile logs-max:10 dir:C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\npm-cache\_logs\2025-03-15T07_03_22_164Z-
+26 verbose logfile C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\npm-cache\_logs\2025-03-15T07_03_22_164Z-debug-0.log
+27 timing npm:load:logFile Completed in 14ms
+28 timing npm:load:timers Completed in 0ms
+29 timing npm:load:configScope Completed in 0ms
+30 timing npm:load Completed in 75ms
+31 timing arborist:ctor Completed in 1ms
+32 silly logfile done cleaning log files
+33 timing idealTree:init Completed in 734ms
+34 timing idealTree:userRequests Completed in 2ms
+35 silly idealTree buildDeps
+36 silly fetch manifest socket.io@^4.8.1
+37 timing arborist:ctor Completed in 0ms
+38 http fetch GET 200 https://registry.npmjs.org/socket.io 518ms (cache miss)
+39 silly fetch manifest uuid@^11.1.0
+40 http fetch GET 200 https://registry.npmjs.org/uuid 31ms (cache miss)
+41 silly placeDep ROOT socket.io@4.8.1 REPLACE for: my-v0-project@0.1.0 want: ^4.8.1
+42 silly placeDep ROOT uuid@11.1.0 REPLACE for: my-v0-project@0.1.0 want: ^11.1.0
+43 timing idealTree:#root Completed in 582ms
+44 silly fetch manifest @babel/preset-env@^7.1.6
+45 http fetch GET 200 https://registry.npmjs.org/@babel%2fpreset-env 59ms (cache miss)
+46 silly fetch manifest @babel/core@^7.0.0-0
+47 http fetch GET 200 https://registry.npmjs.org/@babel%2fcore 70ms (cache miss)
+48 silly placeDep ROOT @babel/preset-env@7.26.9 OK for: @react-native/codegen@0.76.7 want: ^7.1.6
+49 silly fetch manifest semver@^6.3.1
+50 silly fetch manifest @babel/preset-modules@0.1.6-no-external-plugins
+51 silly fetch manifest @babel/plugin-transform-new-target@^7.25.9
+52 silly fetch manifest @babel/plugin-transform-modules-amd@^7.25.9
+53 silly fetch manifest @babel/plugin-transform-modules-umd@^7.25.9
+54 silly fetch manifest @babel/plugin-transform-dotall-regex@^7.25.9
+55 silly fetch manifest @babel/plugin-transform-json-strings@^7.25.9
+56 silly fetch manifest @babel/plugin-transform-object-super@^7.25.9
+57 silly fetch manifest @babel/plugin-transform-typeof-symbol@^7.26.7
+58 silly fetch manifest @babel/plugin-syntax-import-assertions@^7.26.0
+59 silly fetch manifest @babel/plugin-transform-duplicate-keys@^7.25.9
+60 silly fetch manifest @babel/plugin-transform-dynamic-import@^7.25.9
+61 silly fetch manifest @babel/plugin-transform-reserved-words@^7.25.9
+62 silly fetch manifest @babel/plugin-syntax-unicode-sets-regex@^7.18.6
+63 silly fetch manifest @babel/plugin-transform-unicode-escapes@^7.25.9
+64 silly fetch manifest @babel/plugin-transform-modules-systemjs@^7.25.9
+65 silly fetch manifest @babel/plugin-transform-regexp-modifiers@^7.26.0
+66 silly fetch manifest @babel/plugin-transform-property-literals@^7.25.9
+67 silly fetch manifest @babel/plugin-transform-template-literals@^7.26.8
+68 silly fetch manifest @babel/plugin-transform-class-static-block@^7.26.0
+69 silly fetch manifest @babel/plugin-transform-unicode-sets-regex@^7.25.9
+70 silly fetch manifest @babel/plugin-transform-block-scoped-functions@^7.26.5
+71 silly fetch manifest @babel/plugin-transform-unicode-property-regex@^7.25.9
+72 silly fetch manifest @babel/plugin-transform-exponentiation-operator@^7.26.3
+73 silly fetch manifest @babel/plugin-proposal-private-property-in-object@7.21.0-placeholder-for-preset-env.2
+74 silly fetch manifest @babel/plugin-transform-member-expression-literals@^7.25.9
+75 silly fetch manifest @babel/plugin-bugfix-firefox-class-in-computed-class-key@^7.25.9
+76 silly fetch manifest @babel/plugin-bugfix-safari-class-field-initializer-scope@^7.25.9
+77 silly fetch manifest @babel/plugin-bugfix-v8-static-class-fields-redefine-readonly@^7.25.9
+78 silly fetch manifest @babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining@^7.25.9
+79 silly fetch manifest @babel/plugin-transform-duplicate-named-capturing-groups-regex@^7.25.9
+80 silly fetch manifest @babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression@^7.25.9
+81 http fetch GET 200 https://registry.npmjs.org/semver 392ms (cache miss)
+82 http fetch GET 200 https://registry.npmjs.org/@babel%2fpreset-modules 412ms (cache miss)
+83 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-json-strings 412ms (cache miss)
+84 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-bugfix-firefox-class-in-computed-class-key 394ms (cache miss)
+85 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-syntax-unicode-sets-regex 411ms (cache miss)
+86 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-bugfix-safari-class-field-initializer-scope 398ms (cache miss)
+87 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-bugfix-v8-static-class-fields-redefine-readonly 406ms (cache miss)
+88 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-dynamic-import 425ms (cache miss)
+89 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-unicode-sets-regex 418ms (cache miss)
+90 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-bugfix-v8-spread-parameters-in-optional-chaining 418ms (cache miss)
+91 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-proposal-private-property-in-object 426ms (cache miss)
+92 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-unicode-escapes 441ms (cache miss)
+93 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-regexp-modifiers 445ms (cache miss)
+94 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-duplicate-named-capturing-groups-regex 430ms (cache miss)
+95 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-unicode-property-regex 444ms (cache miss)
+96 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-new-target 462ms (cache miss)
+97 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-object-super 462ms (cache miss)
+98 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-class-static-block 455ms (cache miss)
+99 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-dotall-regex 468ms (cache miss)
+100 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-duplicate-keys 467ms (cache miss)
+101 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-block-scoped-functions 462ms (cache miss)
+102 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-modules-umd 478ms (cache miss)
+103 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-syntax-import-assertions 478ms (cache miss)
+104 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-bugfix-safari-id-destructuring-collision-in-function-expression 457ms (cache miss)
+105 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-typeof-symbol 482ms (cache miss)
+106 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-template-literals 477ms (cache miss)
+107 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-modules-amd 488ms (cache miss)
+108 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-member-expression-literals 472ms (cache miss)
+109 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-exponentiation-operator 477ms (cache miss)
+110 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-reserved-words 491ms (cache miss)
+111 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-property-literals 491ms (cache miss)
+112 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-modules-systemjs 494ms (cache miss)
+113 timing idealTree:node_modules/@react-native/codegen Completed in 666ms
+114 silly placeDep ROOT @babel/plugin-bugfix-firefox-class-in-computed-class-key@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+115 silly placeDep ROOT @babel/plugin-bugfix-safari-class-field-initializer-scope@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+116 silly placeDep ROOT @babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+117 silly placeDep ROOT @babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+118 silly placeDep ROOT @babel/plugin-bugfix-v8-static-class-fields-redefine-readonly@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+119 silly placeDep ROOT @babel/plugin-proposal-private-property-in-object@7.21.0-placeholder-for-preset-env.2 OK for: @babel/preset-env@7.26.9 want: 7.21.0-placeholder-for-preset-env.2
+120 silly placeDep ROOT @babel/plugin-syntax-import-assertions@7.26.0 OK for: @babel/preset-env@7.26.9 want: ^7.26.0
+121 silly placeDep ROOT @babel/plugin-syntax-unicode-sets-regex@7.18.6 OK for: @babel/preset-env@7.26.9 want: ^7.18.6
+122 silly placeDep ROOT @babel/plugin-transform-block-scoped-functions@7.26.5 OK for: @babel/preset-env@7.26.9 want: ^7.26.5
+123 silly placeDep ROOT @babel/plugin-transform-class-static-block@7.26.0 OK for: @babel/preset-env@7.26.9 want: ^7.26.0
+124 silly placeDep ROOT @babel/plugin-transform-dotall-regex@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+125 silly placeDep ROOT @babel/plugin-transform-duplicate-keys@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+126 silly placeDep ROOT @babel/plugin-transform-duplicate-named-capturing-groups-regex@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+127 silly placeDep ROOT @babel/plugin-transform-dynamic-import@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+128 silly placeDep ROOT @babel/plugin-transform-exponentiation-operator@7.26.3 OK for: @babel/preset-env@7.26.9 want: ^7.26.3
+129 silly placeDep ROOT @babel/plugin-transform-json-strings@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+130 silly placeDep ROOT @babel/plugin-transform-member-expression-literals@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+131 silly placeDep ROOT @babel/plugin-transform-modules-amd@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+132 silly placeDep ROOT @babel/plugin-transform-modules-systemjs@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+133 silly placeDep ROOT @babel/plugin-transform-modules-umd@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+134 silly placeDep ROOT @babel/plugin-transform-new-target@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+135 silly placeDep ROOT @babel/plugin-transform-object-super@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+136 silly placeDep ROOT @babel/plugin-transform-property-literals@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+137 silly placeDep ROOT @babel/plugin-transform-regexp-modifiers@7.26.0 OK for: @babel/preset-env@7.26.9 want: ^7.26.0
+138 silly placeDep ROOT @babel/plugin-transform-reserved-words@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+139 silly placeDep ROOT @babel/plugin-transform-template-literals@7.26.8 OK for: @babel/preset-env@7.26.9 want: ^7.26.8
+140 silly placeDep ROOT @babel/plugin-transform-typeof-symbol@7.26.7 OK for: @babel/preset-env@7.26.9 want: ^7.26.7
+141 silly placeDep ROOT @babel/plugin-transform-unicode-escapes@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+142 silly placeDep ROOT @babel/plugin-transform-unicode-property-regex@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+143 silly placeDep ROOT @babel/plugin-transform-unicode-sets-regex@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+144 silly placeDep ROOT @babel/preset-modules@0.1.6-no-external-plugins OK for: @babel/preset-env@7.26.9 want: 0.1.6-no-external-plugins
+145 silly fetch manifest esutils@^2.0.2
+146 silly placeDep node_modules/@babel/preset-env semver@6.3.1 OK for: @babel/preset-env@7.26.9 want: ^6.3.1
+147 http fetch GET 200 https://registry.npmjs.org/esutils 33ms (cache miss)
+148 timing idealTree:node_modules/@babel/preset-env Completed in 191ms
+149 timing idealTree:node_modules/@babel/plugin-bugfix-firefox-class-in-computed-class-key Completed in 0ms
+150 timing idealTree:node_modules/@babel/plugin-bugfix-safari-class-field-initializer-scope Completed in 0ms
+151 timing idealTree:node_modules/@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression Completed in 0ms
+152 timing idealTree:node_modules/@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining Completed in 0ms
+153 timing idealTree:node_modules/@babel/plugin-bugfix-v8-static-class-fields-redefine-readonly Completed in 0ms
+154 timing idealTree:node_modules/@babel/plugin-proposal-private-property-in-object Completed in 0ms
+155 timing idealTree:node_modules/@babel/plugin-syntax-import-assertions Completed in 0ms
+156 timing idealTree:node_modules/@babel/plugin-syntax-unicode-sets-regex Completed in 0ms
+157 timing idealTree:node_modules/@babel/plugin-transform-block-scoped-functions Completed in 0ms
+158 timing idealTree:node_modules/@babel/plugin-transform-class-static-block Completed in 0ms
+159 timing idealTree:node_modules/@babel/plugin-transform-dotall-regex Completed in 0ms
+160 timing idealTree:node_modules/@babel/plugin-transform-duplicate-keys Completed in 0ms
+161 timing idealTree:node_modules/@babel/plugin-transform-duplicate-named-capturing-groups-regex Completed in 0ms
+162 timing idealTree:node_modules/@babel/plugin-transform-dynamic-import Completed in 0ms
+163 timing idealTree:node_modules/@babel/plugin-transform-exponentiation-operator Completed in 0ms
+164 timing idealTree:node_modules/@babel/plugin-transform-json-strings Completed in 0ms
+165 timing idealTree:node_modules/@babel/plugin-transform-member-expression-literals Completed in 0ms
+166 timing idealTree:node_modules/@babel/plugin-transform-modules-amd Completed in 0ms
+167 timing idealTree:node_modules/@babel/plugin-transform-modules-systemjs Completed in 0ms
+168 timing idealTree:node_modules/@babel/plugin-transform-modules-umd Completed in 0ms
+169 timing idealTree:node_modules/@babel/plugin-transform-new-target Completed in 0ms
+170 timing idealTree:node_modules/@babel/plugin-transform-object-super Completed in 0ms
+171 timing idealTree:node_modules/@babel/plugin-transform-property-literals Completed in 0ms
+172 timing idealTree:node_modules/@babel/plugin-transform-regexp-modifiers Completed in 0ms
+173 timing idealTree:node_modules/@babel/plugin-transform-reserved-words Completed in 0ms
+174 timing idealTree:node_modules/@babel/plugin-transform-template-literals Completed in 0ms
+175 timing idealTree:node_modules/@babel/plugin-transform-typeof-symbol Completed in 0ms
+176 timing idealTree:node_modules/@babel/plugin-transform-unicode-escapes Completed in 0ms
+177 timing idealTree:node_modules/@babel/plugin-transform-unicode-property-regex Completed in 0ms
+178 timing idealTree:node_modules/@babel/plugin-transform-unicode-sets-regex Completed in 0ms
+179 silly placeDep ROOT esutils@2.0.3 OK for: @babel/preset-modules@0.1.6-no-external-plugins want: ^2.0.2
+180 timing idealTree:node_modules/@babel/preset-modules Completed in 3ms
+181 timing idealTree:node_modules/esutils Completed in 0ms
+182 silly fetch manifest fsevents@^2.3.2
+183 http fetch GET 200 https://registry.npmjs.org/fsevents 32ms (cache miss)
+184 silly placeDep node_modules/jest-haste-map fsevents@2.3.3 OK for: jest-haste-map@29.7.0 want: ^2.3.2
+185 timing idealTree:node_modules/jest-haste-map Completed in 36ms
+186 timing idealTree:node_modules/jscodeshift Completed in 5ms
+187 silly fetch manifest date-fns@^2.28.0 || ^3.0.0
+188 http fetch GET 200 https://registry.npmjs.org/date-fns 45ms (cache miss)
+189 silly fetch manifest react@^16.8.0 || ^17.0.0 || ^18.0.0
+190 http fetch GET 200 https://registry.npmjs.org/react 136ms (cache miss)
+191 timing idealTree Completed in 2478ms
+192 timing command:install Completed in 2492ms
+193 verbose stack Error: could not resolve
+193 verbose stack     at PlaceDep.failPeerConflict (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\place-dep.js:503:25)
+193 verbose stack     at new PlaceDep (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\place-dep.js:157:21)
+193 verbose stack     at #buildDepStep (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:933:18)
+193 verbose stack     at async Arborist.buildIdealTree (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:196:7)
+193 verbose stack     at async Promise.all (index 1)
+193 verbose stack     at async Arborist.reify (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\reify.js:159:5)
+193 verbose stack     at async Install.exec (C:\Program Files\nodejs\node_modules\npm\lib\commands\install.js:152:5)
+193 verbose stack     at async module.exports (C:\Program Files\nodejs\node_modules\npm\lib\cli-entry.js:61:5)
+194 verbose cwd C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario
+195 verbose Windows_NT 10.0.22631
+196 verbose node v20.11.1
+197 verbose npm  v10.2.4
+198 error code ERESOLVE
+199 error ERESOLVE could not resolve
+200 error
+201 error While resolving: [1mreact-day-picker[22m@[1m8.10.1[22m
+201 error Found: [1mdate-fns[22m@[1m4.1.0[22m[2m[22m
+201 error [2mnode_modules/date-fns[22m
+201 error   [1mdate-fns[22m@"[1m4.1.0[22m" from the root project
+201 error
+201 error Could not resolve dependency:
+201 error [35mpeer[39m [1mdate-fns[22m@"[1m^2.28.0 || ^3.0.0[22m" from [1mreact-day-picker[22m@[1m8.10.1[22m[2m[22m
+201 error [2mnode_modules/react-day-picker[22m
+201 error   [1mreact-day-picker[22m@"[1m8.10.1[22m" from the root project
+201 error
+201 error Conflicting peer dependency: [1mdate-fns[22m@[1m3.6.0[22m[2m[22m
+201 error [2mnode_modules/date-fns[22m
+201 error   [35mpeer[39m [1mdate-fns[22m@"[1m^2.28.0 || ^3.0.0[22m" from [1mreact-day-picker[22m@[1m8.10.1[22m[2m[22m
+201 error   [2mnode_modules/react-day-picker[22m
+201 error     [1mreact-day-picker[22m@"[1m8.10.1[22m" from the root project
+201 error
+201 error Fix the upstream dependency conflict, or retry
+201 error this command with --force or --legacy-peer-deps
+201 error to accept an incorrect (and potentially broken) dependency resolution.
+202 error
+202 error
+202 error For a full report see:
+202 error C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\npm-cache\_logs\2025-03-15T07_03_22_164Z-eresolve-report.txt
+203 verbose exit 1
+204 timing npm Completed in 3018ms
+205 verbose unfinished npm timer reify 1742022202676
+206 verbose unfinished npm timer reify:loadTrees 1742022202683
+207 verbose unfinished npm timer idealTree:buildDeps 1742022203420
+208 verbose unfinished npm timer idealTree:node_modules/react-day-picker 1742022204907
+209 verbose code 1
+210 error A complete log of this run can be found in: C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\npm-cache\_logs\2025-03-15T07_03_22_164Z-debug-0.log

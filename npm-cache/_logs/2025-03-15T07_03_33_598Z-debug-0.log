@@ -1,0 +1,1965 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.2.4
+2 info using node@v20.11.1
+3 timing npm:load:whichnode Completed in 2ms
+4 timing config:load:defaults Completed in 3ms
+5 timing config:load:file:C:\Program Files\nodejs\node_modules\npm\npmrc Completed in 5ms
+6 timing config:load:builtin Completed in 5ms
+7 timing config:load:cli Completed in 4ms
+8 timing config:load:env Completed in 1ms
+9 timing config:load:file:C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\.npmrc Completed in 1ms
+10 timing config:load:project Completed in 4ms
+11 timing config:load:file:C:\Users\adnan\.npmrc Completed in 0ms
+12 timing config:load:user Completed in 0ms
+13 timing config:load:file:C:\Users\adnan\AppData\Roaming\npm\etc\npmrc Completed in 1ms
+14 timing config:load:global Completed in 1ms
+15 timing config:load:setEnvs Completed in 1ms
+16 timing config:load Completed in 20ms
+17 timing npm:load:configload Completed in 20ms
+18 timing config:load:flatten Completed in 3ms
+19 timing npm:load:mkdirpcache Completed in 1ms
+20 timing npm:load:mkdirplogs Completed in 0ms
+21 verbose title npm install uuid socket.io
+22 verbose argv "install" "uuid" "socket.io" "--save" "--force"
+23 timing npm:load:setTitle Completed in 1ms
+24 timing npm:load:display Completed in 0ms
+25 verbose logfile logs-max:10 dir:C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\npm-cache\_logs\2025-03-15T07_03_33_598Z-
+26 verbose logfile C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\npm-cache\_logs\2025-03-15T07_03_33_598Z-debug-0.log
+27 timing npm:load:logFile Completed in 12ms
+28 timing npm:load:timers Completed in 0ms
+29 timing npm:load:configScope Completed in 0ms
+30 warn using --force Recommended protections disabled.
+31 timing npm:load Completed in 75ms
+32 timing arborist:ctor Completed in 1ms
+33 silly logfile done cleaning log files
+34 timing idealTree:init Completed in 733ms
+35 timing idealTree:userRequests Completed in 1ms
+36 silly idealTree buildDeps
+37 silly fetch manifest socket.io@^4.8.1
+38 timing arborist:ctor Completed in 0ms
+39 http fetch GET 200 https://registry.npmjs.org/socket.io 423ms (cache hit)
+40 silly fetch manifest uuid@^11.1.0
+41 http fetch GET 200 https://registry.npmjs.org/uuid 9ms (cache hit)
+42 silly placeDep ROOT socket.io@4.8.1 REPLACE for: my-v0-project@0.1.0 want: ^4.8.1
+43 silly placeDep ROOT uuid@11.1.0 REPLACE for: my-v0-project@0.1.0 want: ^11.1.0
+44 timing idealTree:#root Completed in 462ms
+45 silly fetch manifest @babel/preset-env@^7.1.6
+46 http fetch GET 200 https://registry.npmjs.org/@babel%2fpreset-env 10ms (cache hit)
+47 silly fetch manifest @babel/core@^7.0.0-0
+48 http fetch GET 200 https://registry.npmjs.org/@babel%2fcore 6ms (cache hit)
+49 silly placeDep ROOT @babel/preset-env@7.26.9 OK for: @react-native/codegen@0.76.7 want: ^7.1.6
+50 silly fetch manifest semver@^6.3.1
+51 silly fetch manifest @babel/preset-modules@0.1.6-no-external-plugins
+52 silly fetch manifest @babel/plugin-transform-new-target@^7.25.9
+53 silly fetch manifest @babel/plugin-transform-modules-amd@^7.25.9
+54 silly fetch manifest @babel/plugin-transform-modules-umd@^7.25.9
+55 silly fetch manifest @babel/plugin-transform-dotall-regex@^7.25.9
+56 silly fetch manifest @babel/plugin-transform-json-strings@^7.25.9
+57 silly fetch manifest @babel/plugin-transform-object-super@^7.25.9
+58 silly fetch manifest @babel/plugin-transform-typeof-symbol@^7.26.7
+59 silly fetch manifest @babel/plugin-syntax-import-assertions@^7.26.0
+60 silly fetch manifest @babel/plugin-transform-duplicate-keys@^7.25.9
+61 silly fetch manifest @babel/plugin-transform-dynamic-import@^7.25.9
+62 silly fetch manifest @babel/plugin-transform-reserved-words@^7.25.9
+63 silly fetch manifest @babel/plugin-syntax-unicode-sets-regex@^7.18.6
+64 silly fetch manifest @babel/plugin-transform-unicode-escapes@^7.25.9
+65 silly fetch manifest @babel/plugin-transform-modules-systemjs@^7.25.9
+66 silly fetch manifest @babel/plugin-transform-regexp-modifiers@^7.26.0
+67 silly fetch manifest @babel/plugin-transform-property-literals@^7.25.9
+68 silly fetch manifest @babel/plugin-transform-template-literals@^7.26.8
+69 silly fetch manifest @babel/plugin-transform-class-static-block@^7.26.0
+70 silly fetch manifest @babel/plugin-transform-unicode-sets-regex@^7.25.9
+71 silly fetch manifest @babel/plugin-transform-block-scoped-functions@^7.26.5
+72 silly fetch manifest @babel/plugin-transform-unicode-property-regex@^7.25.9
+73 silly fetch manifest @babel/plugin-transform-exponentiation-operator@^7.26.3
+74 silly fetch manifest @babel/plugin-proposal-private-property-in-object@7.21.0-placeholder-for-preset-env.2
+75 silly fetch manifest @babel/plugin-transform-member-expression-literals@^7.25.9
+76 silly fetch manifest @babel/plugin-bugfix-firefox-class-in-computed-class-key@^7.25.9
+77 silly fetch manifest @babel/plugin-bugfix-safari-class-field-initializer-scope@^7.25.9
+78 silly fetch manifest @babel/plugin-bugfix-v8-static-class-fields-redefine-readonly@^7.25.9
+79 silly fetch manifest @babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining@^7.25.9
+80 silly fetch manifest @babel/plugin-transform-duplicate-named-capturing-groups-regex@^7.25.9
+81 silly fetch manifest @babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression@^7.25.9
+82 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-new-target 98ms (cache hit)
+83 http fetch GET 200 https://registry.npmjs.org/semver 101ms (cache hit)
+84 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-object-super 100ms (cache hit)
+85 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-json-strings 103ms (cache hit)
+86 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-modules-amd 107ms (cache hit)
+87 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-dotall-regex 109ms (cache hit)
+88 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-modules-umd 112ms (cache hit)
+89 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-typeof-symbol 112ms (cache hit)
+90 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-syntax-import-assertions 113ms (cache hit)
+91 http fetch GET 200 https://registry.npmjs.org/@babel%2fpreset-modules 119ms (cache hit)
+92 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-reserved-words 115ms (cache hit)
+93 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-dynamic-import 118ms (cache hit)
+94 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-syntax-unicode-sets-regex 118ms (cache hit)
+95 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-duplicate-keys 121ms (cache hit)
+96 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-unicode-escapes 121ms (cache hit)
+97 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-modules-systemjs 123ms (cache hit)
+98 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-template-literals 124ms (cache hit)
+99 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-property-literals 127ms (cache hit)
+100 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-regexp-modifiers 129ms (cache hit)
+101 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-proposal-private-property-in-object 121ms (cache hit)
+102 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-class-static-block 127ms (cache hit)
+103 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-unicode-sets-regex 127ms (cache hit)
+104 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-unicode-property-regex 127ms (cache hit)
+105 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-bugfix-firefox-class-in-computed-class-key 124ms (cache hit)
+106 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-block-scoped-functions 131ms (cache hit)
+107 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-bugfix-v8-static-class-fields-redefine-readonly 126ms (cache hit)
+108 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-bugfix-safari-class-field-initializer-scope 129ms (cache hit)
+109 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-exponentiation-operator 134ms (cache hit)
+110 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-member-expression-literals 133ms (cache hit)
+111 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-bugfix-v8-spread-parameters-in-optional-chaining 132ms (cache hit)
+112 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-transform-duplicate-named-capturing-groups-regex 132ms (cache hit)
+113 http fetch GET 200 https://registry.npmjs.org/@babel%2fplugin-bugfix-safari-id-destructuring-collision-in-function-expression 133ms (cache hit)
+114 timing idealTree:node_modules/@react-native/codegen Completed in 199ms
+115 silly placeDep ROOT @babel/plugin-bugfix-firefox-class-in-computed-class-key@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+116 silly placeDep ROOT @babel/plugin-bugfix-safari-class-field-initializer-scope@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+117 silly placeDep ROOT @babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+118 silly placeDep ROOT @babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+119 silly placeDep ROOT @babel/plugin-bugfix-v8-static-class-fields-redefine-readonly@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+120 silly placeDep ROOT @babel/plugin-proposal-private-property-in-object@7.21.0-placeholder-for-preset-env.2 OK for: @babel/preset-env@7.26.9 want: 7.21.0-placeholder-for-preset-env.2
+121 silly placeDep ROOT @babel/plugin-syntax-import-assertions@7.26.0 OK for: @babel/preset-env@7.26.9 want: ^7.26.0
+122 silly placeDep ROOT @babel/plugin-syntax-unicode-sets-regex@7.18.6 OK for: @babel/preset-env@7.26.9 want: ^7.18.6
+123 silly placeDep ROOT @babel/plugin-transform-block-scoped-functions@7.26.5 OK for: @babel/preset-env@7.26.9 want: ^7.26.5
+124 silly placeDep ROOT @babel/plugin-transform-class-static-block@7.26.0 OK for: @babel/preset-env@7.26.9 want: ^7.26.0
+125 silly placeDep ROOT @babel/plugin-transform-dotall-regex@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+126 silly placeDep ROOT @babel/plugin-transform-duplicate-keys@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+127 silly placeDep ROOT @babel/plugin-transform-duplicate-named-capturing-groups-regex@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+128 silly placeDep ROOT @babel/plugin-transform-dynamic-import@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+129 silly placeDep ROOT @babel/plugin-transform-exponentiation-operator@7.26.3 OK for: @babel/preset-env@7.26.9 want: ^7.26.3
+130 silly placeDep ROOT @babel/plugin-transform-json-strings@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+131 silly placeDep ROOT @babel/plugin-transform-member-expression-literals@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+132 silly placeDep ROOT @babel/plugin-transform-modules-amd@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+133 silly placeDep ROOT @babel/plugin-transform-modules-systemjs@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+134 silly placeDep ROOT @babel/plugin-transform-modules-umd@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+135 silly placeDep ROOT @babel/plugin-transform-new-target@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+136 silly placeDep ROOT @babel/plugin-transform-object-super@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+137 silly placeDep ROOT @babel/plugin-transform-property-literals@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+138 silly placeDep ROOT @babel/plugin-transform-regexp-modifiers@7.26.0 OK for: @babel/preset-env@7.26.9 want: ^7.26.0
+139 silly placeDep ROOT @babel/plugin-transform-reserved-words@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+140 silly placeDep ROOT @babel/plugin-transform-template-literals@7.26.8 OK for: @babel/preset-env@7.26.9 want: ^7.26.8
+141 silly placeDep ROOT @babel/plugin-transform-typeof-symbol@7.26.7 OK for: @babel/preset-env@7.26.9 want: ^7.26.7
+142 silly placeDep ROOT @babel/plugin-transform-unicode-escapes@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+143 silly placeDep ROOT @babel/plugin-transform-unicode-property-regex@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+144 silly placeDep ROOT @babel/plugin-transform-unicode-sets-regex@7.25.9 OK for: @babel/preset-env@7.26.9 want: ^7.25.9
+145 silly placeDep ROOT @babel/preset-modules@0.1.6-no-external-plugins OK for: @babel/preset-env@7.26.9 want: 0.1.6-no-external-plugins
+146 silly fetch manifest esutils@^2.0.2
+147 silly placeDep node_modules/@babel/preset-env semver@6.3.1 OK for: @babel/preset-env@7.26.9 want: ^6.3.1
+148 http fetch GET 200 https://registry.npmjs.org/esutils 9ms (cache hit)
+149 timing idealTree:node_modules/@babel/preset-env Completed in 209ms
+150 timing idealTree:node_modules/@babel/plugin-bugfix-firefox-class-in-computed-class-key Completed in 0ms
+151 timing idealTree:node_modules/@babel/plugin-bugfix-safari-class-field-initializer-scope Completed in 0ms
+152 timing idealTree:node_modules/@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression Completed in 0ms
+153 timing idealTree:node_modules/@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining Completed in 1ms
+154 timing idealTree:node_modules/@babel/plugin-bugfix-v8-static-class-fields-redefine-readonly Completed in 0ms
+155 timing idealTree:node_modules/@babel/plugin-proposal-private-property-in-object Completed in 0ms
+156 timing idealTree:node_modules/@babel/plugin-syntax-import-assertions Completed in 0ms
+157 timing idealTree:node_modules/@babel/plugin-syntax-unicode-sets-regex Completed in 0ms
+158 timing idealTree:node_modules/@babel/plugin-transform-block-scoped-functions Completed in 0ms
+159 timing idealTree:node_modules/@babel/plugin-transform-class-static-block Completed in 0ms
+160 timing idealTree:node_modules/@babel/plugin-transform-dotall-regex Completed in 0ms
+161 timing idealTree:node_modules/@babel/plugin-transform-duplicate-keys Completed in 0ms
+162 timing idealTree:node_modules/@babel/plugin-transform-duplicate-named-capturing-groups-regex Completed in 0ms
+163 timing idealTree:node_modules/@babel/plugin-transform-dynamic-import Completed in 0ms
+164 timing idealTree:node_modules/@babel/plugin-transform-exponentiation-operator Completed in 0ms
+165 timing idealTree:node_modules/@babel/plugin-transform-json-strings Completed in 0ms
+166 timing idealTree:node_modules/@babel/plugin-transform-member-expression-literals Completed in 0ms
+167 timing idealTree:node_modules/@babel/plugin-transform-modules-amd Completed in 0ms
+168 timing idealTree:node_modules/@babel/plugin-transform-modules-systemjs Completed in 0ms
+169 timing idealTree:node_modules/@babel/plugin-transform-modules-umd Completed in 0ms
+170 timing idealTree:node_modules/@babel/plugin-transform-new-target Completed in 0ms
+171 timing idealTree:node_modules/@babel/plugin-transform-object-super Completed in 0ms
+172 timing idealTree:node_modules/@babel/plugin-transform-property-literals Completed in 0ms
+173 timing idealTree:node_modules/@babel/plugin-transform-regexp-modifiers Completed in 0ms
+174 timing idealTree:node_modules/@babel/plugin-transform-reserved-words Completed in 0ms
+175 timing idealTree:node_modules/@babel/plugin-transform-template-literals Completed in 0ms
+176 timing idealTree:node_modules/@babel/plugin-transform-typeof-symbol Completed in 0ms
+177 timing idealTree:node_modules/@babel/plugin-transform-unicode-escapes Completed in 0ms
+178 timing idealTree:node_modules/@babel/plugin-transform-unicode-property-regex Completed in 0ms
+179 timing idealTree:node_modules/@babel/plugin-transform-unicode-sets-regex Completed in 0ms
+180 silly placeDep ROOT esutils@2.0.3 OK for: @babel/preset-modules@0.1.6-no-external-plugins want: ^2.0.2
+181 timing idealTree:node_modules/@babel/preset-modules Completed in 3ms
+182 timing idealTree:node_modules/esutils Completed in 0ms
+183 silly fetch manifest fsevents@^2.3.2
+184 http fetch GET 200 https://registry.npmjs.org/fsevents 5ms (cache hit)
+185 silly placeDep node_modules/jest-haste-map fsevents@2.3.3 OK for: jest-haste-map@29.7.0 want: ^2.3.2
+186 timing idealTree:node_modules/jest-haste-map Completed in 10ms
+187 timing idealTree:node_modules/jscodeshift Completed in 5ms
+188 silly fetch manifest date-fns@^2.28.0 || ^3.0.0
+189 http fetch GET 200 https://registry.npmjs.org/date-fns 6ms (cache hit)
+190 silly fetch manifest react@^16.8.0 || ^17.0.0 || ^18.0.0
+191 http fetch GET 200 https://registry.npmjs.org/react 14ms (cache hit)
+192 warn ERESOLVE overriding peer dependency {
+192 warn ERESOLVE   code: 'ERESOLVE',
+192 warn ERESOLVE   edge: {
+192 warn ERESOLVE     type: 'peer',
+192 warn ERESOLVE     name: 'date-fns',
+192 warn ERESOLVE     spec: '^2.28.0 || ^3.0.0',
+192 warn ERESOLVE     error: 'INVALID',
+192 warn ERESOLVE     from: {
+192 warn ERESOLVE       name: 'react-day-picker',
+192 warn ERESOLVE       version: '8.10.1',
+192 warn ERESOLVE       location: 'node_modules/react-day-picker',
+192 warn ERESOLVE       isWorkspace: false,
+192 warn ERESOLVE       dependents: [Array]
+192 warn ERESOLVE     }
+192 warn ERESOLVE   },
+192 warn ERESOLVE   dep: {
+192 warn ERESOLVE     name: 'date-fns',
+192 warn ERESOLVE     version: '3.6.0',
+192 warn ERESOLVE     whileInstalling: {
+192 warn ERESOLVE       name: 'react-day-picker',
+192 warn ERESOLVE       version: '8.10.1',
+192 warn ERESOLVE       path: 'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\react-day-picker'
+192 warn ERESOLVE     },
+192 warn ERESOLVE     location: 'node_modules/date-fns',
+192 warn ERESOLVE     isWorkspace: false,
+192 warn ERESOLVE     dependents: [ [Object] ]
+192 warn ERESOLVE   },
+192 warn ERESOLVE   force: true,
+192 warn ERESOLVE   isMine: true,
+192 warn ERESOLVE   strictPeerDeps: false,
+192 warn ERESOLVE   current: {
+192 warn ERESOLVE     name: 'date-fns',
+192 warn ERESOLVE     version: '4.1.0',
+192 warn ERESOLVE     location: 'node_modules/date-fns',
+192 warn ERESOLVE     isWorkspace: false,
+192 warn ERESOLVE     dependents: [ [Object] ]
+192 warn ERESOLVE   },
+192 warn ERESOLVE   peerConflict: {
+192 warn ERESOLVE     current: {
+192 warn ERESOLVE       name: 'date-fns',
+192 warn ERESOLVE       version: '4.1.0',
+192 warn ERESOLVE       location: 'node_modules/date-fns',
+192 warn ERESOLVE       isWorkspace: false,
+192 warn ERESOLVE       dependents: [Array]
+192 warn ERESOLVE     },
+192 warn ERESOLVE     peer: {
+192 warn ERESOLVE       name: 'date-fns',
+192 warn ERESOLVE       version: '3.6.0',
+192 warn ERESOLVE       whileInstalling: [Object],
+192 warn ERESOLVE       location: 'node_modules/date-fns',
+192 warn ERESOLVE       isWorkspace: false,
+192 warn ERESOLVE       dependents: [Array]
+192 warn ERESOLVE     }
+192 warn ERESOLVE   }
+192 warn ERESOLVE }
+193 warn ERESOLVE overriding peer dependency {
+193 warn ERESOLVE   code: 'ERESOLVE',
+193 warn ERESOLVE   edge: {
+193 warn ERESOLVE     type: 'peer',
+193 warn ERESOLVE     name: 'react',
+193 warn ERESOLVE     spec: '^16.8.0 || ^17.0.0 || ^18.0.0',
+193 warn ERESOLVE     error: 'INVALID',
+193 warn ERESOLVE     from: {
+193 warn ERESOLVE       name: 'react-day-picker',
+193 warn ERESOLVE       version: '8.10.1',
+193 warn ERESOLVE       location: 'node_modules/react-day-picker',
+193 warn ERESOLVE       isWorkspace: false,
+193 warn ERESOLVE       dependents: [Array]
+193 warn ERESOLVE     }
+193 warn ERESOLVE   },
+193 warn ERESOLVE   dep: {
+193 warn ERESOLVE     name: 'react',
+193 warn ERESOLVE     version: '18.3.1',
+193 warn ERESOLVE     whileInstalling: {
+193 warn ERESOLVE       name: 'react-day-picker',
+193 warn ERESOLVE       version: '8.10.1',
+193 warn ERESOLVE       path: 'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\react-day-picker'
+193 warn ERESOLVE     },
+193 warn ERESOLVE     location: 'node_modules/react',
+193 warn ERESOLVE     isWorkspace: false,
+193 warn ERESOLVE     dependents: [ [Object] ]
+193 warn ERESOLVE   },
+193 warn ERESOLVE   force: true,
+193 warn ERESOLVE   isMine: true,
+193 warn ERESOLVE   strictPeerDeps: false,
+193 warn ERESOLVE   current: {
+193 warn ERESOLVE     name: 'react',
+193 warn ERESOLVE     version: '19.0.0',
+193 warn ERESOLVE     location: 'node_modules/react',
+193 warn ERESOLVE     isWorkspace: false,
+193 warn ERESOLVE     dependents: [
+193 warn ERESOLVE       [Object], [Object], [Object], [Object], [Object], [Object],
+193 warn ERESOLVE       [Object], [Object], [Object], [Object], [Object], [Object],
+193 warn ERESOLVE       [Object], [Object], [Object], [Object], [Object], [Object],
+193 warn ERESOLVE       [Object], [Object], [Object], [Object], [Object], [Object],
+193 warn ERESOLVE       [Object], [Object], [Object], [Object], [Object], [Object],
+193 warn ERESOLVE       [Object], [Object], [Object], [Object], [Object], [Object],
+193 warn ERESOLVE       [Object], [Object], [Object], [Object], [Object], [Object],
+193 warn ERESOLVE       [Object], [Object], [Object], [Object], [Object], [Object],
+193 warn ERESOLVE       [Object], [Object], [Object], [Object], [Object], [Object],
+193 warn ERESOLVE       [Object], [Object], [Object], [Object], [Object], [Object],
+193 warn ERESOLVE       [Object], [Object], [Object], [Object], [Object], [Object],
+193 warn ERESOLVE       [Object], [Object], [Object], [Object], [Object], [Object],
+193 warn ERESOLVE       [Object], [Object], [Object], [Object], [Object], [Object],
+193 warn ERESOLVE       [Object], [Object], [Object], [Object], [Object], [Object],
+193 warn ERESOLVE       [Object], [Object], [Object], [Object], [Object]
+193 warn ERESOLVE     ]
+193 warn ERESOLVE   },
+193 warn ERESOLVE   peerConflict: {
+193 warn ERESOLVE     current: {
+193 warn ERESOLVE       name: 'react',
+193 warn ERESOLVE       version: '19.0.0',
+193 warn ERESOLVE       location: 'node_modules/react',
+193 warn ERESOLVE       isWorkspace: false,
+193 warn ERESOLVE       dependents: [Array]
+193 warn ERESOLVE     },
+193 warn ERESOLVE     peer: {
+193 warn ERESOLVE       name: 'react',
+193 warn ERESOLVE       version: '18.3.1',
+193 warn ERESOLVE       whileInstalling: [Object],
+193 warn ERESOLVE       location: 'node_modules/react',
+193 warn ERESOLVE       isWorkspace: false,
+193 warn ERESOLVE       dependents: [Array]
+193 warn ERESOLVE     }
+193 warn ERESOLVE   }
+193 warn ERESOLVE }
+194 timing idealTree:node_modules/react-day-picker Completed in 229ms
+195 silly fetch manifest @img/sharp-darwin-arm64@0.33.5
+196 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-darwin-arm64 507ms (cache miss)
+197 silly fetch manifest @img/sharp-darwin-x64@0.33.5
+198 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-darwin-x64 84ms (cache miss)
+199 silly fetch manifest @img/sharp-libvips-darwin-arm64@1.0.4
+200 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-libvips-darwin-arm64 87ms (cache miss)
+201 silly fetch manifest @img/sharp-libvips-darwin-x64@1.0.4
+202 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-libvips-darwin-x64 75ms (cache miss)
+203 silly fetch manifest @img/sharp-libvips-linux-arm@1.0.5
+204 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-libvips-linux-arm 77ms (cache miss)
+205 silly fetch manifest @img/sharp-libvips-linux-arm64@1.0.4
+206 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-libvips-linux-arm64 71ms (cache miss)
+207 silly fetch manifest @img/sharp-libvips-linux-s390x@1.0.4
+208 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-libvips-linux-s390x 75ms (cache miss)
+209 silly fetch manifest @img/sharp-libvips-linux-x64@1.0.4
+210 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-libvips-linux-x64 72ms (cache miss)
+211 silly fetch manifest @img/sharp-libvips-linuxmusl-arm64@1.0.4
+212 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-libvips-linuxmusl-arm64 70ms (cache miss)
+213 silly fetch manifest @img/sharp-libvips-linuxmusl-x64@1.0.4
+214 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-libvips-linuxmusl-x64 73ms (cache miss)
+215 silly fetch manifest @img/sharp-linux-arm@0.33.5
+216 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-linux-arm 68ms (cache miss)
+217 silly fetch manifest @img/sharp-linux-arm64@0.33.5
+218 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-linux-arm64 80ms (cache miss)
+219 silly fetch manifest @img/sharp-linux-s390x@0.33.5
+220 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-linux-s390x 77ms (cache miss)
+221 silly fetch manifest @img/sharp-linux-x64@0.33.5
+222 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-linux-x64 69ms (cache miss)
+223 silly fetch manifest @img/sharp-linuxmusl-arm64@0.33.5
+224 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-linuxmusl-arm64 68ms (cache miss)
+225 silly fetch manifest @img/sharp-linuxmusl-x64@0.33.5
+226 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-linuxmusl-x64 70ms (cache miss)
+227 silly fetch manifest @img/sharp-wasm32@0.33.5
+228 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-wasm32 87ms (cache miss)
+229 silly fetch manifest @img/sharp-win32-ia32@0.33.5
+230 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-win32-ia32 67ms (cache miss)
+231 silly placeDep node_modules/sharp @img/sharp-darwin-arm64@0.33.5 OK for: sharp@0.33.5 want: 0.33.5
+232 silly placeDep node_modules/sharp @img/sharp-darwin-x64@0.33.5 OK for: sharp@0.33.5 want: 0.33.5
+233 silly placeDep node_modules/sharp @img/sharp-libvips-darwin-arm64@1.0.4 OK for: sharp@0.33.5 want: 1.0.4
+234 silly placeDep node_modules/sharp @img/sharp-libvips-darwin-x64@1.0.4 OK for: sharp@0.33.5 want: 1.0.4
+235 silly placeDep node_modules/sharp @img/sharp-libvips-linux-arm@1.0.5 OK for: sharp@0.33.5 want: 1.0.5
+236 silly placeDep node_modules/sharp @img/sharp-libvips-linux-arm64@1.0.4 OK for: sharp@0.33.5 want: 1.0.4
+237 silly placeDep node_modules/sharp @img/sharp-libvips-linux-s390x@1.0.4 OK for: sharp@0.33.5 want: 1.0.4
+238 silly placeDep node_modules/sharp @img/sharp-libvips-linux-x64@1.0.4 OK for: sharp@0.33.5 want: 1.0.4
+239 silly placeDep node_modules/sharp @img/sharp-libvips-linuxmusl-arm64@1.0.4 OK for: sharp@0.33.5 want: 1.0.4
+240 silly placeDep node_modules/sharp @img/sharp-libvips-linuxmusl-x64@1.0.4 OK for: sharp@0.33.5 want: 1.0.4
+241 silly placeDep node_modules/sharp @img/sharp-linux-arm@0.33.5 OK for: sharp@0.33.5 want: 0.33.5
+242 silly placeDep node_modules/sharp @img/sharp-linux-arm64@0.33.5 OK for: sharp@0.33.5 want: 0.33.5
+243 silly placeDep node_modules/sharp @img/sharp-linux-s390x@0.33.5 OK for: sharp@0.33.5 want: 0.33.5
+244 silly placeDep node_modules/sharp @img/sharp-linux-x64@0.33.5 OK for: sharp@0.33.5 want: 0.33.5
+245 silly placeDep node_modules/sharp @img/sharp-linuxmusl-arm64@0.33.5 OK for: sharp@0.33.5 want: 0.33.5
+246 silly placeDep node_modules/sharp @img/sharp-linuxmusl-x64@0.33.5 OK for: sharp@0.33.5 want: 0.33.5
+247 silly placeDep node_modules/sharp @img/sharp-wasm32@0.33.5 OK for: sharp@0.33.5 want: 0.33.5
+248 silly fetch manifest @emnapi/runtime@^1.2.0
+249 silly placeDep node_modules/sharp @img/sharp-win32-ia32@0.33.5 OK for: sharp@0.33.5 want: 0.33.5
+250 http fetch GET 200 https://registry.npmjs.org/@emnapi%2fruntime 87ms (cache miss)
+251 timing idealTree:node_modules/sharp Completed in 1928ms
+252 timing idealTree:node_modules/socket.io Completed in 0ms
+253 timing idealTree:node_modules/uuid Completed in 0ms
+254 silly fetch manifest react@^16.8 || ^17.0 || ^18.0
+255 silly fetch manifest react-dom@^16.8 || ^17.0 || ^18.0
+256 http fetch GET 200 https://registry.npmjs.org/react-dom 93ms (cache miss)
+257 warn ERESOLVE overriding peer dependency {
+257 warn ERESOLVE   code: 'ERESOLVE',
+257 warn ERESOLVE   edge: {
+257 warn ERESOLVE     type: 'peer',
+257 warn ERESOLVE     name: 'react',
+257 warn ERESOLVE     spec: '^16.8 || ^17.0 || ^18.0',
+257 warn ERESOLVE     error: 'INVALID',
+257 warn ERESOLVE     from: {
+257 warn ERESOLVE       name: 'vaul',
+257 warn ERESOLVE       version: '0.9.9',
+257 warn ERESOLVE       location: 'node_modules/vaul',
+257 warn ERESOLVE       isWorkspace: false,
+257 warn ERESOLVE       dependents: [Array]
+257 warn ERESOLVE     }
+257 warn ERESOLVE   },
+257 warn ERESOLVE   dep: {
+257 warn ERESOLVE     name: 'react',
+257 warn ERESOLVE     version: '18.3.1',
+257 warn ERESOLVE     whileInstalling: {
+257 warn ERESOLVE       name: 'vaul',
+257 warn ERESOLVE       version: '0.9.9',
+257 warn ERESOLVE       path: 'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\vaul'
+257 warn ERESOLVE     },
+257 warn ERESOLVE     location: 'node_modules/react',
+257 warn ERESOLVE     isWorkspace: false,
+257 warn ERESOLVE     dependents: [ [Object] ]
+257 warn ERESOLVE   },
+257 warn ERESOLVE   force: true,
+257 warn ERESOLVE   isMine: true,
+257 warn ERESOLVE   strictPeerDeps: false,
+257 warn ERESOLVE   current: {
+257 warn ERESOLVE     name: 'react',
+257 warn ERESOLVE     version: '19.0.0',
+257 warn ERESOLVE     location: 'node_modules/react',
+257 warn ERESOLVE     isWorkspace: false,
+257 warn ERESOLVE     dependents: [
+257 warn ERESOLVE       [Object], [Object], [Object], [Object], [Object], [Object],
+257 warn ERESOLVE       [Object], [Object], [Object], [Object], [Object], [Object],
+257 warn ERESOLVE       [Object], [Object], [Object], [Object], [Object], [Object],
+257 warn ERESOLVE       [Object], [Object], [Object], [Object], [Object], [Object],
+257 warn ERESOLVE       [Object], [Object], [Object], [Object], [Object], [Object],
+257 warn ERESOLVE       [Object], [Object], [Object], [Object], [Object], [Object],
+257 warn ERESOLVE       [Object], [Object], [Object], [Object], [Object], [Object],
+257 warn ERESOLVE       [Object], [Object], [Object], [Object], [Object], [Object],
+257 warn ERESOLVE       [Object], [Object], [Object], [Object], [Object], [Object],
+257 warn ERESOLVE       [Object], [Object], [Object], [Object], [Object], [Object],
+257 warn ERESOLVE       [Object], [Object], [Object], [Object], [Object], [Object],
+257 warn ERESOLVE       [Object], [Object], [Object], [Object], [Object], [Object],
+257 warn ERESOLVE       [Object], [Object], [Object], [Object], [Object], [Object],
+257 warn ERESOLVE       [Object], [Object], [Object], [Object], [Object], [Object],
+257 warn ERESOLVE       [Object], [Object], [Object], [Object], [Object]
+257 warn ERESOLVE     ]
+257 warn ERESOLVE   },
+257 warn ERESOLVE   peerConflict: {
+257 warn ERESOLVE     current: {
+257 warn ERESOLVE       name: 'react',
+257 warn ERESOLVE       version: '19.0.0',
+257 warn ERESOLVE       location: 'node_modules/react',
+257 warn ERESOLVE       isWorkspace: false,
+257 warn ERESOLVE       dependents: [Array]
+257 warn ERESOLVE     },
+257 warn ERESOLVE     peer: {
+257 warn ERESOLVE       name: 'react',
+257 warn ERESOLVE       version: '18.3.1',
+257 warn ERESOLVE       whileInstalling: [Object],
+257 warn ERESOLVE       location: 'node_modules/react',
+257 warn ERESOLVE       isWorkspace: false,
+257 warn ERESOLVE       dependents: [Array]
+257 warn ERESOLVE     }
+257 warn ERESOLVE   }
+257 warn ERESOLVE }
+258 warn ERESOLVE overriding peer dependency {
+258 warn ERESOLVE   code: 'ERESOLVE',
+258 warn ERESOLVE   edge: {
+258 warn ERESOLVE     type: 'peer',
+258 warn ERESOLVE     name: 'react-dom',
+258 warn ERESOLVE     spec: '^16.8 || ^17.0 || ^18.0',
+258 warn ERESOLVE     error: 'INVALID',
+258 warn ERESOLVE     from: {
+258 warn ERESOLVE       name: 'vaul',
+258 warn ERESOLVE       version: '0.9.9',
+258 warn ERESOLVE       location: 'node_modules/vaul',
+258 warn ERESOLVE       isWorkspace: false,
+258 warn ERESOLVE       dependents: [Array]
+258 warn ERESOLVE     }
+258 warn ERESOLVE   },
+258 warn ERESOLVE   dep: {
+258 warn ERESOLVE     name: 'react-dom',
+258 warn ERESOLVE     version: '18.3.1',
+258 warn ERESOLVE     whileInstalling: {
+258 warn ERESOLVE       name: 'vaul',
+258 warn ERESOLVE       version: '0.9.9',
+258 warn ERESOLVE       path: 'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\vaul'
+258 warn ERESOLVE     },
+258 warn ERESOLVE     location: 'node_modules/react-dom',
+258 warn ERESOLVE     isWorkspace: false,
+258 warn ERESOLVE     dependents: [ [Object] ]
+258 warn ERESOLVE   },
+258 warn ERESOLVE   force: true,
+258 warn ERESOLVE   isMine: true,
+258 warn ERESOLVE   strictPeerDeps: false,
+258 warn ERESOLVE   current: {
+258 warn ERESOLVE     name: 'react-dom',
+258 warn ERESOLVE     version: '19.0.0',
+258 warn ERESOLVE     location: 'node_modules/react-dom',
+258 warn ERESOLVE     isWorkspace: false,
+258 warn ERESOLVE     dependents: [
+258 warn ERESOLVE       [Object], [Object], [Object], [Object],
+258 warn ERESOLVE       [Object], [Object], [Object], [Object],
+258 warn ERESOLVE       [Object], [Object], [Object], [Object],
+258 warn ERESOLVE       [Object], [Object], [Object], [Object],
+258 warn ERESOLVE       [Object], [Object], [Object], [Object],
+258 warn ERESOLVE       [Object], [Object], [Object], [Object],
+258 warn ERESOLVE       [Object], [Object], [Object], [Object],
+258 warn ERESOLVE       [Object], [Object], [Object], [Object],
+258 warn ERESOLVE       [Object], [Object], [Object], [Object],
+258 warn ERESOLVE       [Object], [Object], [Object], [Object],
+258 warn ERESOLVE       [Object], [Object], [Object], [Object],
+258 warn ERESOLVE       [Object], [Object], [Object], [Object],
+258 warn ERESOLVE       [Object], [Object], [Object]
+258 warn ERESOLVE     ]
+258 warn ERESOLVE   },
+258 warn ERESOLVE   peerConflict: {
+258 warn ERESOLVE     current: {
+258 warn ERESOLVE       name: 'react-dom',
+258 warn ERESOLVE       version: '19.0.0',
+258 warn ERESOLVE       location: 'node_modules/react-dom',
+258 warn ERESOLVE       isWorkspace: false,
+258 warn ERESOLVE       dependents: [Array]
+258 warn ERESOLVE     },
+258 warn ERESOLVE     peer: {
+258 warn ERESOLVE       name: 'react-dom',
+258 warn ERESOLVE       version: '18.3.1',
+258 warn ERESOLVE       whileInstalling: [Object],
+258 warn ERESOLVE       location: 'node_modules/react-dom',
+258 warn ERESOLVE       isWorkspace: false,
+258 warn ERESOLVE       dependents: [Array]
+258 warn ERESOLVE     }
+258 warn ERESOLVE   }
+258 warn ERESOLVE }
+259 timing idealTree:node_modules/vaul Completed in 367ms
+260 timing idealTree:node_modules/@babel/preset-env/node_modules/semver Completed in 0ms
+261 timing idealTree:node_modules/@react-native/metro-babel-transformer/node_modules/@react-native/codegen Completed in 1ms
+262 timing idealTree:node_modules/jest-haste-map/node_modules/fsevents Completed in 0ms
+263 timing idealTree:node_modules/react-native/node_modules/@react-native/codegen Completed in 1ms
+264 timing idealTree:node_modules/sharp/node_modules/@img/sharp-darwin-arm64 Completed in 0ms
+265 timing idealTree:node_modules/sharp/node_modules/@img/sharp-darwin-x64 Completed in 0ms
+266 timing idealTree:node_modules/sharp/node_modules/@img/sharp-libvips-darwin-arm64 Completed in 0ms
+267 timing idealTree:node_modules/sharp/node_modules/@img/sharp-libvips-darwin-x64 Completed in 0ms
+268 timing idealTree:node_modules/sharp/node_modules/@img/sharp-libvips-linux-arm Completed in 0ms
+269 timing idealTree:node_modules/sharp/node_modules/@img/sharp-libvips-linux-arm64 Completed in 0ms
+270 timing idealTree:node_modules/sharp/node_modules/@img/sharp-libvips-linux-s390x Completed in 0ms
+271 timing idealTree:node_modules/sharp/node_modules/@img/sharp-libvips-linux-x64 Completed in 0ms
+272 timing idealTree:node_modules/sharp/node_modules/@img/sharp-libvips-linuxmusl-arm64 Completed in 0ms
+273 timing idealTree:node_modules/sharp/node_modules/@img/sharp-libvips-linuxmusl-x64 Completed in 0ms
+274 timing idealTree:node_modules/sharp/node_modules/@img/sharp-linux-arm Completed in 0ms
+275 timing idealTree:node_modules/sharp/node_modules/@img/sharp-linux-arm64 Completed in 0ms
+276 timing idealTree:node_modules/sharp/node_modules/@img/sharp-linux-s390x Completed in 0ms
+277 timing idealTree:node_modules/sharp/node_modules/@img/sharp-linux-x64 Completed in 0ms
+278 timing idealTree:node_modules/sharp/node_modules/@img/sharp-linuxmusl-arm64 Completed in 0ms
+279 timing idealTree:node_modules/sharp/node_modules/@img/sharp-linuxmusl-x64 Completed in 0ms
+280 silly placeDep ROOT @emnapi/runtime@1.3.1 OK for: @img/sharp-wasm32@0.33.5 want: ^1.2.0
+281 timing idealTree:node_modules/sharp/node_modules/@img/sharp-wasm32 Completed in 5ms
+282 timing idealTree:node_modules/@emnapi/runtime Completed in 0ms
+283 timing idealTree:node_modules/sharp/node_modules/@img/sharp-win32-ia32 Completed in 0ms
+284 timing idealTree:buildDeps Completed in 3427ms
+285 timing idealTree:fixDepFlags Completed in 18ms
+286 timing idealTree Completed in 4184ms
+287 timing reify:loadTrees Completed in 4185ms
+288 timing reify:diffTrees Completed in 36ms
+289 silly reify mark retired [
+289 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-darwin-arm64'
+289 silly reify ]
+290 silly reify mark retired [
+290 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-darwin-x64'
+290 silly reify ]
+291 silly reify mark retired [
+291 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-libvips-darwin-arm64'
+291 silly reify ]
+292 silly reify mark retired [
+292 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-libvips-darwin-x64'
+292 silly reify ]
+293 silly reify mark retired [
+293 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-libvips-linux-arm'
+293 silly reify ]
+294 silly reify mark retired [
+294 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-libvips-linux-arm64'
+294 silly reify ]
+295 silly reify mark retired [
+295 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-libvips-linux-s390x'
+295 silly reify ]
+296 silly reify mark retired [
+296 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-libvips-linux-x64'
+296 silly reify ]
+297 silly reify mark retired [
+297 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-libvips-linuxmusl-arm64'
+297 silly reify ]
+298 silly reify mark retired [
+298 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-libvips-linuxmusl-x64'
+298 silly reify ]
+299 silly reify mark retired [
+299 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-linux-arm'
+299 silly reify ]
+300 silly reify mark retired [
+300 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-linux-arm64'
+300 silly reify ]
+301 silly reify mark retired [
+301 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-linux-s390x'
+301 silly reify ]
+302 silly reify mark retired [
+302 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-linux-x64'
+302 silly reify ]
+303 silly reify mark retired [
+303 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-linuxmusl-arm64'
+303 silly reify ]
+304 silly reify mark retired [
+304 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-linuxmusl-x64'
+304 silly reify ]
+305 silly reify mark retired [
+305 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-wasm32'
+305 silly reify ]
+306 silly reify mark retired [
+306 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-win32-ia32'
+306 silly reify ]
+307 silly reify mark retired [
+307 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\fsevents'
+307 silly reify ]
+308 silly reify moves {
+308 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-darwin-arm64': 'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\.sharp-darwin-arm64-QYaTCQjY',
+308 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-darwin-x64': 'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\.sharp-darwin-x64-K8jTxMsZ',
+308 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-libvips-darwin-arm64': 'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\.sharp-libvips-darwin-arm64-aka9IEV2',
+308 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-libvips-darwin-x64': 'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\.sharp-libvips-darwin-x64-Y1KLF7L4',
+308 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-libvips-linux-arm': 'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\.sharp-libvips-linux-arm-ImcGJgmt',
+308 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-libvips-linux-arm64': 'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\.sharp-libvips-linux-arm64-PbERfPS1',
+308 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-libvips-linux-s390x': 'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\.sharp-libvips-linux-s390x-2TR6xFus',
+308 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-libvips-linux-x64': 'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\.sharp-libvips-linux-x64-FyqmfOLC',
+308 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-libvips-linuxmusl-arm64': 'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\.sharp-libvips-linuxmusl-arm64-0rvd5fsS',
+308 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-libvips-linuxmusl-x64': 'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\.sharp-libvips-linuxmusl-x64-HFduuU5v',
+308 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-linux-arm': 'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\.sharp-linux-arm-4PZA8Cqt',
+308 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-linux-arm64': 'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\.sharp-linux-arm64-V6gjIpXd',
+308 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-linux-s390x': 'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\.sharp-linux-s390x-IxaVDD7U',
+308 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-linux-x64': 'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\.sharp-linux-x64-G7RC0eSj',
+308 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-linuxmusl-arm64': 'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\.sharp-linuxmusl-arm64-apZq2wJy',
+308 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-linuxmusl-x64': 'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\.sharp-linuxmusl-x64-n1UFCNyZ',
+308 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-wasm32': 'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\.sharp-wasm32-5FYkqjrP',
+308 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\sharp-win32-ia32': 'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@img\\.sharp-win32-ia32-5KfZxXHy',
+308 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\fsevents': 'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\.fsevents-fCtotZZN'
+308 silly reify }
+309 timing reify:retireShallow Completed in 27ms
+310 timing reify:createSparse Completed in 15ms
+311 timing reify:loadBundles Completed in 0ms
+312 silly audit bulk request {
+312 silly audit   '@0no-co/graphql.web': [ '1.1.2' ],
+312 silly audit   '@alloc/quick-lru': [ '5.2.0' ],
+312 silly audit   '@ampproject/remapping': [ '2.3.0' ],
+312 silly audit   '@babel/code-frame': [ '7.10.4', '7.26.2' ],
+312 silly audit   '@babel/compat-data': [ '7.26.8' ],
+312 silly audit   '@babel/core': [ '7.26.10' ],
+312 silly audit   semver: [ '6.3.1', '5.7.2', '7.7.1' ],
+312 silly audit   '@babel/generator': [ '7.26.10' ],
+312 silly audit   '@babel/helper-annotate-as-pure': [ '7.25.9' ],
+312 silly audit   '@babel/helper-compilation-targets': [ '7.26.5' ],
+312 silly audit   '@babel/helper-create-class-features-plugin': [ '7.26.9' ],
+312 silly audit   '@babel/helper-create-regexp-features-plugin': [ '7.26.3' ],
+312 silly audit   '@babel/helper-define-polyfill-provider': [ '0.6.3' ],
+312 silly audit   '@babel/helper-member-expression-to-functions': [ '7.25.9' ],
+312 silly audit   '@babel/helper-module-imports': [ '7.25.9' ],
+312 silly audit   '@babel/helper-module-transforms': [ '7.26.0' ],
+312 silly audit   '@babel/helper-optimise-call-expression': [ '7.25.9' ],
+312 silly audit   '@babel/helper-plugin-utils': [ '7.26.5' ],
+312 silly audit   '@babel/helper-remap-async-to-generator': [ '7.25.9' ],
+312 silly audit   '@babel/helper-replace-supers': [ '7.26.5' ],
+312 silly audit   '@babel/helper-skip-transparent-expression-wrappers': [ '7.25.9' ],
+312 silly audit   '@babel/helper-string-parser': [ '7.25.9' ],
+312 silly audit   '@babel/helper-validator-identifier': [ '7.25.9' ],
+312 silly audit   '@babel/helper-validator-option': [ '7.25.9' ],
+312 silly audit   '@babel/helper-wrap-function': [ '7.25.9' ],
+312 silly audit   '@babel/helpers': [ '7.26.10' ],
+312 silly audit   '@babel/highlight': [ '7.25.9' ],
+312 silly audit   'ansi-styles': [ '3.2.1', '6.2.1', '4.3.0', '5.2.0' ],
+312 silly audit   chalk: [ '2.4.2', '4.1.2' ],
+312 silly audit   'color-convert': [ '1.9.3', '2.0.1' ],
+312 silly audit   'color-name': [ '1.1.3', '1.1.4' ],
+312 silly audit   'escape-string-regexp': [ '1.0.5', '4.0.0', '2.0.0' ],
+312 silly audit   'has-flag': [ '3.0.0', '4.0.0' ],
+312 silly audit   'supports-color': [ '5.5.0', '8.1.1', '7.2.0' ],
+312 silly audit   '@babel/parser': [ '7.26.10' ],
+312 silly audit   '@babel/plugin-proposal-class-properties': [ '7.18.6' ],
+312 silly audit   '@babel/plugin-proposal-decorators': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-proposal-export-default-from': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-proposal-nullish-coalescing-operator': [ '7.18.6' ],
+312 silly audit   '@babel/plugin-proposal-optional-chaining': [ '7.21.0' ],
+312 silly audit   '@babel/plugin-syntax-async-generators': [ '7.8.4' ],
+312 silly audit   '@babel/plugin-syntax-bigint': [ '7.8.3' ],
+312 silly audit   '@babel/plugin-syntax-class-properties': [ '7.12.13' ],
+312 silly audit   '@babel/plugin-syntax-class-static-block': [ '7.14.5' ],
+312 silly audit   '@babel/plugin-syntax-decorators': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-syntax-dynamic-import': [ '7.8.3' ],
+312 silly audit   '@babel/plugin-syntax-export-default-from': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-syntax-flow': [ '7.26.0' ],
+312 silly audit   '@babel/plugin-syntax-import-attributes': [ '7.26.0' ],
+312 silly audit   '@babel/plugin-syntax-import-meta': [ '7.10.4' ],
+312 silly audit   '@babel/plugin-syntax-json-strings': [ '7.8.3' ],
+312 silly audit   '@babel/plugin-syntax-jsx': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-syntax-logical-assignment-operators': [ '7.10.4' ],
+312 silly audit   '@babel/plugin-syntax-nullish-coalescing-operator': [ '7.8.3' ],
+312 silly audit   '@babel/plugin-syntax-numeric-separator': [ '7.10.4' ],
+312 silly audit   '@babel/plugin-syntax-object-rest-spread': [ '7.8.3' ],
+312 silly audit   '@babel/plugin-syntax-optional-catch-binding': [ '7.8.3' ],
+312 silly audit   '@babel/plugin-syntax-optional-chaining': [ '7.8.3' ],
+312 silly audit   '@babel/plugin-syntax-private-property-in-object': [ '7.14.5' ],
+312 silly audit   '@babel/plugin-syntax-top-level-await': [ '7.14.5' ],
+312 silly audit   '@babel/plugin-syntax-typescript': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-arrow-functions': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-async-generator-functions': [ '7.26.8' ],
+312 silly audit   '@babel/plugin-transform-async-to-generator': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-block-scoping': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-class-properties': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-classes': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-computed-properties': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-destructuring': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-export-namespace-from': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-flow-strip-types': [ '7.26.5' ],
+312 silly audit   '@babel/plugin-transform-for-of': [ '7.26.9' ],
+312 silly audit   '@babel/plugin-transform-function-name': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-literals': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-logical-assignment-operators': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-modules-commonjs': [ '7.26.3' ],
+312 silly audit   '@babel/plugin-transform-named-capturing-groups-regex': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-nullish-coalescing-operator': [ '7.26.6' ],
+312 silly audit   '@babel/plugin-transform-numeric-separator': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-object-rest-spread': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-optional-catch-binding': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-optional-chaining': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-parameters': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-private-methods': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-private-property-in-object': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-react-display-name': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-react-jsx': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-react-jsx-development': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-react-jsx-self': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-react-jsx-source': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-react-pure-annotations': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-regenerator': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-runtime': [ '7.26.10' ],
+312 silly audit   '@babel/plugin-transform-shorthand-properties': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-spread': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-sticky-regex': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-typescript': [ '7.26.8' ],
+312 silly audit   '@babel/plugin-transform-unicode-regex': [ '7.25.9' ],
+312 silly audit   '@babel/preset-flow': [ '7.25.9' ],
+312 silly audit   '@babel/preset-react': [ '7.26.3' ],
+312 silly audit   '@babel/preset-typescript': [ '7.26.0' ],
+312 silly audit   '@babel/register': [ '7.25.9' ],
+312 silly audit   '@babel/runtime': [ '7.26.10' ],
+312 silly audit   '@babel/template': [ '7.26.9' ],
+312 silly audit   '@babel/traverse': [ '7.26.10' ],
+312 silly audit   '@babel/types': [ '7.26.10' ],
+312 silly audit   '@expo/bunyan': [ '4.0.1' ],
+312 silly audit   uuid: [ '8.3.2', '7.0.3', '11.1.0' ],
+312 silly audit   '@expo/cli': [ '0.22.20' ],
+312 silly audit   '@expo/code-signing-certificates': [ '0.0.5' ],
+312 silly audit   '@expo/config': [ '10.0.11' ],
+312 silly audit   '@expo/config-plugins': [ '9.0.17' ],
+312 silly audit   '@expo/config-types': [ '52.0.5' ],
+312 silly audit   '@expo/devcert': [ '1.1.4' ],
+312 silly audit   debug: [ '3.2.7', '2.6.9', '4.4.0', '4.3.7' ],
+312 silly audit   '@expo/env': [ '0.4.2' ],
+312 silly audit   '@expo/fingerprint': [ '0.11.11' ],
+312 silly audit   '@expo/image-utils': [ '0.6.5' ],
+312 silly audit   'fs-extra': [ '9.0.0', '9.1.0', '8.1.0' ],
+312 silly audit   jsonfile: [ '6.1.0', '4.0.0' ],
+312 silly audit   universalify: [ '2.0.1', '1.0.0', '0.1.2' ],
+312 silly audit   '@expo/json-file': [ '9.0.2' ],
+312 silly audit   '@expo/metro-config': [ '0.19.12' ],
+312 silly audit   postcss: [ '8.4.49', '8.4.31', '8.5.3' ],
+312 silly audit   '@expo/osascript': [ '2.1.6' ],
+312 silly audit   '@expo/package-manager': [ '1.7.2' ],
+312 silly audit   'sudo-prompt': [ '9.1.1', '8.2.5' ],
+312 silly audit   '@expo/plist': [ '0.2.2' ],
+312 silly audit   '@expo/prebuild-config': [ '8.0.29' ],
+312 silly audit   '@expo/rudder-sdk-node': [ '1.1.1' ],
+312 silly audit   '@expo/sdk-runtime-versions': [ '1.0.0' ],
+312 silly audit   '@expo/spawn-async': [ '1.7.2' ],
+312 silly audit   '@expo/vector-icons': [ '14.0.4' ],
+312 silly audit   '@expo/ws-tunnel': [ '1.0.6' ],
+312 silly audit   '@expo/xcpretty': [ '4.3.2' ],
+312 silly audit   argparse: [ '2.0.1', '1.0.10' ],
+312 silly audit   'js-yaml': [ '4.1.0', '3.14.1' ],
+312 silly audit   '@floating-ui/core': [ '1.6.9' ],
+312 silly audit   '@floating-ui/dom': [ '1.6.13' ],
+312 silly audit   '@floating-ui/react-dom': [ '2.1.2' ],
+312 silly audit   '@floating-ui/utils': [ '0.2.9' ],
+312 silly audit   '@hookform/resolvers': [ '3.10.0' ],
+312 silly audit   '@img/sharp-darwin-arm64': [ '0.33.5' ],
+312 silly audit   '@img/sharp-darwin-x64': [ '0.33.5' ],
+312 silly audit   '@img/sharp-libvips-darwin-arm64': [ '1.0.4' ],
+312 silly audit   '@img/sharp-libvips-darwin-x64': [ '1.0.4' ],
+312 silly audit   '@img/sharp-libvips-linux-arm': [ '1.0.5' ],
+312 silly audit   '@img/sharp-libvips-linux-arm64': [ '1.0.4' ],
+312 silly audit   '@img/sharp-libvips-linux-s390x': [ '1.0.4' ],
+312 silly audit   '@img/sharp-libvips-linux-x64': [ '1.0.4' ],
+312 silly audit   '@img/sharp-libvips-linuxmusl-arm64': [ '1.0.4' ],
+312 silly audit   '@img/sharp-libvips-linuxmusl-x64': [ '1.0.4' ],
+312 silly audit   '@img/sharp-linux-arm': [ '0.33.5' ],
+312 silly audit   '@img/sharp-linux-arm64': [ '0.33.5' ],
+312 silly audit   '@img/sharp-linux-s390x': [ '0.33.5' ],
+312 silly audit   '@img/sharp-linux-x64': [ '0.33.5' ],
+312 silly audit   '@img/sharp-linuxmusl-arm64': [ '0.33.5' ],
+312 silly audit   '@img/sharp-linuxmusl-x64': [ '0.33.5' ],
+312 silly audit   '@img/sharp-wasm32': [ '0.33.5' ],
+312 silly audit   '@img/sharp-win32-ia32': [ '0.33.5' ],
+312 silly audit   '@img/sharp-win32-x64': [ '0.33.5' ],
+312 silly audit   '@isaacs/cliui': [ '8.0.2' ],
+312 silly audit   'wrap-ansi': [ '8.1.0', '7.0.0' ],
+312 silly audit   '@isaacs/ttlcache': [ '1.4.1' ],
+312 silly audit   '@istanbuljs/load-nyc-config': [ '1.1.0' ],
+312 silly audit   'find-up': [ '4.1.0', '5.0.0', '3.0.0' ],
+312 silly audit   'locate-path': [ '5.0.0', '6.0.0', '3.0.0' ],
+312 silly audit   'p-limit': [ '2.3.0', '3.1.0' ],
+312 silly audit   'p-locate': [ '4.1.0', '5.0.0', '3.0.0' ],
+312 silly audit   '@istanbuljs/schema': [ '0.1.3' ],
+312 silly audit   '@jest/create-cache-key-function': [ '29.7.0' ],
+312 silly audit   '@jest/environment': [ '29.7.0' ],
+312 silly audit   '@jest/fake-timers': [ '29.7.0' ],
+312 silly audit   '@jest/schemas': [ '29.6.3' ],
+312 silly audit   '@jest/transform': [ '29.7.0' ],
+312 silly audit   'signal-exit': [ '3.0.7', '4.1.0' ],
+312 silly audit   'write-file-atomic': [ '4.0.2', '5.0.1', '2.4.3' ],
+312 silly audit   '@jest/types': [ '29.6.3' ],
+312 silly audit   '@jridgewell/gen-mapping': [ '0.3.8' ],
+312 silly audit   '@jridgewell/resolve-uri': [ '3.1.2' ],
+312 silly audit   '@jridgewell/set-array': [ '1.2.1' ],
+312 silly audit   '@jridgewell/source-map': [ '0.3.6' ],
+312 silly audit   '@jridgewell/sourcemap-codec': [ '1.5.0' ],
+312 silly audit   '@jridgewell/trace-mapping': [ '0.3.25' ],
+312 silly audit   '@mediapipe/tasks-vision': [ '0.10.17' ],
+312 silly audit   '@monogrid/gainmap-js': [ '3.1.0' ],
+312 silly audit   '@next/env': [ '15.2.2' ],
+312 silly audit   '@next/swc-darwin-arm64': [ '15.2.2' ],
+312 silly audit   '@next/swc-darwin-x64': [ '15.2.2' ],
+312 silly audit   '@next/swc-linux-arm64-gnu': [ '15.2.2' ],
+312 silly audit   '@next/swc-linux-arm64-musl': [ '15.2.2' ],
+312 silly audit   '@next/swc-linux-x64-gnu': [ '15.2.2' ],
+312 silly audit   '@next/swc-linux-x64-musl': [ '15.2.2' ],
+312 silly audit   '@next/swc-win32-arm64-msvc': [ '15.2.2' ],
+312 silly audit   '@next/swc-win32-x64-msvc': [ '15.2.2' ],
+312 silly audit   '@nodelib/fs.scandir': [ '2.1.5' ],
+312 silly audit   '@nodelib/fs.stat': [ '2.0.5' ],
+312 silly audit   '@nodelib/fs.walk': [ '1.2.8' ],
+312 silly audit   '@npmcli/fs': [ '3.1.1' ],
+312 silly audit   '@pkgjs/parseargs': [ '0.11.0' ],
+312 silly audit   '@radix-ui/number': [ '1.1.0' ],
+312 silly audit   '@radix-ui/primitive': [ '1.1.1' ],
+312 silly audit   '@radix-ui/react-accordion': [ '1.2.3' ],
+312 silly audit   '@radix-ui/react-alert-dialog': [ '1.1.6' ],
+312 silly audit   '@radix-ui/react-arrow': [ '1.1.2' ],
+312 silly audit   '@radix-ui/react-aspect-ratio': [ '1.1.2' ],
+312 silly audit   '@radix-ui/react-avatar': [ '1.1.3' ],
+312 silly audit   '@radix-ui/react-checkbox': [ '1.1.4' ],
+312 silly audit   '@radix-ui/react-collapsible': [ '1.1.3' ],
+312 silly audit   '@radix-ui/react-collection': [ '1.1.2' ],
+312 silly audit   '@radix-ui/react-compose-refs': [ '1.1.1' ],
+312 silly audit   '@radix-ui/react-context': [ '1.1.1' ],
+312 silly audit   '@radix-ui/react-context-menu': [ '2.2.6' ],
+312 silly audit   '@radix-ui/react-dialog': [ '1.1.6' ],
+312 silly audit   '@radix-ui/react-direction': [ '1.1.0' ],
+312 silly audit   '@radix-ui/react-dismissable-layer': [ '1.1.5' ],
+312 silly audit   '@radix-ui/react-dropdown-menu': [ '2.1.6' ],
+312 silly audit   '@radix-ui/react-focus-guards': [ '1.1.1' ],
+312 silly audit   '@radix-ui/react-focus-scope': [ '1.1.2' ],
+312 silly audit   '@radix-ui/react-hover-card': [ '1.1.6' ],
+312 silly audit   '@radix-ui/react-id': [ '1.1.0' ],
+312 silly audit   '@radix-ui/react-label': [ '2.1.2' ],
+312 silly audit   '@radix-ui/react-menu': [ '2.1.6' ],
+312 silly audit   '@radix-ui/react-menubar': [ '1.1.6' ],
+312 silly audit   '@radix-ui/react-navigation-menu': [ '1.2.5' ],
+312 silly audit   '@radix-ui/react-popover': [ '1.1.6' ],
+312 silly audit   '@radix-ui/react-popper': [ '1.2.2' ],
+312 silly audit   '@radix-ui/react-portal': [ '1.1.4' ],
+312 silly audit   '@radix-ui/react-presence': [ '1.1.2' ],
+312 silly audit   '@radix-ui/react-primitive': [ '2.0.2' ],
+312 silly audit   '@radix-ui/react-progress': [ '1.1.2' ],
+312 silly audit   '@radix-ui/react-radio-group': [ '1.2.3' ],
+312 silly audit   '@radix-ui/react-roving-focus': [ '1.1.2' ],
+312 silly audit   '@radix-ui/react-scroll-area': [ '1.2.3' ],
+312 silly audit   '@radix-ui/react-select': [ '2.1.6' ],
+312 silly audit   '@radix-ui/react-separator': [ '1.1.2' ],
+312 silly audit   '@radix-ui/react-slider': [ '1.2.3' ],
+312 silly audit   '@radix-ui/react-slot': [ '1.1.2' ],
+312 silly audit   '@radix-ui/react-switch': [ '1.1.3' ],
+312 silly audit   '@radix-ui/react-tabs': [ '1.1.3' ],
+312 silly audit   '@radix-ui/react-toast': [ '1.2.6' ],
+312 silly audit   '@radix-ui/react-toggle': [ '1.1.2' ],
+312 silly audit   '@radix-ui/react-toggle-group': [ '1.1.2' ],
+312 silly audit   '@radix-ui/react-tooltip': [ '1.1.8' ],
+312 silly audit   '@radix-ui/react-use-callback-ref': [ '1.1.0' ],
+312 silly audit   '@radix-ui/react-use-controllable-state': [ '1.1.0' ],
+312 silly audit   '@radix-ui/react-use-escape-keydown': [ '1.1.0' ],
+312 silly audit   '@radix-ui/react-use-layout-effect': [ '1.1.0' ],
+312 silly audit   '@radix-ui/react-use-previous': [ '1.1.0' ],
+312 silly audit   '@radix-ui/react-use-rect': [ '1.1.0' ],
+312 silly audit   '@radix-ui/react-use-size': [ '1.1.0' ],
+312 silly audit   '@radix-ui/react-visually-hidden': [ '1.1.2' ],
+312 silly audit   '@radix-ui/rect': [ '1.1.0' ],
+312 silly audit   '@react-native/assets-registry': [ '0.78.0' ],
+312 silly audit   '@react-native/babel-plugin-codegen': [ '0.76.7', '0.78.0' ],
+312 silly audit   '@react-native/babel-preset': [ '0.76.7', '0.78.0' ],
+312 silly audit   '@react-native/codegen': [ '0.76.7', '0.78.0' ],
+312 silly audit   glob: [ '7.2.3', '10.4.5' ],
+312 silly audit   '@react-native/community-cli-plugin': [ '0.78.0' ],
+312 silly audit   '@react-native/debugger-frontend': [ '0.78.0', '0.76.7' ],
+312 silly audit   '@react-native/dev-middleware': [ '0.78.0', '0.76.7' ],
+312 silly audit   ms: [ '2.0.0', '2.1.3' ],
+312 silly audit   ws: [ '6.2.3', '8.17.1', '7.5.10', '8.18.1' ],
+312 silly audit   '@react-native/gradle-plugin': [ '0.78.0' ],
+312 silly audit   '@react-native/js-polyfills': [ '0.78.0' ],
+312 silly audit   '@react-native/metro-babel-transformer': [ '0.78.0' ],
+312 silly audit   'ast-types': [ '0.16.1', '0.15.2' ],
+312 silly audit   'hermes-estree': [ '0.25.1', '0.23.1' ],
+312 silly audit   'hermes-parser': [ '0.25.1', '0.23.1' ],
+312 silly audit   jscodeshift: [ '17.1.2', '0.14.0' ],
+312 silly audit   recast: [ '0.23.11', '0.21.5' ],
+312 silly audit   'source-map': [ '0.6.1', '0.5.7' ],
+312 silly audit   tmp: [ '0.2.3', '0.0.33' ],
+312 silly audit   '@react-native/normalize-colors': [ '0.76.7', '0.78.0' ],
+312 silly audit   '@react-native/virtualized-lists': [ '0.78.0' ],
+312 silly audit   '@react-three/drei': [ '10.0.4' ],
+312 silly audit   '@react-three/fiber': [ '9.1.0' ],
+312 silly audit   '@react-three/postprocessing': [ '3.0.4' ],
+312 silly audit   maath: [ '0.6.0', '0.10.8' ],
+312 silly audit   '@segment/loosely-validate-event': [ '2.0.0' ],
+312 silly audit   '@sinclair/typebox': [ '0.27.8' ],
+312 silly audit   '@sinonjs/commons': [ '3.0.1' ],
+312 silly audit   '@sinonjs/fake-timers': [ '10.3.0' ],
+312 silly audit   '@socket.io/component-emitter': [ '3.1.2' ],
+312 silly audit   '@swc/counter': [ '0.1.3' ],
+312 silly audit   '@swc/helpers': [ '0.5.15' ],
+312 silly audit   '@tweenjs/tween.js': [ '23.1.3' ],
+312 silly audit   '@types/babel__core': [ '7.20.5' ],
+312 silly audit   '@types/babel__generator': [ '7.6.8' ],
+312 silly audit   '@types/babel__template': [ '7.4.4' ],
+312 silly audit   '@types/babel__traverse': [ '7.20.6' ],
+312 silly audit   '@types/cors': [ '2.8.17' ],
+312 silly audit   '@types/d3-array': [ '3.2.1' ],
+312 silly audit   '@types/d3-color': [ '3.1.3' ],
+312 silly audit   '@types/d3-ease': [ '3.0.2' ],
+312 silly audit   '@types/d3-interpolate': [ '3.0.4' ],
+312 silly audit   '@types/d3-path': [ '3.1.1' ],
+312 silly audit   '@types/d3-scale': [ '4.0.9' ],
+312 silly audit   '@types/d3-shape': [ '3.1.7' ],
+312 silly audit   '@types/d3-time': [ '3.0.4' ],
+312 silly audit   '@types/d3-timer': [ '3.0.2' ],
+312 silly audit   '@types/draco3d': [ '1.4.10' ],
+312 silly audit   '@types/graceful-fs': [ '4.1.9' ],
+312 silly audit   '@types/istanbul-lib-coverage': [ '2.0.6' ],
+312 silly audit   '@types/istanbul-lib-report': [ '3.0.3' ],
+312 silly audit   '@types/istanbul-reports': [ '3.0.4' ],
+312 silly audit   '@types/node': [ '22.13.10' ],
+312 silly audit   '@types/node-forge': [ '1.3.11' ],
+312 silly audit   '@types/offscreencanvas': [ '2019.7.3' ],
+312 silly audit   '@types/react': [ '19.0.10' ],
+312 silly audit   '@types/react-dom': [ '19.0.4' ],
+312 silly audit   '@types/react-reconciler': [ '0.28.9' ],
+312 silly audit   '@types/stack-utils': [ '2.0.3' ],
+312 silly audit   '@types/stats.js': [ '0.17.3' ],
+312 silly audit   '@types/three': [ '0.174.0' ],
+312 silly audit   '@types/webxr': [ '0.5.21' ],
+312 silly audit   '@types/yargs': [ '17.0.33' ],
+312 silly audit   '@types/yargs-parser': [ '21.0.3' ],
+312 silly audit   '@urql/core': [ '5.1.1' ],
+312 silly audit   '@urql/exchange-retry': [ '1.3.1' ],
+312 silly audit   '@use-gesture/core': [ '10.3.1' ],
+312 silly audit   '@use-gesture/react': [ '10.3.1' ],
+312 silly audit   '@webgpu/types': [ '0.1.56' ],
+312 silly audit   '@xmldom/xmldom': [ '0.7.13', '0.8.10' ],
+312 silly audit   'abort-controller': [ '3.0.0' ],
+312 silly audit   accepts: [ '1.3.8' ],
+312 silly audit   acorn: [ '8.14.1' ],
+312 silly audit   'aggregate-error': [ '3.1.0' ],
+312 silly audit   anser: [ '1.4.10' ],
+312 silly audit   'ansi-escapes': [ '4.3.2' ],
+312 silly audit   'ansi-regex': [ '5.0.1', '4.1.1', '6.1.0' ],
+312 silly audit   'any-promise': [ '1.3.0' ],
+312 silly audit   anymatch: [ '3.1.3' ],
+312 silly audit   picomatch: [ '2.3.1', '3.0.1' ],
+312 silly audit   'application-config-path': [ '0.1.1' ],
+312 silly audit   arg: [ '5.0.2' ],
+312 silly audit   'aria-hidden': [ '1.2.4' ],
+312 silly audit   'array-union': [ '2.1.0' ],
+312 silly audit   asap: [ '2.0.6' ],
+312 silly audit   'async-limiter': [ '1.0.1' ],
+312 silly audit   asynckit: [ '0.4.0' ],
+312 silly audit   'at-least-node': [ '1.0.0' ],
+312 silly audit   autoprefixer: [ '10.4.21' ],
+312 silly audit   'babel-core': [ '7.0.0-bridge.0' ],
+312 silly audit   'babel-jest': [ '29.7.0' ],
+312 silly audit   'babel-plugin-istanbul': [ '6.1.1' ],
+312 silly audit   'babel-plugin-jest-hoist': [ '29.6.3' ],
+312 silly audit   'babel-plugin-polyfill-corejs2': [ '0.4.12' ],
+312 silly audit   'babel-plugin-polyfill-corejs3': [ '0.11.1' ],
+312 silly audit   'babel-plugin-polyfill-regenerator': [ '0.6.3' ],
+312 silly audit   'babel-plugin-react-native-web': [ '0.19.13' ],
+312 silly audit   'babel-plugin-syntax-hermes-parser': [ '0.25.1' ],
+312 silly audit   'babel-plugin-transform-flow-enums': [ '0.0.2' ],
+312 silly audit   'babel-preset-current-node-syntax': [ '1.1.0' ],
+312 silly audit   'babel-preset-expo': [ '12.0.9' ],
+312 silly audit   'babel-preset-jest': [ '29.6.3' ],
+312 silly audit   'balanced-match': [ '1.0.2' ],
+312 silly audit   'base64-js': [ '1.5.1' ],
+312 silly audit   base64id: [ '2.0.0' ],
+312 silly audit   'better-opn': [ '3.0.2' ],
+312 silly audit   open: [ '8.4.2', '7.4.2' ],
+312 silly audit   'bidi-js': [ '1.0.3' ],
+312 silly audit   'big-integer': [ '1.6.52' ],
+312 silly audit   'binary-extensions': [ '2.3.0' ],
+312 silly audit   'bplist-creator': [ '0.0.7', '0.1.0' ],
+312 silly audit   'bplist-parser': [ '0.3.2', '0.3.1' ],
+312 silly audit   'brace-expansion': [ '1.1.11', '2.0.1' ],
+312 silly audit   braces: [ '3.0.3' ],
+312 silly audit   browserslist: [ '4.24.4' ],
+312 silly audit   bser: [ '2.1.1' ],
+312 silly audit   buffer: [ '6.0.3', '5.7.1' ],
+312 silly audit   'buffer-alloc': [ '1.2.0' ],
+312 silly audit   'buffer-alloc-unsafe': [ '1.1.0' ],
+312 silly audit   'buffer-fill': [ '1.0.0' ],
+312 silly audit   'buffer-from': [ '1.1.2' ],
+312 silly audit   busboy: [ '1.6.0' ],
+312 silly audit   bytes: [ '3.1.2' ],
+312 silly audit   cacache: [ '18.0.4' ],
+312 silly audit   'lru-cache': [ '10.4.3', '5.1.1' ],
+312 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+312 silly audit   'caller-callsite': [ '2.0.0' ],
+312 silly audit   'caller-path': [ '2.0.0' ],
+312 silly audit   callsites: [ '2.0.0' ],
+312 silly audit   camelcase: [ '5.3.1', '6.3.0' ],
+312 silly audit   'camelcase-css': [ '2.0.1' ],
+312 silly audit   'camera-controls': [ '2.10.0' ],
+312 silly audit   'caniuse-lite': [ '1.0.30001704' ],
+312 silly audit   charenc: [ '0.0.2' ],
+312 silly audit   chokidar: [ '3.6.0' ],
+312 silly audit   fsevents: [ '2.3.3' ],
+312 silly audit   chownr: [ '2.0.0' ],
+312 silly audit   'chrome-launcher': [ '0.15.2' ],
+312 silly audit   'chromium-edge-launcher': [ '0.2.0' ],
+312 silly audit   mkdirp: [ '1.0.4', '0.5.6' ],
+312 silly audit   'ci-info': [ '3.9.0', '2.0.0' ],
+312 silly audit   'class-variance-authority': [ '0.7.1' ],
+312 silly audit   'clean-stack': [ '2.2.0' ],
+312 silly audit   'cli-cursor': [ '2.1.0' ],
+312 silly audit   'cli-spinners': [ '2.9.2' ],
+312 silly audit   'client-only': [ '0.0.1' ],
+312 silly audit   cliui: [ '8.0.1' ],
+312 silly audit   'emoji-regex': [ '8.0.0', '9.2.2' ],
+312 silly audit   'string-width': [ '4.2.3', '5.1.2' ],
+312 silly audit   'strip-ansi': [ '6.0.1', '5.2.0', '7.1.0' ],
+312 silly audit   clone: [ '1.0.4' ],
+312 silly audit   'clone-deep': [ '4.0.1' ],
+312 silly audit   clsx: [ '2.1.1' ],
+312 silly audit   cmdk: [ '1.0.4' ],
+312 silly audit   color: [ '4.2.3' ],
+312 silly audit   'color-string': [ '1.9.1' ],
+312 silly audit   'combined-stream': [ '1.0.8' ],
+312 silly audit   'command-exists': [ '1.2.9' ],
+312 silly audit   commander: [ '7.2.0', '12.1.0', '4.1.1', '2.20.3' ],
+312 silly audit   commondir: [ '1.0.1' ],
+312 silly audit   'component-type': [ '1.2.2' ],
+312 silly audit   compressible: [ '2.0.18' ],
+312 silly audit   compression: [ '1.8.0' ],
+312 silly audit   negotiator: [ '0.6.4', '0.6.3' ],
+312 silly audit   'concat-map': [ '0.0.1' ],
+312 silly audit   connect: [ '3.7.0' ],
+312 silly audit   'convert-source-map': [ '2.0.0' ],
+312 silly audit   cookie: [ '0.7.2' ],
+312 silly audit   'core-js-compat': [ '3.41.0' ],
+312 silly audit   cors: [ '2.8.5' ],
+312 silly audit   cosmiconfig: [ '5.2.1' ],
+312 silly audit   'cross-env': [ '7.0.3' ],
+312 silly audit   'cross-fetch': [ '3.2.0' ],
+312 silly audit   'cross-spawn': [ '7.0.6', '6.0.6' ],
+312 silly audit   crypt: [ '0.0.2' ],
+312 silly audit   'crypto-random-string': [ '2.0.0' ],
+312 silly audit   cssesc: [ '3.0.0' ],
+312 silly audit   csstype: [ '3.1.3' ],
+312 silly audit   'd3-array': [ '3.2.4' ],
+312 silly audit   'd3-color': [ '3.1.0' ],
+312 silly audit   'd3-ease': [ '3.0.1' ],
+312 silly audit   'd3-format': [ '3.1.0' ],
+312 silly audit   'd3-interpolate': [ '3.0.1' ],
+312 silly audit   'd3-path': [ '3.1.0' ],
+312 silly audit   'd3-scale': [ '4.0.2' ],
+312 silly audit   'd3-shape': [ '3.2.0' ],
+312 silly audit   'd3-time': [ '3.1.0' ],
+312 silly audit   'd3-time-format': [ '4.1.0' ],
+312 silly audit   'd3-timer': [ '3.0.1' ],
+312 silly audit   'date-fns': [ '4.1.0' ],
+312 silly audit   'decimal.js-light': [ '2.5.1' ],
+312 silly audit   'deep-extend': [ '0.6.0' ],
+312 silly audit   deepmerge: [ '4.3.1' ],
+312 silly audit   'default-gateway': [ '4.2.0' ],
+312 silly audit   defaults: [ '1.0.4' ],
+312 silly audit   'define-lazy-prop': [ '2.0.0' ],
+312 silly audit   del: [ '6.1.1' ],
+312 silly audit   'delayed-stream': [ '1.0.0' ],
+312 silly audit   depd: [ '2.0.0' ],
+312 silly audit   destroy: [ '1.2.0' ],
+312 silly audit   'detect-gpu': [ '5.0.70' ],
+312 silly audit   'detect-libc': [ '1.0.3', '2.0.3' ],
+312 silly audit   'detect-node-es': [ '1.1.0' ],
+312 silly audit   didyoumean: [ '1.2.2' ],
+312 silly audit   'dir-glob': [ '3.0.1' ],
+312 silly audit   dlv: [ '1.1.3' ],
+312 silly audit   'dom-helpers': [ '5.2.1' ],
+312 silly audit   dotenv: [ '16.4.7' ],
+312 silly audit   'dotenv-expand': [ '11.0.7' ],
+312 silly audit   draco3d: [ '1.5.7' ],
+312 silly audit   'dunder-proto': [ '1.0.1' ],
+312 silly audit   eastasianwidth: [ '0.2.0' ],
+312 silly audit   'ee-first': [ '1.1.1' ],
+312 silly audit   'electron-to-chromium': [ '1.5.118' ],
+312 silly audit   'embla-carousel': [ '8.5.1' ],
+312 silly audit   'embla-carousel-react': [ '8.5.1' ],
+312 silly audit   'embla-carousel-reactive-utils': [ '8.5.1' ],
+312 silly audit   encodeurl: [ '1.0.2', '2.0.0' ],
+312 silly audit   'end-of-stream': [ '1.4.4' ],
+312 silly audit   'engine.io': [ '6.6.4' ],
+312 silly audit   'engine.io-client': [ '6.6.3' ],
+312 silly audit   'engine.io-parser': [ '5.2.3' ],
+312 silly audit   'env-editor': [ '0.4.2' ],
+312 silly audit   eol: [ '0.9.1' ],
+312 silly audit   'error-ex': [ '1.3.2' ],
+312 silly audit   'error-stack-parser': [ '2.1.4' ],
+312 silly audit   'es-define-property': [ '1.0.1' ],
+312 silly audit   'es-errors': [ '1.3.0' ],
+312 silly audit   'es-object-atoms': [ '1.1.1' ],
+312 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+312 silly audit   escalade: [ '3.2.0' ],
+312 silly audit   'escape-html': [ '1.0.3' ],
+312 silly audit   esprima: [ '4.0.1' ],
+312 silly audit   etag: [ '1.8.1' ],
+312 silly audit   'event-target-shim': [ '5.0.1' ],
+312 silly audit   eventemitter3: [ '4.0.7' ],
+312 silly audit   'exec-async': [ '2.2.0' ],
+312 silly audit   execa: [ '1.0.0' ],
+312 silly audit   'path-key': [ '2.0.1', '3.1.1' ],
+312 silly audit   'shebang-command': [ '1.2.0', '2.0.0' ],
+312 silly audit   'shebang-regex': [ '1.0.0', '3.0.0' ],
+312 silly audit   which: [ '1.3.1', '2.0.2' ],
+312 silly audit   expo: [ '52.0.39' ],
+312 silly audit   'expo-asset': [ '11.0.4' ],
+312 silly audit   'expo-constants': [ '17.0.8' ],
+312 silly audit   'expo-file-system': [ '18.0.11' ],
+312 silly audit   'expo-font': [ '13.0.4' ],
+312 silly audit   'expo-gl': [ '15.0.4' ],
+312 silly audit   'expo-keep-awake': [ '14.0.3' ],
+312 silly audit   'expo-modules-autolinking': [ '2.0.8' ],
+312 silly audit   'expo-modules-core': [ '2.2.3' ],
+312 silly audit   'exponential-backoff': [ '3.1.2' ],
+312 silly audit   'fast-equals': [ '5.2.2' ],
+312 silly audit   'fast-glob': [ '3.3.3' ],
+312 silly audit   'fast-json-stable-stringify': [ '2.1.0' ],
+312 silly audit   fastq: [ '1.19.1' ],
+312 silly audit   'fb-watchman': [ '2.0.2' ],
+312 silly audit   fbemitter: [ '3.0.0' ],
+312 silly audit   fbjs: [ '3.0.5' ],
+312 silly audit   'fbjs-css-vars': [ '1.0.2' ],
+312 silly audit   'fetch-retry': [ '4.1.1' ],
+312 silly audit   fflate: [ '0.8.2', '0.6.10' ],
+312 silly audit   'fill-range': [ '7.1.1' ],
+312 silly audit   finalhandler: [ '1.1.2' ],
+312 silly audit   'find-cache-dir': [ '2.1.0' ],
+312 silly audit   'flow-enums-runtime': [ '0.0.6' ],
+312 silly audit   'flow-parser': [ '0.265.2' ],
+312 silly audit   fontfaceobserver: [ '2.3.0' ],
+312 silly audit   'foreground-child': [ '3.3.1' ],
+312 silly audit   'form-data': [ '3.0.3' ],
+312 silly audit   'fraction.js': [ '4.3.7' ],
+312 silly audit   'freeport-async': [ '2.0.0' ],
+312 silly audit   fresh: [ '0.5.2' ],
+312 silly audit   'fs-minipass': [ '3.0.3', '2.1.0' ],
+312 silly audit   'fs.realpath': [ '1.0.0' ],
+312 silly audit   'function-bind': [ '1.1.2' ],
+312 silly audit   gensync: [ '1.0.0-beta.2' ],
+312 silly audit   'get-caller-file': [ '2.0.5' ],
+312 silly audit   'get-intrinsic': [ '1.3.0' ],
+312 silly audit   'get-nonce': [ '1.0.1' ],
+312 silly audit   'get-package-type': [ '0.1.0' ],
+312 silly audit   'get-port': [ '3.2.0' ],
+312 silly audit   'get-proto': [ '1.0.1' ],
+312 silly audit   'get-stream': [ '4.1.0' ],
+312 silly audit   getenv: [ '1.0.0' ],
+312 silly audit   'glob-parent': [ '5.1.2', '6.0.2' ],
+312 silly audit   minimatch: [ '9.0.5', '3.1.2' ],
+312 silly audit   globals: [ '11.12.0' ],
+312 silly audit   globby: [ '11.1.0' ],
+312 silly audit   'glsl-noise': [ '0.0.0' ],
+312 silly audit   gopd: [ '1.2.0' ],
+312 silly audit   'graceful-fs': [ '4.2.11' ],
+312 silly audit   'has-symbols': [ '1.1.0' ],
+312 silly audit   'has-tostringtag': [ '1.0.2' ],
+312 silly audit   hasown: [ '2.0.2' ],
+312 silly audit   'hls.js': [ '1.5.20' ],
+312 silly audit   'hosted-git-info': [ '7.0.2' ],
+312 silly audit   http: [ '0.0.1-security' ],
+312 silly audit   'http-errors': [ '2.0.0' ],
+312 silly audit   statuses: [ '2.0.1', '1.5.0' ],
+312 silly audit   ieee754: [ '1.2.1' ],
+312 silly audit   ignore: [ '5.3.2' ],
+312 silly audit   'image-size': [ '1.2.0' ],
+312 silly audit   immediate: [ '3.0.6' ],
+312 silly audit   immer: [ '10.1.1' ],
+312 silly audit   'import-fresh': [ '2.0.0' ],
+312 silly audit   'resolve-from': [ '3.0.0', '5.0.0' ],
+312 silly audit   imurmurhash: [ '0.1.4' ],
+312 silly audit   'indent-string': [ '4.0.0' ],
+312 silly audit   inflight: [ '1.0.6' ],
+312 silly audit   inherits: [ '2.0.4' ],
+312 silly audit   ini: [ '1.3.8' ],
+312 silly audit   'input-otp': [ '1.4.1' ],
+312 silly audit   'internal-ip': [ '4.3.0' ],
+312 silly audit   internmap: [ '2.0.3' ],
+312 silly audit   invariant: [ '2.2.4' ],
+312 silly audit   'ip-regex': [ '2.1.0' ],
+312 silly audit   'ipaddr.js': [ '1.9.1' ],
+312 silly audit   'is-arrayish': [ '0.2.1', '0.3.2' ],
+312 silly audit   'is-binary-path': [ '2.1.0' ],
+312 silly audit   'is-buffer': [ '1.1.6' ],
+312 silly audit   'is-core-module': [ '2.16.1' ],
+312 silly audit   'is-directory': [ '0.3.1' ],
+312 silly audit   'is-docker': [ '2.2.1' ],
+312 silly audit   'is-extglob': [ '2.1.1' ],
+312 silly audit   'is-fullwidth-code-point': [ '3.0.0' ],
+312 silly audit   'is-glob': [ '4.0.3' ],
+312 silly audit   'is-number': [ '7.0.0' ],
+312 silly audit   'is-path-cwd': [ '2.2.0' ],
+312 silly audit   'is-path-inside': [ '3.0.3' ],
+312 silly audit   'is-plain-object': [ '2.0.4' ],
+312 silly audit   'is-promise': [ '2.2.2' ],
+312 silly audit   'is-stream': [ '1.1.0', '2.0.1' ],
+312 silly audit   'is-wsl': [ '2.2.0' ],
+312 silly audit   isexe: [ '2.0.0' ],
+312 silly audit   isobject: [ '3.0.1' ],
+312 silly audit   'istanbul-lib-coverage': [ '3.2.2' ],
+312 silly audit   'istanbul-lib-instrument': [ '5.2.1' ],
+312 silly audit   'its-fine': [ '2.0.0' ],
+312 silly audit   jackspeak: [ '3.4.3' ],
+312 silly audit   'jest-environment-node': [ '29.7.0' ],
+312 silly audit   'jest-get-type': [ '29.6.3' ],
+312 silly audit   'jest-haste-map': [ '29.7.0' ],
+312 silly audit   'jest-message-util': [ '29.7.0' ],
+312 silly audit   'jest-mock': [ '29.7.0' ],
+312 silly audit   'jest-regex-util': [ '29.6.3' ],
+312 silly audit   'jest-util': [ '29.7.0' ],
+312 silly audit   'jest-validate': [ '29.7.0' ],
+312 silly audit   'jest-worker': [ '29.7.0' ],
+312 silly audit   'jimp-compact': [ '0.16.1' ],
+312 silly audit   jiti: [ '1.21.7' ],
+312 silly audit   'join-component': [ '1.1.0' ],
+312 silly audit   'js-tokens': [ '4.0.0' ],
+312 silly audit   'jsc-safe-url': [ '0.2.4' ],
+312 silly audit   jsesc: [ '3.1.0', '3.0.2' ],
+312 silly audit   'json-parse-better-errors': [ '1.0.2' ],
+312 silly audit   json5: [ '2.2.3' ],
+312 silly audit   'kind-of': [ '6.0.3' ],
+312 silly audit   kleur: [ '3.0.3' ],
+312 silly audit   leven: [ '3.1.0' ],
+312 silly audit   lie: [ '3.3.0' ],
+312 silly audit   'lighthouse-logger': [ '1.4.2' ],
+312 silly audit   lightningcss: [ '1.27.0' ],
+312 silly audit   'lightningcss-win32-x64-msvc': [ '1.27.0' ],
+312 silly audit   'lightningcss-darwin-arm64': [ '1.27.0' ],
+312 silly audit   'lightningcss-darwin-x64': [ '1.27.0' ],
+312 silly audit   'lightningcss-freebsd-x64': [ '1.27.0' ],
+312 silly audit   'lightningcss-linux-arm-gnueabihf': [ '1.27.0' ],
+312 silly audit   'lightningcss-linux-arm64-gnu': [ '1.27.0' ],
+312 silly audit   'lightningcss-linux-arm64-musl': [ '1.27.0' ],
+312 silly audit   'lightningcss-linux-x64-gnu': [ '1.27.0' ],
+312 silly audit   'lightningcss-linux-x64-musl': [ '1.27.0' ],
+312 silly audit   'lightningcss-win32-arm64-msvc': [ '1.27.0' ],
+312 silly audit   lilconfig: [ '3.1.3' ],
+312 silly audit   'lines-and-columns': [ '1.2.4' ],
+312 silly audit   lodash: [ '4.17.21' ],
+312 silly audit   'lodash.debounce': [ '4.0.8' ],
+312 silly audit   'lodash.throttle': [ '4.1.1' ],
+312 silly audit   'log-symbols': [ '2.2.0' ],
+312 silly audit   'loose-envify': [ '1.4.0' ],
+312 silly audit   'lucide-react': [ '0.454.0' ],
+312 silly audit   'make-dir': [ '2.1.0' ],
+312 silly audit   makeerror: [ '1.0.12' ],
+312 silly audit   marky: [ '1.2.5' ],
+312 silly audit   'math-intrinsics': [ '1.1.0' ],
+312 silly audit   md5: [ '2.3.0' ],
+312 silly audit   'md5-file': [ '3.2.3' ],
+312 silly audit   'memoize-one': [ '5.2.1' ],
+312 silly audit   'merge-stream': [ '2.0.0' ],
+312 silly audit   merge2: [ '1.4.1' ],
+312 silly audit   meshline: [ '3.3.1' ],
+312 silly audit   meshoptimizer: [ '0.18.1' ],
+312 silly audit   metro: [ '0.81.3' ],
+312 silly audit   'metro-babel-transformer': [ '0.81.3' ],
+312 silly audit   'metro-cache': [ '0.81.3' ],
+312 silly audit   'metro-cache-key': [ '0.81.3' ],
+312 silly audit   'metro-config': [ '0.81.3' ],
+312 silly audit   'metro-core': [ '0.81.3' ],
+312 silly audit   'metro-file-map': [ '0.81.3' ],
+312 silly audit   'metro-minify-terser': [ '0.81.3' ],
+312 silly audit   'metro-resolver': [ '0.81.3' ],
+312 silly audit   'metro-runtime': [ '0.81.3' ],
+312 silly audit   'metro-source-map': [ '0.81.3' ],
+312 silly audit   'metro-symbolicate': [ '0.81.3' ],
+312 silly audit   'metro-transform-plugins': [ '0.81.3' ],
+312 silly audit   'metro-transform-worker': [ '0.81.3' ],
+312 silly audit   micromatch: [ '4.0.8' ],
+312 silly audit   mime: [ '1.6.0' ],
+312 silly audit   'mime-db': [ '1.53.0', '1.52.0' ],
+312 silly audit   'mime-types': [ '2.1.35' ],
+312 silly audit   'mimic-fn': [ '1.2.0' ],
+312 silly audit   minimist: [ '1.2.8' ],
+312 silly audit   minipass: [ '7.1.2', '3.3.6', '5.0.0' ],
+312 silly audit   'minipass-collect': [ '2.0.1' ],
+312 silly audit   'minipass-flush': [ '1.0.5' ],
+312 silly audit   yallist: [ '4.0.0', '3.1.1' ],
+312 silly audit   'minipass-pipeline': [ '1.2.4' ],
+312 silly audit   minizlib: [ '2.1.2' ],
+312 silly audit   mz: [ '2.7.0' ],
+312 silly audit   n8ao: [ '1.9.4' ],
+312 silly audit   nanoid: [ '3.3.9' ],
+312 silly audit   'neo-async': [ '2.6.2' ],
+312 silly audit   'nested-error-stacks': [ '2.0.1' ],
+312 silly audit   next: [ '15.2.2' ],
+312 silly audit   'next-themes': [ '0.4.6' ],
+312 silly audit   'nice-try': [ '1.0.5' ],
+312 silly audit   'node-dir': [ '0.1.17' ],
+312 silly audit   'node-fetch': [ '2.7.0' ],
+312 silly audit   'node-forge': [ '1.3.1' ],
+312 silly audit   'node-int64': [ '0.4.0' ],
+312 silly audit   'node-releases': [ '2.0.19' ],
+312 silly audit   'normalize-path': [ '3.0.0' ],
+312 silly audit   'normalize-range': [ '0.1.2' ],
+312 silly audit   'npm-package-arg': [ '11.0.3' ],
+312 silly audit   'npm-run-path': [ '2.0.2' ],
+312 silly audit   nullthrows: [ '1.1.1' ],
+312 silly audit   ob1: [ '0.81.3' ],
+312 silly audit   'object-assign': [ '4.1.1' ],
+312 silly audit   'object-hash': [ '3.0.0' ],
+312 silly audit   'on-finished': [ '2.3.0', '2.4.1' ],
+312 silly audit   'on-headers': [ '1.0.2' ],
+312 silly audit   once: [ '1.4.0' ],
+312 silly audit   onetime: [ '2.0.1' ],
+312 silly audit   ora: [ '3.4.0' ],
+312 silly audit   'os-tmpdir': [ '1.0.2' ],
+312 silly audit   'p-finally': [ '1.0.0' ],
+312 silly audit   'p-map': [ '4.0.0' ],
+312 silly audit   'p-try': [ '2.2.0' ],
+312 silly audit   'package-json-from-dist': [ '1.0.1' ],
+312 silly audit   'parse-json': [ '4.0.0' ],
+312 silly audit   'parse-png': [ '2.1.0' ],
+312 silly audit   parseurl: [ '1.3.3' ],
+312 silly audit   'password-prompt': [ '1.1.3' ],
+312 silly audit   'path-exists': [ '4.0.0', '3.0.0' ],
+312 silly audit   'path-is-absolute': [ '1.0.1' ],
+312 silly audit   'path-parse': [ '1.0.7' ],
+312 silly audit   'path-scurry': [ '1.11.1' ],
+312 silly audit   'path-type': [ '4.0.0' ],
+312 silly audit   picocolors: [ '1.1.1' ],
+312 silly audit   pify: [ '4.0.1', '2.3.0' ],
+312 silly audit   pirates: [ '4.0.6' ],
+312 silly audit   'pkg-dir': [ '3.0.0' ],
+312 silly audit   plist: [ '3.1.0' ],
+312 silly audit   xmlbuilder: [ '15.1.1', '11.0.1', '14.0.0' ],
+312 silly audit   pngjs: [ '3.4.0' ],
+312 silly audit   'postcss-import': [ '15.1.0' ],
+312 silly audit   'postcss-js': [ '4.0.1' ],
+312 silly audit   'postcss-load-config': [ '4.0.2' ],
+312 silly audit   'postcss-nested': [ '6.2.0' ],
+312 silly audit   'postcss-selector-parser': [ '6.1.2' ],
+312 silly audit   'postcss-value-parser': [ '4.2.0' ],
+312 silly audit   postprocessing: [ '6.37.1' ],
+312 silly audit   potpack: [ '1.0.2' ],
+312 silly audit   'pretty-bytes': [ '5.6.0' ],
+312 silly audit   'pretty-format': [ '29.7.0' ],
+312 silly audit   'proc-log': [ '4.2.0' ],
+312 silly audit   progress: [ '2.0.3' ],
+312 silly audit   promise: [ '7.3.1', '8.3.0' ],
+312 silly audit   'promise-worker-transferable': [ '1.0.4' ],
+312 silly audit   prompts: [ '2.4.2' ],
+312 silly audit   'prop-types': [ '15.8.1' ],
+312 silly audit   'react-is': [ '16.13.1', '18.3.1' ],
+312 silly audit   pump: [ '3.0.2' ],
+312 silly audit   punycode: [ '2.3.1' ],
+312 silly audit   'qrcode-terminal': [ '0.11.0' ],
+312 silly audit   queue: [ '6.0.2' ],
+312 silly audit   'queue-microtask': [ '1.2.3' ],
+312 silly audit   'range-parser': [ '1.2.1' ],
+312 silly audit   rc: [ '1.2.8' ],
+312 silly audit   react: [ '19.0.0' ],
+312 silly audit   'react-day-picker': [ '8.10.1' ],
+312 silly audit   'react-devtools-core': [ '6.1.1' ],
+312 silly audit   'react-dom': [ '19.0.0' ],
+312 silly audit   'react-hook-form': [ '7.54.2' ],
+312 silly audit   'react-native': [ '0.78.0' ],
+312 silly audit   'regenerator-runtime': [ '0.13.11', '0.14.1' ],
+312 silly audit   'react-reconciler': [ '0.31.0' ],
+312 silly audit   'react-refresh': [ '0.14.2' ],
+312 silly audit   'react-remove-scroll': [ '2.6.3' ],
+312 silly audit   'react-remove-scroll-bar': [ '2.3.8' ],
+312 silly audit   'react-resizable-panels': [ '2.1.7' ],
+312 silly audit   'react-smooth': [ '4.0.4' ],
+312 silly audit   'react-style-singleton': [ '2.2.3' ],
+312 silly audit   'react-transition-group': [ '4.4.5' ],
+312 silly audit   'react-use-measure': [ '2.1.7' ],
+312 silly audit   'read-cache': [ '1.0.0' ],
+312 silly audit   readdirp: [ '3.6.0' ],
+312 silly audit   readline: [ '1.3.0' ],
+312 silly audit   recharts: [ '2.15.0' ],
+312 silly audit   'recharts-scale': [ '0.4.5' ],
+312 silly audit   regenerate: [ '1.4.2' ],
+312 silly audit   'regenerate-unicode-properties': [ '10.2.0' ],
+312 silly audit   'regenerator-transform': [ '0.15.2' ],
+312 silly audit   'regexpu-core': [ '6.2.0' ],
+312 silly audit   regjsgen: [ '0.8.0' ],
+312 silly audit   regjsparser: [ '0.12.0' ],
+312 silly audit   'remove-trailing-slash': [ '0.1.1' ],
+312 silly audit   'require-directory': [ '2.1.1' ],
+312 silly audit   'require-from-string': [ '2.0.2' ],
+312 silly audit   requireg: [ '0.2.2' ],
+312 silly audit   resolve: [ '1.7.1', '1.22.10' ],
+312 silly audit   'resolve-workspace-root': [ '2.0.0' ],
+312 silly audit   'resolve.exports': [ '2.0.3' ],
+312 silly audit   'restore-cursor': [ '2.0.0' ],
+312 silly audit   reusify: [ '1.1.0' ],
+312 silly audit   rimraf: [ '3.0.2', '2.6.3' ],
+312 silly audit   'run-parallel': [ '1.2.0' ],
+312 silly audit   'safe-buffer': [ '5.2.1' ],
+312 silly audit   sax: [ '1.4.1' ],
+312 silly audit   scheduler: [ '0.25.0' ],
+312 silly audit   selfsigned: [ '2.4.1' ],
+312 silly audit   send: [ '0.19.1', '0.19.0' ],
+312 silly audit   'serialize-error': [ '2.1.0' ],
+312 silly audit   'serve-static': [ '1.16.2' ],
+312 silly audit   setimmediate: [ '1.0.5' ],
+312 silly audit   setprototypeof: [ '1.2.0' ],
+312 silly audit   'shallow-clone': [ '3.0.1' ],
+312 silly audit   sharp: [ '0.33.5' ],
+312 silly audit   'shell-quote': [ '1.8.2' ],
+312 silly audit   'simple-plist': [ '1.3.1' ],
+312 silly audit   'simple-swizzle': [ '0.2.2' ],
+312 silly audit   sisteransi: [ '1.0.5' ],
+312 silly audit   slash: [ '3.0.0' ],
+312 silly audit   slugify: [ '1.6.6' ],
+312 silly audit   'socket.io-adapter': [ '2.5.5' ],
+312 silly audit   'socket.io-client': [ '4.8.1' ],
+312 silly audit   'socket.io-parser': [ '4.2.4' ],
+312 silly audit   sonner: [ '1.7.4' ],
+312 silly audit   'source-map-js': [ '1.2.1' ],
+312 silly audit   'source-map-support': [ '0.5.21' ],
+312 silly audit   split: [ '1.0.1' ],
+312 silly audit   'sprintf-js': [ '1.0.3' ],
+312 silly audit   ssri: [ '10.0.6' ],
+312 silly audit   'stack-utils': [ '2.0.6' ],
+312 silly audit   stackframe: [ '1.3.4' ],
+312 silly audit   'stacktrace-parser': [ '0.1.11' ],
+312 silly audit   'type-fest': [ '0.7.1', '0.16.0', '0.21.3' ],
+312 silly audit   'stats-gl': [ '2.4.2' ],
+312 silly audit   three: [ '0.170.0', '0.174.0' ],
+312 silly audit   'stats.js': [ '0.17.0' ],
+312 silly audit   'stream-buffers': [ '2.2.0' ],
+312 silly audit   streamsearch: [ '1.1.0' ],
+312 silly audit   'strip-eof': [ '1.0.0' ],
+312 silly audit   'strip-json-comments': [ '2.0.1' ],
+312 silly audit   'structured-headers': [ '0.4.1' ],
+312 silly audit   'styled-jsx': [ '5.1.6' ],
+312 silly audit   sucrase: [ '3.35.0' ],
+312 silly audit   'supports-hyperlinks': [ '2.3.0' ],
+312 silly audit   'supports-preserve-symlinks-flag': [ '1.0.0' ],
+312 silly audit   'suspend-react': [ '0.1.3' ],
+312 silly audit   'tailwind-merge': [ '2.6.0' ],
+312 silly audit   tailwindcss: [ '3.4.17' ],
+312 silly audit   'tailwindcss-animate': [ '1.0.7' ],
+312 silly audit   tar: [ '6.2.1' ],
+312 silly audit   temp: [ '0.8.4' ],
+312 silly audit   'temp-dir': [ '2.0.0' ],
+312 silly audit   tempy: [ '0.7.1' ],
+312 silly audit   'terminal-link': [ '2.1.1' ],
+312 silly audit   terser: [ '5.39.0' ],
+312 silly audit   'test-exclude': [ '6.0.0' ],
+312 silly audit   thenify: [ '3.3.1' ],
+312 silly audit   'thenify-all': [ '1.6.0' ],
+312 silly audit   'three-mesh-bvh': [ '0.8.3' ],
+312 silly audit   'three-stdlib': [ '2.35.14' ],
+312 silly audit   throat: [ '5.0.0' ],
+312 silly audit   through: [ '2.3.8' ],
+312 silly audit   'tiny-invariant': [ '1.3.3' ],
+312 silly audit   tmpl: [ '1.0.5' ],
+312 silly audit   'to-regex-range': [ '5.0.1' ],
+312 silly audit   toidentifier: [ '1.0.1' ],
+312 silly audit   tr46: [ '0.0.3' ],
+312 silly audit   'troika-three-text': [ '0.52.3' ],
+312 silly audit   'troika-three-utils': [ '0.52.0' ],
+312 silly audit   'troika-worker-utils': [ '0.52.0' ],
+312 silly audit   'ts-interface-checker': [ '0.1.13' ],
+312 silly audit   tslib: [ '2.8.1' ],
+312 silly audit   'tunnel-rat': [ '0.1.2' ],
+312 silly audit   zustand: [ '4.5.6', '5.0.3' ],
+312 silly audit   'type-detect': [ '4.0.8' ],
+312 silly audit   typescript: [ '5.8.2' ],
+312 silly audit   'ua-parser-js': [ '1.0.40' ],
+312 silly audit   undici: [ '6.21.2' ],
+312 silly audit   'undici-types': [ '6.20.0' ],
+312 silly audit   'unicode-canonical-property-names-ecmascript': [ '2.0.1' ],
+312 silly audit   'unicode-match-property-ecmascript': [ '2.0.0' ],
+312 silly audit   'unicode-match-property-value-ecmascript': [ '2.2.0' ],
+312 silly audit   'unicode-property-aliases-ecmascript': [ '2.1.0' ],
+312 silly audit   'unique-filename': [ '3.0.0' ],
+312 silly audit   'unique-slug': [ '4.0.0' ],
+312 silly audit   'unique-string': [ '2.0.0' ],
+312 silly audit   unpipe: [ '1.0.0' ],
+312 silly audit   'update-browserslist-db': [ '1.1.3' ],
+312 silly audit   'use-callback-ref': [ '1.3.3' ],
+312 silly audit   'use-sidecar': [ '1.1.3' ],
+312 silly audit   'use-sync-external-store': [ '1.4.0' ],
+312 silly audit   'util-deprecate': [ '1.0.2' ],
+312 silly audit   'utility-types': [ '3.11.0' ],
+312 silly audit   'utils-merge': [ '1.0.1' ],
+312 silly audit   'validate-npm-package-name': [ '5.0.1' ],
+312 silly audit   vary: [ '1.1.2' ],
+312 silly audit   vaul: [ '0.9.9' ],
+312 silly audit   'victory-vendor': [ '36.9.2' ],
+312 silly audit   vlq: [ '1.0.1' ],
+312 silly audit   walker: [ '1.0.8' ],
+312 silly audit   wcwidth: [ '1.0.1' ],
+312 silly audit   'web-streams-polyfill': [ '3.3.3' ],
+312 silly audit   'webgl-constants': [ '1.1.1' ],
+312 silly audit   'webgl-sdf-generator': [ '1.1.1' ],
+312 silly audit   'webidl-conversions': [ '3.0.1', '5.0.0' ],
+312 silly audit   'whatwg-fetch': [ '3.6.20' ],
+312 silly audit   'whatwg-url': [ '5.0.0' ],
+312 silly audit   'whatwg-url-without-unicode': [ '8.0.0-3' ],
+312 silly audit   wonka: [ '6.3.5' ],
+312 silly audit   wrappy: [ '1.0.2' ],
+312 silly audit   xcode: [ '3.0.1' ],
+312 silly audit   xml2js: [ '0.6.0' ],
+312 silly audit   'xmlhttprequest-ssl': [ '2.1.2' ],
+312 silly audit   y18n: [ '5.0.8' ],
+312 silly audit   yaml: [ '2.7.0' ],
+312 silly audit   yargs: [ '17.7.2' ],
+312 silly audit   'yargs-parser': [ '21.1.1' ],
+312 silly audit   'yocto-queue': [ '0.1.0' ],
+312 silly audit   zod: [ '3.24.2' ],
+312 silly audit   'socket.io': [ '4.8.1' ],
+312 silly audit   '@babel/preset-env': [ '7.26.9' ],
+312 silly audit   '@babel/plugin-bugfix-firefox-class-in-computed-class-key': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-bugfix-safari-class-field-initializer-scope': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-bugfix-v8-static-class-fields-redefine-readonly': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-proposal-private-property-in-object': [ '7.21.0-placeholder-for-preset-env.2' ],
+312 silly audit   '@babel/plugin-syntax-import-assertions': [ '7.26.0' ],
+312 silly audit   '@babel/plugin-syntax-unicode-sets-regex': [ '7.18.6' ],
+312 silly audit   '@babel/plugin-transform-block-scoped-functions': [ '7.26.5' ],
+312 silly audit   '@babel/plugin-transform-class-static-block': [ '7.26.0' ],
+312 silly audit   '@babel/plugin-transform-dotall-regex': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-duplicate-keys': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-duplicate-named-capturing-groups-regex': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-dynamic-import': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-exponentiation-operator': [ '7.26.3' ],
+312 silly audit   '@babel/plugin-transform-json-strings': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-member-expression-literals': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-modules-amd': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-modules-systemjs': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-modules-umd': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-new-target': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-object-super': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-property-literals': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-regexp-modifiers': [ '7.26.0' ],
+312 silly audit   '@babel/plugin-transform-reserved-words': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-template-literals': [ '7.26.8' ],
+312 silly audit   '@babel/plugin-transform-typeof-symbol': [ '7.26.7' ],
+312 silly audit   '@babel/plugin-transform-unicode-escapes': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-unicode-property-regex': [ '7.25.9' ],
+312 silly audit   '@babel/plugin-transform-unicode-sets-regex': [ '7.25.9' ],
+312 silly audit   '@babel/preset-modules': [ '0.1.6-no-external-plugins' ],
+312 silly audit   esutils: [ '2.0.3' ],
+312 silly audit   '@emnapi/runtime': [ '1.3.1' ]
+312 silly audit }
+313 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\@next\swc-win32-arm64-msvc
+314 silly reify mark deleted [
+314 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@next\\swc-win32-arm64-msvc'
+314 silly reify ]
+315 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\@next\swc-linux-x64-musl
+316 silly reify mark deleted [
+316 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@next\\swc-linux-x64-musl'
+316 silly reify ]
+317 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\@next\swc-linux-x64-gnu
+318 silly reify mark deleted [
+318 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@next\\swc-linux-x64-gnu'
+318 silly reify ]
+319 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\@next\swc-linux-arm64-musl
+320 silly reify mark deleted [
+320 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@next\\swc-linux-arm64-musl'
+320 silly reify ]
+321 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\@next\swc-linux-arm64-gnu
+322 silly reify mark deleted [
+322 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@next\\swc-linux-arm64-gnu'
+322 silly reify ]
+323 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\@next\swc-darwin-x64
+324 silly reify mark deleted [
+324 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@next\\swc-darwin-x64'
+324 silly reify ]
+325 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\@next\swc-darwin-arm64
+326 silly reify mark deleted [
+326 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@next\\swc-darwin-arm64'
+326 silly reify ]
+327 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\sharp\node_modules\@img\sharp-win32-ia32
+328 silly reify mark deleted [
+328 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\sharp\\node_modules\\@img\\sharp-win32-ia32'
+328 silly reify ]
+329 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\sharp\node_modules\@img\sharp-wasm32
+330 silly reify mark deleted [
+330 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\sharp\\node_modules\\@img\\sharp-wasm32'
+330 silly reify ]
+331 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\@emnapi\runtime
+332 silly reify mark deleted [
+332 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\@emnapi\\runtime'
+332 silly reify ]
+333 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\sharp\node_modules\@img\sharp-linuxmusl-x64
+334 silly reify mark deleted [
+334 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\sharp\\node_modules\\@img\\sharp-linuxmusl-x64'
+334 silly reify ]
+335 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\sharp\node_modules\@img\sharp-linuxmusl-arm64
+336 silly reify mark deleted [
+336 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\sharp\\node_modules\\@img\\sharp-linuxmusl-arm64'
+336 silly reify ]
+337 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\sharp\node_modules\@img\sharp-linux-x64
+338 silly reify mark deleted [
+338 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\sharp\\node_modules\\@img\\sharp-linux-x64'
+338 silly reify ]
+339 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\sharp\node_modules\@img\sharp-linux-s390x
+340 silly reify mark deleted [
+340 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\sharp\\node_modules\\@img\\sharp-linux-s390x'
+340 silly reify ]
+341 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\sharp\node_modules\@img\sharp-linux-arm64
+342 silly reify mark deleted [
+342 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\sharp\\node_modules\\@img\\sharp-linux-arm64'
+342 silly reify ]
+343 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\sharp\node_modules\@img\sharp-linux-arm
+344 silly reify mark deleted [
+344 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\sharp\\node_modules\\@img\\sharp-linux-arm'
+344 silly reify ]
+345 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\sharp\node_modules\@img\sharp-libvips-linuxmusl-x64
+346 silly reify mark deleted [
+346 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\sharp\\node_modules\\@img\\sharp-libvips-linuxmusl-x64'
+346 silly reify ]
+347 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\sharp\node_modules\@img\sharp-libvips-linuxmusl-arm64
+348 silly reify mark deleted [
+348 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\sharp\\node_modules\\@img\\sharp-libvips-linuxmusl-arm64'
+348 silly reify ]
+349 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\sharp\node_modules\@img\sharp-libvips-linux-x64
+350 silly reify mark deleted [
+350 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\sharp\\node_modules\\@img\\sharp-libvips-linux-x64'
+350 silly reify ]
+351 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\sharp\node_modules\@img\sharp-libvips-linux-s390x
+352 silly reify mark deleted [
+352 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\sharp\\node_modules\\@img\\sharp-libvips-linux-s390x'
+352 silly reify ]
+353 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\sharp\node_modules\@img\sharp-libvips-linux-arm64
+354 silly reify mark deleted [
+354 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\sharp\\node_modules\\@img\\sharp-libvips-linux-arm64'
+354 silly reify ]
+355 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\sharp\node_modules\@img\sharp-libvips-linux-arm
+356 silly reify mark deleted [
+356 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\sharp\\node_modules\\@img\\sharp-libvips-linux-arm'
+356 silly reify ]
+357 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\sharp\node_modules\@img\sharp-libvips-darwin-x64
+358 silly reify mark deleted [
+358 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\sharp\\node_modules\\@img\\sharp-libvips-darwin-x64'
+358 silly reify ]
+359 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\sharp\node_modules\@img\sharp-libvips-darwin-arm64
+360 silly reify mark deleted [
+360 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\sharp\\node_modules\\@img\\sharp-libvips-darwin-arm64'
+360 silly reify ]
+361 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\sharp\node_modules\@img\sharp-darwin-x64
+362 silly reify mark deleted [
+362 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\sharp\\node_modules\\@img\\sharp-darwin-x64'
+362 silly reify ]
+363 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\sharp\node_modules\@img\sharp-darwin-arm64
+364 silly reify mark deleted [
+364 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\sharp\\node_modules\\@img\\sharp-darwin-arm64'
+364 silly reify ]
+365 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\lightningcss\node_modules\lightningcss-win32-arm64-msvc
+366 silly reify mark deleted [
+366 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\lightningcss\\node_modules\\lightningcss-win32-arm64-msvc'
+366 silly reify ]
+367 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\lightningcss\node_modules\lightningcss-linux-x64-musl
+368 silly reify mark deleted [
+368 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\lightningcss\\node_modules\\lightningcss-linux-x64-musl'
+368 silly reify ]
+369 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\lightningcss\node_modules\lightningcss-linux-x64-gnu
+370 silly reify mark deleted [
+370 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\lightningcss\\node_modules\\lightningcss-linux-x64-gnu'
+370 silly reify ]
+371 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\lightningcss\node_modules\lightningcss-linux-arm64-musl
+372 silly reify mark deleted [
+372 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\lightningcss\\node_modules\\lightningcss-linux-arm64-musl'
+372 silly reify ]
+373 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\lightningcss\node_modules\lightningcss-linux-arm64-gnu
+374 silly reify mark deleted [
+374 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\lightningcss\\node_modules\\lightningcss-linux-arm64-gnu'
+374 silly reify ]
+375 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\lightningcss\node_modules\lightningcss-linux-arm-gnueabihf
+376 silly reify mark deleted [
+376 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\lightningcss\\node_modules\\lightningcss-linux-arm-gnueabihf'
+376 silly reify ]
+377 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\lightningcss\node_modules\lightningcss-freebsd-x64
+378 silly reify mark deleted [
+378 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\lightningcss\\node_modules\\lightningcss-freebsd-x64'
+378 silly reify ]
+379 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\lightningcss\node_modules\lightningcss-darwin-x64
+380 silly reify mark deleted [
+380 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\lightningcss\\node_modules\\lightningcss-darwin-x64'
+380 silly reify ]
+381 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\lightningcss\node_modules\lightningcss-darwin-arm64
+382 silly reify mark deleted [
+382 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\lightningcss\\node_modules\\lightningcss-darwin-arm64'
+382 silly reify ]
+383 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\jest-haste-map\node_modules\fsevents
+384 silly reify mark deleted [
+384 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\jest-haste-map\\node_modules\\fsevents'
+384 silly reify ]
+385 verbose reify failed optional dependency C:\Users\adnan\OneDrive\Masaüstü\codingprojects\vibe code\3d-agario\node_modules\chokidar\node_modules\fsevents
+386 silly reify mark deleted [
+386 silly reify   'C:\\Users\\adnan\\OneDrive\\Masaüstü\\codingprojects\\vibe code\\3d-agario\\node_modules\\chokidar\\node_modules\\fsevents'
+386 silly reify ]
+387 timing reifyNode:node_modules/@next/swc-win32-arm64-msvc Completed in 24ms
+388 timing reifyNode:node_modules/@next/swc-linux-x64-musl Completed in 23ms
+389 timing reifyNode:node_modules/@next/swc-linux-x64-gnu Completed in 23ms
+390 timing reifyNode:node_modules/@next/swc-linux-arm64-musl Completed in 23ms
+391 timing reifyNode:node_modules/@next/swc-linux-arm64-gnu Completed in 23ms
+392 timing reifyNode:node_modules/@next/swc-darwin-x64 Completed in 23ms
+393 timing reifyNode:node_modules/@next/swc-darwin-arm64 Completed in 23ms
+394 timing reifyNode:node_modules/sharp/node_modules/@img/sharp-win32-ia32 Completed in 23ms
+395 timing reifyNode:node_modules/sharp/node_modules/@img/sharp-wasm32 Completed in 22ms
+396 timing reifyNode:node_modules/sharp/node_modules/@img/sharp-linuxmusl-x64 Completed in 23ms
+397 timing reifyNode:node_modules/sharp/node_modules/@img/sharp-linuxmusl-arm64 Completed in 23ms
+398 timing reifyNode:node_modules/sharp/node_modules/@img/sharp-linux-x64 Completed in 23ms
+399 timing reifyNode:node_modules/sharp/node_modules/@img/sharp-linux-s390x Completed in 22ms
+400 timing reifyNode:node_modules/sharp/node_modules/@img/sharp-linux-arm64 Completed in 22ms
+401 timing reifyNode:node_modules/sharp/node_modules/@img/sharp-linux-arm Completed in 22ms
+402 timing reifyNode:node_modules/sharp/node_modules/@img/sharp-libvips-linuxmusl-x64 Completed in 22ms
+403 timing reifyNode:node_modules/sharp/node_modules/@img/sharp-libvips-linuxmusl-arm64 Completed in 21ms
+404 timing reifyNode:node_modules/sharp/node_modules/@img/sharp-libvips-linux-x64 Completed in 21ms
+405 timing reifyNode:node_modules/sharp/node_modules/@img/sharp-libvips-linux-s390x Completed in 21ms
+406 timing reifyNode:node_modules/sharp/node_modules/@img/sharp-libvips-linux-arm64 Completed in 21ms
+407 timing reifyNode:node_modules/sharp/node_modules/@img/sharp-libvips-linux-arm Completed in 20ms
+408 timing reifyNode:node_modules/sharp/node_modules/@img/sharp-libvips-darwin-x64 Completed in 20ms
+409 timing reifyNode:node_modules/sharp/node_modules/@img/sharp-libvips-darwin-arm64 Completed in 20ms
+410 timing reifyNode:node_modules/sharp/node_modules/@img/sharp-darwin-x64 Completed in 20ms
+411 timing reifyNode:node_modules/sharp/node_modules/@img/sharp-darwin-arm64 Completed in 19ms
+412 timing reifyNode:node_modules/lightningcss/node_modules/lightningcss-win32-arm64-msvc Completed in 20ms
+413 timing reifyNode:node_modules/lightningcss/node_modules/lightningcss-linux-x64-musl Completed in 20ms
+414 timing reifyNode:node_modules/lightningcss/node_modules/lightningcss-linux-x64-gnu Completed in 20ms
+415 timing reifyNode:node_modules/lightningcss/node_modules/lightningcss-linux-arm64-musl Completed in 20ms
+416 timing reifyNode:node_modules/lightningcss/node_modules/lightningcss-linux-arm64-gnu Completed in 19ms
+417 timing reifyNode:node_modules/lightningcss/node_modules/lightningcss-linux-arm-gnueabihf Completed in 19ms
+418 timing reifyNode:node_modules/lightningcss/node_modules/lightningcss-freebsd-x64 Completed in 19ms
+419 timing reifyNode:node_modules/lightningcss/node_modules/lightningcss-darwin-x64 Completed in 19ms
+420 timing reifyNode:node_modules/lightningcss/node_modules/lightningcss-darwin-arm64 Completed in 19ms
+421 timing reifyNode:node_modules/jest-haste-map/node_modules/fsevents Completed in 19ms
+422 timing reifyNode:node_modules/chokidar/node_modules/fsevents Completed in 18ms
+423 silly tarball no local data for esutils@https://registry.npmjs.org/esutils/-/esutils-2.0.3.tgz. Extracting by manifest.
+424 silly tarball no local data for @emnapi/runtime@https://registry.npmjs.org/@emnapi/runtime/-/runtime-1.3.1.tgz. Extracting by manifest.
+425 silly tarball no local data for @babel/preset-modules@https://registry.npmjs.org/@babel/preset-modules/-/preset-modules-0.1.6-no-external-plugins.tgz. Extracting by manifest.
+426 silly tarball no local data for @babel/plugin-transform-unicode-sets-regex@https://registry.npmjs.org/@babel/plugin-transform-unicode-sets-regex/-/plugin-transform-unicode-sets-regex-7.25.9.tgz. Extracting by manifest.
+427 silly tarball no local data for @babel/plugin-transform-unicode-escapes@https://registry.npmjs.org/@babel/plugin-transform-unicode-escapes/-/plugin-transform-unicode-escapes-7.25.9.tgz. Extracting by manifest.
+428 silly tarball no local data for @babel/plugin-transform-typeof-symbol@https://registry.npmjs.org/@babel/plugin-transform-typeof-symbol/-/plugin-transform-typeof-symbol-7.26.7.tgz. Extracting by manifest.
+429 silly tarball no local data for @babel/plugin-transform-template-literals@https://registry.npmjs.org/@babel/plugin-transform-template-literals/-/plugin-transform-template-literals-7.26.8.tgz. Extracting by manifest.
+430 silly tarball no local data for @babel/plugin-transform-unicode-property-regex@https://registry.npmjs.org/@babel/plugin-transform-unicode-property-regex/-/plugin-transform-unicode-property-regex-7.25.9.tgz. Extracting by manifest.
+431 silly tarball no local data for @babel/plugin-transform-reserved-words@https://registry.npmjs.org/@babel/plugin-transform-reserved-words/-/plugin-transform-reserved-words-7.25.9.tgz. Extracting by manifest.
+432 silly tarball no local data for @babel/plugin-transform-regexp-modifiers@https://registry.npmjs.org/@babel/plugin-transform-regexp-modifiers/-/plugin-transform-regexp-modifiers-7.26.0.tgz. Extracting by manifest.
+433 silly tarball no local data for @babel/plugin-transform-property-literals@https://registry.npmjs.org/@babel/plugin-transform-property-literals/-/plugin-transform-property-literals-7.25.9.tgz. Extracting by manifest.
+434 silly tarball no local data for @babel/plugin-transform-object-super@https://registry.npmjs.org/@babel/plugin-transform-object-super/-/plugin-transform-object-super-7.25.9.tgz. Extracting by manifest.
+435 silly tarball no local data for @babel/plugin-transform-new-target@https://registry.npmjs.org/@babel/plugin-transform-new-target/-/plugin-transform-new-target-7.25.9.tgz. Extracting by manifest.
+436 silly tarball no local data for @babel/plugin-transform-modules-umd@https://registry.npmjs.org/@babel/plugin-transform-modules-umd/-/plugin-transform-modules-umd-7.25.9.tgz. Extracting by manifest.
+437 silly tarball no local data for @babel/plugin-transform-modules-amd@https://registry.npmjs.org/@babel/plugin-transform-modules-amd/-/plugin-transform-modules-amd-7.25.9.tgz. Extracting by manifest.
+438 silly tarball no local data for @babel/plugin-transform-modules-systemjs@https://registry.npmjs.org/@babel/plugin-transform-modules-systemjs/-/plugin-transform-modules-systemjs-7.25.9.tgz. Extracting by manifest.
+439 silly tarball no local data for @babel/plugin-transform-member-expression-literals@https://registry.npmjs.org/@babel/plugin-transform-member-expression-literals/-/plugin-transform-member-expression-literals-7.25.9.tgz. Extracting by manifest.
+440 silly tarball no local data for @babel/plugin-transform-json-strings@https://registry.npmjs.org/@babel/plugin-transform-json-strings/-/plugin-transform-json-strings-7.25.9.tgz. Extracting by manifest.
+441 silly tarball no local data for @babel/plugin-transform-duplicate-keys@https://registry.npmjs.org/@babel/plugin-transform-duplicate-keys/-/plugin-transform-duplicate-keys-7.25.9.tgz. Extracting by manifest.
+442 silly tarball no local data for @babel/plugin-transform-dynamic-import@https://registry.npmjs.org/@babel/plugin-transform-dynamic-import/-/plugin-transform-dynamic-import-7.25.9.tgz. Extracting by manifest.
+443 silly tarball no local data for @babel/plugin-transform-exponentiation-operator@https://registry.npmjs.org/@babel/plugin-transform-exponentiation-operator/-/plugin-transform-exponentiation-operator-7.26.3.tgz. Extracting by manifest.
+444 silly tarball no local data for @babel/plugin-transform-class-static-block@https://registry.npmjs.org/@babel/plugin-transform-class-static-block/-/plugin-transform-class-static-block-7.26.0.tgz. Extracting by manifest.
+445 silly tarball no local data for @babel/plugin-transform-dotall-regex@https://registry.npmjs.org/@babel/plugin-transform-dotall-regex/-/plugin-transform-dotall-regex-7.25.9.tgz. Extracting by manifest.
+446 silly tarball no local data for @babel/plugin-transform-duplicate-named-capturing-groups-regex@https://registry.npmjs.org/@babel/plugin-transform-duplicate-named-capturing-groups-regex/-/plugin-transform-duplicate-named-capturing-groups-regex-7.25.9.tgz. Extracting by manifest.
+447 silly tarball no local data for @babel/plugin-syntax-unicode-sets-regex@https://registry.npmjs.org/@babel/plugin-syntax-unicode-sets-regex/-/plugin-syntax-unicode-sets-regex-7.18.6.tgz. Extracting by manifest.
+448 silly tarball no local data for @babel/plugin-transform-block-scoped-functions@https://registry.npmjs.org/@babel/plugin-transform-block-scoped-functions/-/plugin-transform-block-scoped-functions-7.26.5.tgz. Extracting by manifest.
+449 silly tarball no local data for @babel/plugin-syntax-import-assertions@https://registry.npmjs.org/@babel/plugin-syntax-import-assertions/-/plugin-syntax-import-assertions-7.26.0.tgz. Extracting by manifest.
+450 silly tarball no local data for @babel/plugin-proposal-private-property-in-object@https://registry.npmjs.org/@babel/plugin-proposal-private-property-in-object/-/plugin-proposal-private-property-in-object-7.21.0-placeholder-for-preset-env.2.tgz. Extracting by manifest.
+451 silly tarball no local data for @babel/plugin-bugfix-v8-static-class-fields-redefine-readonly@https://registry.npmjs.org/@babel/plugin-bugfix-v8-static-class-fields-redefine-readonly/-/plugin-bugfix-v8-static-class-fields-redefine-readonly-7.25.9.tgz. Extracting by manifest.
+452 silly tarball no local data for @babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining@https://registry.npmjs.org/@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining/-/plugin-bugfix-v8-spread-parameters-in-optional-chaining-7.25.9.tgz. Extracting by manifest.
+453 silly tarball no local data for @babel/plugin-bugfix-safari-class-field-initializer-scope@https://registry.npmjs.org/@babel/plugin-bugfix-safari-class-field-initializer-scope/-/plugin-bugfix-safari-class-field-initializer-scope-7.25.9.tgz. Extracting by manifest.
+454 silly tarball no local data for @babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression@https://registry.npmjs.org/@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression/-/plugin-bugfix-safari-id-destructuring-collision-in-function-expression-7.25.9.tgz. Extracting by manifest.
+455 silly tarball no local data for @babel/plugin-bugfix-firefox-class-in-computed-class-key@https://registry.npmjs.org/@babel/plugin-bugfix-firefox-class-in-computed-class-key/-/plugin-bugfix-firefox-class-in-computed-class-key-7.25.9.tgz. Extracting by manifest.
+456 silly tarball no local data for @babel/preset-env@https://registry.npmjs.org/@babel/preset-env/-/preset-env-7.26.9.tgz. Extracting by manifest.
+457 silly tarball no local data for semver@https://registry.npmjs.org/semver/-/semver-6.3.1.tgz. Extracting by manifest.
+458 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 338ms
+459 timing auditReport:getReport Completed in 359ms
+460 silly audit report {}
+461 timing auditReport:init Completed in 0ms
+462 timing reify:audit Completed in 359ms
+463 http fetch GET 200 https://registry.npmjs.org/@babel/plugin-transform-dotall-regex/-/plugin-transform-dotall-regex-7.25.9.tgz 561ms (cache miss)
+464 http fetch GET 200 https://registry.npmjs.org/@babel/plugin-transform-regexp-modifiers/-/plugin-transform-regexp-modifiers-7.26.0.tgz 573ms (cache miss)
+465 http fetch GET 200 https://registry.npmjs.org/@babel/plugin-transform-property-literals/-/plugin-transform-property-literals-7.25.9.tgz 576ms (cache miss)
+466 http fetch GET 200 https://registry.npmjs.org/@babel/plugin-transform-unicode-property-regex/-/plugin-transform-unicode-property-regex-7.25.9.tgz 587ms (cache miss)
+467 http fetch GET 200 https://registry.npmjs.org/@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining/-/plugin-bugfix-v8-spread-parameters-in-optional-chaining-7.25.9.tgz 573ms (cache miss)
+468 http fetch GET 200 https://registry.npmjs.org/@babel/plugin-transform-block-scoped-functions/-/plugin-transform-block-scoped-functions-7.26.5.tgz 577ms (cache miss)
+469 http fetch GET 200 https://registry.npmjs.org/@babel/plugin-syntax-import-assertions/-/plugin-syntax-import-assertions-7.26.0.tgz 577ms (cache miss)
+470 http fetch GET 200 https://registry.npmjs.org/@babel/plugin-transform-new-target/-/plugin-transform-new-target-7.25.9.tgz 590ms (cache miss)
+471 http fetch GET 200 https://registry.npmjs.org/@babel/plugin-syntax-unicode-sets-regex/-/plugin-syntax-unicode-sets-regex-7.18.6.tgz 581ms (cache miss)
+472 timing reifyNode:node_modules/@babel/plugin-syntax-unicode-sets-regex Completed in 643ms
+473 http fetch GET 200 https://registry.npmjs.org/@babel/plugin-transform-reserved-words/-/plugin-transform-reserved-words-7.25.9.tgz 598ms (cache miss)
+474 http fetch GET 200 https://registry.npmjs.org/@babel/plugin-transform-json-strings/-/plugin-transform-json-strings-7.25.9.tgz 592ms (cache miss)
+475 http fetch GET 200 https://registry.npmjs.org/@babel/plugin-transform-unicode-sets-regex/-/plugin-transform-unicode-sets-regex-7.25.9.tgz 605ms (cache miss)
+476 http fetch GET 200 https://registry.npmjs.org/@babel/plugin-transform-unicode-escapes/-/plugin-transform-unicode-escapes-7.25.9.tgz 607ms (cache miss)
+477 http fetch GET 200 https://registry.npmjs.org/@babel/plugin-transform-class-static-block/-/plugin-transform-class-static-block-7.26.0.tgz 595ms (cache miss)
+478 http fetch GET 200 https://registry.npmjs.org/@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression/-/plugin-bugfix-safari-id-destructuring-collision-in-function-expression-7.25.9.tgz 590ms (cache miss)
+479 http fetch GET 200 https://registry.npmjs.org/@babel/plugin-transform-duplicate-named-capturing-groups-regex/-/plugin-transform-duplicate-named-capturing-groups-regex-7.25.9.tgz 595ms (cache miss)
+480 http fetch GET 200 https://registry.npmjs.org/@babel/plugin-transform-member-expression-literals/-/plugin-transform-member-expression-literals-7.25.9.tgz 601ms (cache miss)
+481 http fetch GET 200 https://registry.npmjs.org/@babel/plugin-transform-dynamic-import/-/plugin-transform-dynamic-import-7.25.9.tgz 600ms (cache miss)
+482 timing reifyNode:node_modules/@babel/plugin-transform-dotall-regex Completed in 660ms
+483 timing reifyNode:node_modules/@babel/plugin-transform-regexp-modifiers Completed in 663ms
+484 http fetch GET 200 https://registry.npmjs.org/@babel/plugin-transform-duplicate-keys/-/plugin-transform-duplicate-keys-7.25.9.tgz 605ms (cache miss)
+485 http fetch GET 200 https://registry.npmjs.org/@babel/plugin-transform-object-super/-/plugin-transform-object-super-7.25.9.tgz 612ms (cache miss)
+486 timing reifyNode:node_modules/@babel/plugin-transform-property-literals Completed in 665ms
+487 timing reifyNode:node_modules/@babel/plugin-transform-unicode-property-regex Completed in 667ms
+488 timing reifyNode:node_modules/@babel/plugin-transform-unicode-sets-regex Completed in 668ms
+489 http fetch GET 200 https://registry.npmjs.org/@babel/plugin-transform-exponentiation-operator/-/plugin-transform-exponentiation-operator-7.26.3.tgz 609ms (cache miss)
+490 http fetch GET 200 https://registry.npmjs.org/@babel/plugin-bugfix-firefox-class-in-computed-class-key/-/plugin-bugfix-firefox-class-in-computed-class-key-7.25.9.tgz 601ms (cache miss)
+491 http fetch GET 200 https://registry.npmjs.org/@babel/plugin-transform-typeof-symbol/-/plugin-transform-typeof-symbol-7.26.7.tgz 622ms (cache miss)
+492 timing reifyNode:node_modules/@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining Completed in 667ms
+493 timing reifyNode:node_modules/@babel/plugin-transform-block-scoped-functions Completed in 668ms
+494 timing reifyNode:node_modules/@babel/plugin-syntax-import-assertions Completed in 669ms
+495 timing reifyNode:node_modules/@babel/plugin-transform-new-target Completed in 672ms
+496 timing reifyNode:node_modules/@babel/plugin-transform-member-expression-literals Completed in 671ms
+497 timing reifyNode:node_modules/@babel/plugin-transform-reserved-words Completed in 673ms
+498 timing reifyNode:node_modules/@babel/plugin-transform-json-strings Completed in 672ms
+499 http fetch GET 200 https://registry.npmjs.org/@babel/plugin-bugfix-safari-class-field-initializer-scope/-/plugin-bugfix-safari-class-field-initializer-scope-7.25.9.tgz 606ms (cache miss)
+500 timing reifyNode:node_modules/@babel/plugin-transform-duplicate-named-capturing-groups-regex Completed in 673ms
+501 timing reifyNode:node_modules/@babel/plugin-transform-unicode-escapes Completed in 677ms
+502 timing reifyNode:node_modules/@babel/plugin-transform-object-super Completed in 676ms
+503 timing reifyNode:node_modules/@babel/plugin-transform-class-static-block Completed in 675ms
+504 timing reifyNode:node_modules/@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression Completed in 675ms
+505 timing reifyNode:node_modules/@babel/plugin-transform-dynamic-import Completed in 677ms
+506 timing reifyNode:node_modules/@babel/plugin-transform-duplicate-keys Completed in 678ms
+507 timing reifyNode:node_modules/@babel/plugin-bugfix-safari-class-field-initializer-scope Completed in 678ms
+508 timing reifyNode:node_modules/@babel/plugin-bugfix-firefox-class-in-computed-class-key Completed in 679ms
+509 timing reifyNode:node_modules/@babel/plugin-transform-exponentiation-operator Completed in 681ms
+510 timing reifyNode:node_modules/@babel/plugin-transform-typeof-symbol Completed in 684ms
+511 http fetch GET 200 https://registry.npmjs.org/@babel/plugin-proposal-private-property-in-object/-/plugin-proposal-private-property-in-object-7.21.0-placeholder-for-preset-env.2.tgz 626ms (cache miss)
+512 timing reifyNode:node_modules/@babel/plugin-proposal-private-property-in-object Completed in 688ms
+513 http fetch GET 200 https://registry.npmjs.org/@babel/plugin-transform-template-literals/-/plugin-transform-template-literals-7.26.8.tgz 644ms (cache miss)
+514 timing reifyNode:node_modules/@babel/plugin-transform-template-literals Completed in 693ms
+515 http fetch GET 200 https://registry.npmjs.org/@babel/plugin-transform-modules-amd/-/plugin-transform-modules-amd-7.25.9.tgz 641ms (cache miss)
+516 timing reifyNode:node_modules/@babel/plugin-transform-modules-amd Completed in 696ms
+517 http fetch GET 200 https://registry.npmjs.org/@babel/plugin-transform-modules-umd/-/plugin-transform-modules-umd-7.25.9.tgz 643ms (cache miss)
+518 timing reifyNode:node_modules/@babel/plugin-transform-modules-umd Completed in 698ms
+519 http fetch GET 200 https://registry.npmjs.org/@babel/plugin-bugfix-v8-static-class-fields-redefine-readonly/-/plugin-bugfix-v8-static-class-fields-redefine-readonly-7.25.9.tgz 635ms (cache miss)
+520 timing reifyNode:node_modules/@babel/plugin-bugfix-v8-static-class-fields-redefine-readonly Completed in 699ms
+521 http fetch GET 200 https://registry.npmjs.org/esutils/-/esutils-2.0.3.tgz 659ms (cache miss)
+522 timing reifyNode:node_modules/esutils Completed in 704ms
+523 http fetch GET 200 https://registry.npmjs.org/@babel/plugin-transform-modules-systemjs/-/plugin-transform-modules-systemjs-7.25.9.tgz 648ms (cache miss)
+524 timing reifyNode:node_modules/@babel/plugin-transform-modules-systemjs Completed in 705ms
+525 http fetch GET 200 https://registry.npmjs.org/semver/-/semver-6.3.1.tgz 639ms (cache miss)
+526 timing reifyNode:node_modules/@babel/preset-env/node_modules/semver Completed in 706ms
+527 http fetch GET 200 https://registry.npmjs.org/@emnapi/runtime/-/runtime-1.3.1.tgz 700ms (cache miss)
+528 timing reifyNode:node_modules/@emnapi/runtime Completed in 749ms
+529 http fetch GET 200 https://registry.npmjs.org/@babel/preset-modules/-/preset-modules-0.1.6-no-external-plugins.tgz 707ms (cache miss)
+530 timing reifyNode:node_modules/@babel/preset-modules Completed in 753ms
+531 http fetch GET 200 https://registry.npmjs.org/@babel/preset-env/-/preset-env-7.26.9.tgz 702ms (cache miss)
+532 timing reifyNode:node_modules/@babel/preset-env Completed in 768ms
+533 timing reify:unpack Completed in 776ms
+534 timing reify:unretire Completed in 0ms
+535 timing build:queue Completed in 3ms
+536 timing build:link:node_modules/@babel/preset-env/node_modules/semver Completed in 6ms
+537 timing build:link Completed in 6ms
+538 timing build:deps Completed in 11ms
+539 timing build Completed in 11ms
+540 timing reify:build Completed in 12ms
+541 timing reify:trash Completed in 9ms
+542 timing reify:save Completed in 516ms
+543 timing reify Completed in 5684ms
+544 silly ADD
+545 silly ADD node_modules/esutils
+546 silly ADD node_modules/@babel/preset-modules
+547 silly ADD node_modules/@babel/plugin-transform-unicode-sets-regex
+548 silly ADD node_modules/@babel/plugin-transform-unicode-property-regex
+549 silly ADD node_modules/@babel/plugin-transform-unicode-escapes
+550 silly ADD node_modules/@babel/plugin-transform-typeof-symbol
+551 silly ADD node_modules/@babel/plugin-transform-template-literals
+552 silly ADD node_modules/@babel/plugin-transform-reserved-words
+553 silly ADD node_modules/@babel/plugin-transform-regexp-modifiers
+554 silly ADD node_modules/@babel/plugin-transform-property-literals
+555 silly ADD node_modules/@babel/plugin-transform-object-super
+556 silly ADD node_modules/@babel/plugin-transform-new-target
+557 silly ADD node_modules/@babel/plugin-transform-modules-umd
+558 silly ADD node_modules/@babel/plugin-transform-modules-systemjs
+559 silly ADD node_modules/@babel/plugin-transform-modules-amd
+560 silly ADD node_modules/@babel/plugin-transform-member-expression-literals
+561 silly ADD node_modules/@babel/plugin-transform-json-strings
+562 silly ADD node_modules/@babel/plugin-transform-exponentiation-operator
+563 silly ADD node_modules/@babel/plugin-transform-dynamic-import
+564 silly ADD node_modules/@babel/plugin-transform-duplicate-named-capturing-groups-regex
+565 silly ADD node_modules/@babel/plugin-transform-duplicate-keys
+566 silly ADD node_modules/@babel/plugin-transform-dotall-regex
+567 silly ADD node_modules/@babel/plugin-transform-class-static-block
+568 silly ADD node_modules/@babel/plugin-transform-block-scoped-functions
+569 silly ADD node_modules/@babel/plugin-syntax-unicode-sets-regex
+570 silly ADD node_modules/@babel/plugin-syntax-import-assertions
+571 silly ADD node_modules/@babel/plugin-proposal-private-property-in-object
+572 silly ADD node_modules/@babel/plugin-bugfix-v8-static-class-fields-redefine-readonly
+573 silly ADD node_modules/@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining
+574 silly ADD node_modules/@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression
+575 silly ADD node_modules/@babel/plugin-bugfix-safari-class-field-initializer-scope
+576 silly ADD node_modules/@babel/plugin-bugfix-firefox-class-in-computed-class-key
+577 silly ADD node_modules/@babel/preset-env
+578 silly ADD node_modules/@babel/preset-env/node_modules/semver
+579 silly ADD
+580 silly ADD
+581 silly ADD
+582 silly ADD
+583 silly ADD
+584 silly ADD
+585 silly ADD
+586 silly ADD
+587 silly ADD
+588 silly ADD
+589 silly ADD
+590 silly ADD
+591 silly ADD
+592 silly ADD
+593 silly ADD
+594 silly ADD
+595 silly ADD
+596 silly ADD
+597 silly ADD
+598 silly ADD
+599 silly ADD
+600 silly ADD
+601 silly ADD
+602 silly ADD
+603 silly ADD
+604 silly ADD
+605 silly ADD
+606 silly ADD
+607 silly ADD
+608 silly ADD
+609 silly ADD
+610 silly ADD
+611 silly ADD
+612 silly ADD
+613 silly ADD
+614 silly REMOVE node_modules/fsevents
+615 silly ADD
+616 silly REMOVE node_modules/@img/sharp-win32-ia32
+617 silly REMOVE node_modules/@img/sharp-wasm32
+618 silly REMOVE node_modules/@img/sharp-linuxmusl-x64
+619 silly REMOVE node_modules/@img/sharp-linuxmusl-arm64
+620 silly REMOVE node_modules/@img/sharp-linux-x64
+621 silly REMOVE node_modules/@img/sharp-linux-s390x
+622 silly REMOVE node_modules/@img/sharp-linux-arm64
+623 silly REMOVE node_modules/@img/sharp-linux-arm
+624 silly REMOVE node_modules/@img/sharp-libvips-linuxmusl-x64
+625 silly REMOVE node_modules/@img/sharp-libvips-linuxmusl-arm64
+626 silly REMOVE node_modules/@img/sharp-libvips-linux-x64
+627 silly REMOVE node_modules/@img/sharp-libvips-linux-s390x
+628 silly REMOVE node_modules/@img/sharp-libvips-linux-arm64
+629 silly REMOVE node_modules/@img/sharp-libvips-linux-arm
+630 silly REMOVE node_modules/@img/sharp-libvips-darwin-x64
+631 silly REMOVE node_modules/@img/sharp-libvips-darwin-arm64
+632 silly REMOVE node_modules/@img/sharp-darwin-x64
+633 silly REMOVE node_modules/@img/sharp-darwin-arm64
+634 timing command:install Completed in 5704ms
+635 verbose exit 0
+636 timing npm Completed in 6218ms
+637 info ok
