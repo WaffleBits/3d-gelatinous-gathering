@@ -25,6 +25,10 @@ export function GameScene({ playerName, selectedSkin, visualQuality = "medium" }
   const controlsRef = useRef<any>()
   const lastCameraUpdate = useRef(0)
 
+  // Create a Set to track food items that have been collected
+  // to prevent the same food from being collected multiple times
+  const collectedFood = useRef(new Set<string>()).current
+
   const { score, addScore, gameOver, setGameOver, activePowerUps, activatePowerUp, hasPowerUp, addCoins } = useGameStore()
   
   // Socket connection for multiplayer
@@ -90,6 +94,7 @@ export function GameScene({ playerName, selectedSkin, visualQuality = "medium" }
     enemiesRef.current = enemies
   }, [enemies])
 
+  // Only update player size based on score, NOT on every render
   useEffect(() => {
     playerSize.current = 1 + score * 0.1
   }, [score])
@@ -131,11 +136,7 @@ export function GameScene({ playerName, selectedSkin, visualQuality = "medium" }
     // Generate random enemies with safe positions
     const newEnemies = Array.from({ length: 10 }, (_, i) => ({
       id: i,
-      position: [
-        (Math.random() > 0.5 ? 1 : -1) * (20 + Math.random() * 70), // Place enemies farther from center
-        0, 
-        (Math.random() > 0.5 ? 1 : -1) * (20 + Math.random() * 70)
-      ] as [number, number, number],
+      position: generateSafePosition(), // Use safe position generator
       velocity: [(Math.random() - 0.5) * 0.05, 0, (Math.random() - 0.5) * 0.05] as [number, number, number],
       size: Math.random() * 1.5 + 0.5,
       score: Math.floor(Math.random() * 20),
@@ -146,21 +147,11 @@ export function GameScene({ playerName, selectedSkin, visualQuality = "medium" }
     // Only create local foods when not connected to server
     if (!isConnected) {
       // Generate food positions spread around the map, not concentrated near the center
-      const newFoods = Array.from({ length: 100 }, (_, i) => {
-        // Distribute foods throughout the map, avoiding the center area
-        const angle = Math.random() * Math.PI * 2;
-        const distance = 5 + Math.random() * 90; // Minimum distance of 5 from center
-        
-        return {
-          id: i,
-          position: [
-            Math.cos(angle) * distance, 
-            0, 
-            Math.sin(angle) * distance
-          ] as [number, number, number],
-          color: `hsl(${Math.random() * 360}, 70%, 60%)`,
-        };
-      });
+      const newFoods = Array.from({ length: 100 }, (_, i) => ({
+        id: i,
+        position: generateSafePosition(), // Use safe position generator
+        color: `hsl(${Math.random() * 360}, 70%, 60%)`,
+      }));
       setFoods(newFoods);
     }
 
@@ -223,55 +214,42 @@ export function GameScene({ playerName, selectedSkin, visualQuality = "medium" }
     return () => clearInterval(spawnInterval);
   }, []);
 
-  // Helper to generate a safe position away from the player
-  const generateSafePosition = (): [number, number, number] => {
-    if (!playerRef.current) {
-      const angle = Math.random() * Math.PI * 2;
-      const distance = 10 + Math.random() * 85; // Stay away from center
-      return [Math.cos(angle) * distance, 0, Math.sin(angle) * distance];
-    }
+  // Generate a safe position away from the player
+  const generateSafePosition = (playerPosition?: Vector3): [number, number, number] => {
+    const minDistance = 10; // Minimum distance from player
     
-    // Get player position
-    const playerPos = playerRef.current.position;
-    const safeDistance = playerSize.current * 2 + 5; // Safe distance based on player size
-    
-    let attempts = 0;
-    let position: [number, number, number];
-    
-    // Try up to 10 times to find a safe position
-    do {
-      const angle = Math.random() * Math.PI * 2;
-      const distance = safeDistance + Math.random() * 50;
-      
-      position = [
-        playerPos.x + Math.cos(angle) * distance, 
-        0, 
-        playerPos.z + Math.sin(angle) * distance
-      ];
-      
-      // Keep within world bounds
-      position[0] = Math.max(-95, Math.min(95, position[0]));
-      position[2] = Math.max(-95, Math.min(95, position[2]));
-      
-      attempts++;
-      
-      // Distance check - should always be safe due to our calculation method
-      const distance2 = Math.sqrt(
-        Math.pow(position[0] - playerPos.x, 2) + 
-        Math.pow(position[2] - playerPos.z, 2)
+    if (playerPosition) {
+      // With player position, ensure safe distance
+      let position: [number, number, number];
+      do {
+        const angle = Math.random() * Math.PI * 2;
+        const distance = 20 + Math.random() * 75; // Further away from center and player
+        
+        position = [
+          Math.cos(angle) * distance, 
+          0, 
+          Math.sin(angle) * distance
+        ];
+      } while (
+        playerPosition && 
+        Math.sqrt(
+          Math.pow(position[0] - playerPosition.x, 2) + 
+          Math.pow(position[2] - playerPosition.z, 2)
+        ) < minDistance
       );
       
-      if (distance2 > safeDistance) {
-        return position; // Found a safe position
-      }
-    } while (attempts < 5);
-    
-    // This should rarely happen, but as a fallback
-    return [
-      (Math.random() > 0.5 ? 1 : -1) * (50 + Math.random() * 45),
-      0,
-      (Math.random() > 0.5 ? 1 : -1) * (50 + Math.random() * 45)
-    ];
+      return position;
+    } else {
+      // Without player position, just randomize
+      const angle = Math.random() * Math.PI * 2;
+      const distance = 15 + Math.random() * 80;
+      
+      return [
+        Math.cos(angle) * distance, 
+        0, 
+        Math.sin(angle) * distance
+      ];
+    }
   };
 
   // Handle food collection
@@ -286,9 +264,13 @@ export function GameScene({ playerName, selectedSkin, visualQuality = "medium" }
       setTimeout(() => {
         setFoods((prev) => {
           const filtered = prev.filter((food) => food.id !== foodId)
+          
+          // Get current player position for safe spawning
+          const playerPosition = playerRef.current?.position;
+          
           const newFood = {
             id: Date.now(),
-            position: generateSafePosition(),
+            position: generateSafePosition(playerPosition),
             color: `hsl(${Math.random() * 360}, 70%, 60%)`,
           }
           return [...filtered, newFood]
@@ -545,7 +527,17 @@ export function GameScene({ playerName, selectedSkin, visualQuality = "medium" }
       const collisionRadiusSquared = Math.pow(collisionRadius, 2)
 
       if (distanceSquared < collisionRadiusSquared) {
-        collectFood(food.id)
+        // Ensure we only count each food item once by tracking it
+        const foodKey = `${food.id}`;
+        if (!collectedFood.has(foodKey)) {
+          collectedFood.add(foodKey);
+          collectFood(food.id);
+          
+          // Clear the set after a short delay to prevent repeated collections of the same food
+          setTimeout(() => {
+            collectedFood.delete(foodKey);
+          }, 100);
+        }
       }
     }
     
