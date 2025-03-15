@@ -1,6 +1,6 @@
 # 3D Gelatinous Gathering
 
-A 3D reimagination of the classic Agar.io game with advanced rendering, multiplayer capabilities, and performance optimizations.
+A 3D reimagination of the classic blob-eating multiplayer game with advanced rendering, multiplayer capabilities, and performance optimizations.
 
 ![3D Gelatinous Gathering](https://i.imgur.com/ZLUcDXL.png)
 
@@ -127,7 +127,7 @@ http://localhost:3000
 
 - Development: WaffleBits
 - Performance optimization: @adnan 
-- Original game concept: Agar.io
+- Original game concept: A popular browser-based multiplayer game where players control circular cells, consume smaller cells to grow, and avoid being consumed by larger ones
 
 ## 📜 License
 
