@@ -22,8 +22,8 @@ interface GameSceneProps {
 
 export function GameScene({ playerName, selectedSkin, visualQuality = "medium" }: GameSceneProps) {
   const { camera } = useThree()
-  const playerRef = useRef<any>()
-  const controlsRef = useRef<any>()
+  const playerRef = useRef<any>(null)
+  const controlsRef = useRef<any>(null)
   const lastCameraUpdate = useRef(0)
 
   // Create a Set to track food items that have been collected
